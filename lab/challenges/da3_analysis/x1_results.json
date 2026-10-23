@@ -1,0 +1,112 @@
+{
+ "M_hidden": 20,
+ "secret": "refinance bridging loan Halyard equity release lender valuation",
+ "arms": {
+  "A": {
+   "queries": 307,
+   "top10_changed": 1,
+   "top50_changed": 2,
+   "max_abs_score_delta": 0.06913467292751596,
+   "canary_probes": 744,
+   "canary_alarms": 0,
+   "by_attacker": {
+    "partner_construction": {
+     "queries": 44,
+     "top10_changed": 1
+    }
+   }
+  },
+  "B": {
+   "queries": 307,
+   "top10_changed": 0,
+   "top50_changed": 0,
+   "max_abs_score_delta": 0.0,
+   "canary_probes": 744,
+   "canary_alarms": 0,
+   "by_attacker": {}
+  },
+  "C": {
+   "queries": 307,
+   "top10_changed": 258,
+   "top50_changed": 295,
+   "max_abs_score_delta": 0.011764705882352943,
+   "canary_probes": 744,
+   "canary_alarms": 0,
+   "by_attacker": {
+    "household": {
+     "queries": 43,
+     "top10_changed": 43
+    },
+    "partner_gym": {
+     "queries": 44,
+     "top10_changed": 44
+    },
+    "partner_construction": {
+     "queries": 44,
+     "top10_changed": 38
+    },
+    "partner_cafe": {
+     "queries": 44,
+     "top10_changed": 42
+    },
+    "member_m01": {
+     "queries": 11,
+     "top10_changed": 8
+    },
+    "member_m02": {
+     "queries": 11,
+     "top10_changed": 5
+    },
+    "member_m03": {
+     "queries": 11,
+     "top10_changed": 7
+    },
+    "member_m04": {
+     "queries": 11,
+     "top10_changed": 8
+    },
+    "member_m05": {
+     "queries": 11,
+     "top10_changed": 7
+    },
+    "member_m06": {
+     "queries": 11,
+     "top10_changed": 8
+    },
+    "member_m07": {
+     "queries": 11,
+     "top10_changed": 8
+    },
+    "member_m08": {
+     "queries": 11,
+     "top10_changed": 8
+    },
+    "member_m09": {
+     "queries": 11,
+     "top10_changed": 7
+    },
+    "member_m10": {
+     "queries": 11,
+     "top10_changed": 8
+    },
+    "member_m11": {
+     "queries": 11,
+     "top10_changed": 9
+    },
+    "member_m12": {
+     "queries": 11,
+     "top10_changed": 8
+    }
+   }
+  },
+  "D": {
+   "queries": 307,
+   "top10_changed": 0,
+   "top50_changed": 1,
+   "max_abs_score_delta": 0.003875968992248062,
+   "canary_probes": 744,
+   "canary_alarms": 0,
+   "by_attacker": {}
+  }
+ }
+}

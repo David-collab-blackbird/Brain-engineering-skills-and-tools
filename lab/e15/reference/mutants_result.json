@@ -1,0 +1,267 @@
+{
+ "global_bm25_stats": {
+  "hidden_pass": 36,
+  "failed": [
+   "test_h37_noninterference_average_length"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "global_N": {
+  "hidden_pass": 36,
+  "failed": [
+   "test_h36_noninterference_document_count"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "global_avgdl": {
+  "hidden_pass": 36,
+  "failed": [
+   "test_h37_noninterference_average_length"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "global_df": {
+  "hidden_pass": 36,
+  "failed": [
+   "test_h20_noninterference_hidden_inserts"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "global_topk_then_filter": {
+  "hidden_pass": 32,
+  "failed": [
+   "test_h20_noninterference_hidden_inserts",
+   "test_h21_noninterference_other_tenant",
+   "test_h24_scores_are_rrf_values",
+   "test_h27_prefilter_returns_k",
+   "test_h37_noninterference_average_length"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "no_exit_check": {
+  "hidden_pass": 33,
+  "failed": [
+   "test_h13_quarantine_after_build",
+   "test_h14_reclassify_after_build",
+   "test_h15_new_version_not_served_until_refresh",
+   "test_h17_dropped_candidates_are_refilled"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 7
+ },
+ "no_version_check": {
+  "hidden_pass": 36,
+  "failed": [
+   "test_h15_new_version_not_served_until_refresh"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "agent_gets_person_access": {
+  "hidden_pass": 34,
+  "failed": [
+   "test_h08_desk_agent_no_finance",
+   "test_h09_exec_agent_limited_by_own_rows",
+   "test_h23_ranking_conforms_to_spec"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "agent_own_rows_only": {
+  "hidden_pass": 36,
+  "failed": [
+   "test_h08_desk_agent_no_finance"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "revoked_allowed": {
+  "hidden_pass": 35,
+  "failed": [
+   "test_h01_revoked_principal_gets_nothing",
+   "test_h02_revocation_after_build_takes_effect"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "trust_membership_rows": {
+  "hidden_pass": 34,
+  "failed": [
+   "test_h04_ghost_and_missing_groups",
+   "test_h05_cross_tenant_membership_row_ignored",
+   "test_h06_record_tenant_must_match"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "post_filter_topk": {
+  "hidden_pass": 35,
+  "failed": [
+   "test_h23_ranking_conforms_to_spec",
+   "test_h24_scores_are_rrf_values"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "no_dense": {
+  "hidden_pass": 33,
+  "failed": [
+   "test_h08_desk_agent_no_finance",
+   "test_h23_ranking_conforms_to_spec",
+   "test_h24_scores_are_rrf_values",
+   "test_h25_dense_channel_finds_paraphrase"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "rrf_k_1": {
+  "hidden_pass": 35,
+  "failed": [
+   "test_h23_ranking_conforms_to_spec",
+   "test_h24_scores_are_rrf_values"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "index_everything": {
+  "hidden_pass": 36,
+  "failed": [
+   "test_h19_erased_quarantined_never_indexed"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "no_log": {
+  "hidden_pass": 36,
+  "failed": [
+   "test_h30_audit_log"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "logs_titles": {
+  "hidden_pass": 36,
+  "failed": [
+   "test_h30_audit_log"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "no_markers": {
+  "hidden_pass": 36,
+  "failed": [
+   "test_h32_decision_markers"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "special_case_owner": {
+  "hidden_pass": 34,
+  "failed": [
+   "test_h07_owner_cannot_see_member_health",
+   "test_h31_not_found_equals_denied",
+   "test_h33_no_hardcoded_identities"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "passed",
+  "visible_pass": 8
+ },
+ "owner_role_bypass": {
+  "hidden_pass": 33,
+  "failed": [
+   "test_h07_owner_cannot_see_member_health",
+   "test_h09_exec_agent_limited_by_own_rows",
+   "test_h23_ranking_conforms_to_spec",
+   "test_h31_not_found_equals_denied"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "passed",
+  "visible_pass": 8
+ },
+ "raw_match": {
+  "hidden_pass": 35,
+  "failed": [
+   "test_h26_recall_at_3",
+   "test_h28_hostile_queries_never_raise"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "cache_visible_set": {
+  "hidden_pass": 35,
+  "failed": [
+   "test_h02_revocation_after_build_takes_effect",
+   "test_h03_membership_removed_after_build"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "recompute_vectors": {
+  "hidden_pass": 36,
+  "failed": [
+   "test_h35_document_vectors_not_recomputed"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ },
+ "stale_snippet_text": {
+  "hidden_pass": 35,
+  "failed": [
+   "test_h15_new_version_not_served_until_refresh",
+   "test_h16_hits_carry_current_text_only"
+  ],
+  "caught": true,
+  "expected_failed": true,
+  "impossible": "failed",
+  "visible_pass": 8
+ }
+}

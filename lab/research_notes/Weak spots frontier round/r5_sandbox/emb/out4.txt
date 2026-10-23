@@ -1,0 +1,7 @@
+docs 800
+RESULT BM25 ID R@1=1.000 R@10=1.000
+RESULT BM25 PARA R@1=0.067 R@10=0.420
+Qwen3-0.6B (+instruction) loaded 8s
+RESULT Qwen3-0.6B (+instruction) ID R@1=0.240 R@10=0.493
+RESULT Qwen3-0.6B (+instruction) PARA R@1=0.800 R@10=0.987
+Qwen3-0.6B (+instruction) done in 1631s

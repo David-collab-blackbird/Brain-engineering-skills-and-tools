@@ -1,0 +1,102 @@
+{
+ "F": {
+  "zephyr_terms": [
+   101,
+   102
+  ],
+  "zephyr_rate": [
+   103,
+   104,
+   105
+  ],
+  "zephyr_contact": [
+   106
+  ],
+  "zephyr_day": [
+   107,
+   108
+  ],
+  "zephyrco_abn": [
+   109
+  ],
+  "quill_rate": [
+   110,
+   111
+  ],
+  "quill_phone": [
+   112
+  ],
+  "arbor_rate": [
+   113
+  ],
+  "arbor_cert": [
+   114
+  ],
+  "pool_ph": [
+   115,
+   116,
+   117
+  ],
+  "pool_chlorine": [
+   118
+  ],
+  "pool_budget": [
+   119,
+   120
+  ],
+  "rower_status": [
+   121,
+   122
+  ],
+  "boiler_service": [
+   123,
+   124
+  ],
+  "boiler_cost": [
+   125
+  ],
+  "m7_plan": [
+   126,
+   127
+  ],
+  "m7_class": [
+   128,
+   129
+  ],
+  "coach_hours": [
+   130
+  ],
+  "coach_pay": [
+   131,
+   132
+  ],
+  "lease_end": [
+   133
+  ],
+  "lease_option": [
+   134
+  ],
+  "cafe_hours": [
+   135,
+   136
+  ],
+  "cafe_supplier": [
+   137,
+   138
+  ],
+  "elm_boiler": [
+   139,
+   140
+  ],
+  "elm_car": [
+   141
+  ],
+  "elm_car_private": [
+   142,
+   143
+  ],
+  "elm_quill": [
+   144
+  ]
+ }
+}

@@ -1,0 +1,1740 @@
+{
+ "phase": "pilot2",
+ "n_scored_runs": 98,
+ "main_sonnet": {
+  "A": {
+   "n_runs": 10,
+   "n_tasks": 10,
+   "n_gold_runs": 8,
+   "n_none_runs": 2,
+   "correct_use": {
+    "k": 10,
+    "n": 10,
+    "rate": 1.0,
+    "wilson": [
+     0.7225,
+     1.0
+    ],
+    "cp_lower_1s95": 0.7411
+   },
+   "correct_use_behavioural": {
+    "k": 10,
+    "n": 10,
+    "rate": 1.0,
+    "wilson": [
+     0.7225,
+     1.0
+    ]
+   },
+   "correct_use_gold": {
+    "k": 8,
+    "n": 8,
+    "rate": 1.0,
+    "wilson": [
+     0.6756,
+     1.0
+    ]
+   },
+   "correct_none": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "selected_gold": 1.0,
+   "gold_in_context": 1.0,
+   "signature_executed_gold": 1.0,
+   "compliance_mean": 1.0,
+   "compliance_ci": [
+    1.0,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 8,
+    "n": 8,
+    "rate": 1.0,
+    "wilson": [
+     0.6756,
+     1.0
+    ]
+   },
+   "outcome": {
+    "k": 10,
+    "n": 10,
+    "rate": 1.0,
+    "wilson": [
+     0.7225,
+     1.0
+    ]
+   },
+   "tokens_total_mean": 130833.6,
+   "tokens_input_mean": 129218.4,
+   "tokens_output_mean": 1615.2,
+   "arm_context_tokens_est_mean": 17117.0,
+   "cost_per_run_mean": 0.0402,
+   "turns_mean": 7.3,
+   "procedures_get_per_run": 0.1,
+   "procedures_search_per_run": 0.0,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 10
+   }
+  },
+  "B": {
+   "n_runs": 10,
+   "n_tasks": 10,
+   "n_gold_runs": 8,
+   "n_none_runs": 2,
+   "correct_use": {
+    "k": 10,
+    "n": 10,
+    "rate": 1.0,
+    "wilson": [
+     0.7225,
+     1.0
+    ],
+    "cp_lower_1s95": 0.7411
+   },
+   "correct_use_behavioural": {
+    "k": 10,
+    "n": 10,
+    "rate": 1.0,
+    "wilson": [
+     0.7225,
+     1.0
+    ]
+   },
+   "correct_use_gold": {
+    "k": 8,
+    "n": 8,
+    "rate": 1.0,
+    "wilson": [
+     0.6756,
+     1.0
+    ]
+   },
+   "correct_none": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "selected_gold": 1.0,
+   "gold_in_context": 1.0,
+   "signature_executed_gold": 1.0,
+   "compliance_mean": 1.0,
+   "compliance_ci": [
+    1.0,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 8,
+    "n": 8,
+    "rate": 1.0,
+    "wilson": [
+     0.6756,
+     1.0
+    ]
+   },
+   "outcome": {
+    "k": 10,
+    "n": 10,
+    "rate": 1.0,
+    "wilson": [
+     0.7225,
+     1.0
+    ]
+   },
+   "tokens_total_mean": 34385.3,
+   "tokens_input_mean": 32834.9,
+   "tokens_output_mean": 1550.4,
+   "arm_context_tokens_est_mean": 1345.0,
+   "cost_per_run_mean": 0.0339,
+   "turns_mean": 7.9,
+   "procedures_get_per_run": 0.8,
+   "procedures_search_per_run": 0.0,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 10
+   }
+  },
+  "C": {
+   "n_runs": 10,
+   "n_tasks": 10,
+   "n_gold_runs": 8,
+   "n_none_runs": 2,
+   "correct_use": {
+    "k": 10,
+    "n": 10,
+    "rate": 1.0,
+    "wilson": [
+     0.7225,
+     1.0
+    ],
+    "cp_lower_1s95": 0.7411
+   },
+   "correct_use_behavioural": {
+    "k": 10,
+    "n": 10,
+    "rate": 1.0,
+    "wilson": [
+     0.7225,
+     1.0
+    ]
+   },
+   "correct_use_gold": {
+    "k": 8,
+    "n": 8,
+    "rate": 1.0,
+    "wilson": [
+     0.6756,
+     1.0
+    ]
+   },
+   "correct_none": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "selected_gold": 1.0,
+   "gold_in_context": 1.0,
+   "signature_executed_gold": 1.0,
+   "compliance_mean": 1.0,
+   "compliance_ci": [
+    1.0,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 8,
+    "n": 8,
+    "rate": 1.0,
+    "wilson": [
+     0.6756,
+     1.0
+    ]
+   },
+   "outcome": {
+    "k": 10,
+    "n": 10,
+    "rate": 1.0,
+    "wilson": [
+     0.7225,
+     1.0
+    ]
+   },
+   "tokens_total_mean": 46784.6,
+   "tokens_input_mean": 45230.3,
+   "tokens_output_mean": 1554.3,
+   "arm_context_tokens_est_mean": 3337.3,
+   "cost_per_run_mean": 0.0341,
+   "turns_mean": 7.7,
+   "procedures_get_per_run": 0.3,
+   "procedures_search_per_run": 0.0,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 10
+   }
+  },
+  "D": {
+   "n_runs": 10,
+   "n_tasks": 10,
+   "n_gold_runs": 8,
+   "n_none_runs": 2,
+   "correct_use": {
+    "k": 9,
+    "n": 10,
+    "rate": 0.9,
+    "wilson": [
+     0.5958,
+     0.9821
+    ],
+    "cp_lower_1s95": 0.6058
+   },
+   "correct_use_behavioural": {
+    "k": 9,
+    "n": 10,
+    "rate": 0.9,
+    "wilson": [
+     0.5958,
+     0.9821
+    ]
+   },
+   "correct_use_gold": {
+    "k": 8,
+    "n": 8,
+    "rate": 1.0,
+    "wilson": [
+     0.6756,
+     1.0
+    ]
+   },
+   "correct_none": {
+    "k": 1,
+    "n": 2,
+    "rate": 0.5,
+    "wilson": [
+     0.0945,
+     0.9055
+    ]
+   },
+   "selected_gold": 1.0,
+   "gold_in_context": 1.0,
+   "signature_executed_gold": 1.0,
+   "compliance_mean": 1.0,
+   "compliance_ci": [
+    1.0,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 8,
+    "n": 8,
+    "rate": 1.0,
+    "wilson": [
+     0.6756,
+     1.0
+    ]
+   },
+   "outcome": {
+    "k": 10,
+    "n": 10,
+    "rate": 1.0,
+    "wilson": [
+     0.7225,
+     1.0
+    ]
+   },
+   "tokens_total_mean": 37347.3,
+   "tokens_input_mean": 35678.7,
+   "tokens_output_mean": 1668.6,
+   "arm_context_tokens_est_mean": 1785.0,
+   "cost_per_run_mean": 0.0434,
+   "turns_mean": 8.0,
+   "procedures_get_per_run": 0.1,
+   "procedures_search_per_run": 0.0,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 9,
+    "procedure_misapplied": 1
+   }
+  }
+ },
+ "contrasts_sonnet": {
+  "C_vs_A": {
+   "n_pairs": 10,
+   "x_rate": 1.0,
+   "y_rate": 1.0,
+   "diff_x_minus_y": 0.0,
+   "diff_ci95": [
+    0.0,
+    0.0
+   ],
+   "mcnemar": {
+    "x_only": 0,
+    "y_only": 0,
+    "p": 1.0
+   }
+  },
+  "C_vs_A_compliance": {
+   "n_pairs": 8,
+   "x_rate": 1.0,
+   "y_rate": 1.0,
+   "diff_x_minus_y": 0.0,
+   "diff_ci95": [
+    0.0,
+    0.0
+   ],
+   "mcnemar": {
+    "x_only": 0,
+    "y_only": 0,
+    "p": 1.0
+   }
+  },
+  "tokens_C_over_A": {
+   "ratio_x_over_y": 0.3576,
+   "ci95": [
+    0.3283,
+    0.4042
+   ],
+   "wilcoxon_p_per_task_means": 0.001953125,
+   "n_pairs": 10
+  },
+  "B_vs_C": {
+   "n_pairs": 10,
+   "x_rate": 1.0,
+   "y_rate": 1.0,
+   "diff_x_minus_y": 0.0,
+   "diff_ci95": [
+    0.0,
+    0.0
+   ],
+   "mcnemar": {
+    "x_only": 0,
+    "y_only": 0,
+    "p": 1.0
+   }
+  },
+  "tokens_B_over_A": {
+   "ratio_x_over_y": 0.2628,
+   "ci95": [
+    0.2421,
+    0.2825
+   ],
+   "wilcoxon_p_per_task_means": 0.001953125,
+   "n_pairs": 10
+  },
+  "D_vs_C": {
+   "n_pairs": 10,
+   "x_rate": 0.9,
+   "y_rate": 1.0,
+   "diff_x_minus_y": -0.1,
+   "diff_ci95": [
+    -0.3,
+    0.0
+   ],
+   "mcnemar": {
+    "x_only": 0,
+    "y_only": 1,
+    "p": 1.0
+   }
+  },
+  "tokens_D_over_A": {
+   "ratio_x_over_y": 0.2855,
+   "ci95": [
+    0.2565,
+    0.3279
+   ],
+   "wilcoxon_p_per_task_means": 0.001953125,
+   "n_pairs": 10
+  }
+ },
+ "main_sonnet_H": {
+  "A": {
+   "n_runs": 10,
+   "n_tasks": 10,
+   "n_gold_runs": 8,
+   "n_none_runs": 2,
+   "correct_use": {
+    "k": 9,
+    "n": 10,
+    "rate": 0.9,
+    "wilson": [
+     0.5958,
+     0.9821
+    ],
+    "cp_lower_1s95": 0.6058
+   },
+   "correct_use_behavioural": {
+    "k": 9,
+    "n": 10,
+    "rate": 0.9,
+    "wilson": [
+     0.5958,
+     0.9821
+    ]
+   },
+   "correct_use_gold": {
+    "k": 7,
+    "n": 8,
+    "rate": 0.875,
+    "wilson": [
+     0.5291,
+     0.9776
+    ]
+   },
+   "correct_none": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "selected_gold": 0.875,
+   "gold_in_context": 1.0,
+   "signature_executed_gold": 0.875,
+   "compliance_mean": 0.925,
+   "compliance_ci": [
+    0.775,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 7,
+    "n": 8,
+    "rate": 0.875,
+    "wilson": [
+     0.5291,
+     0.9776
+    ]
+   },
+   "outcome": {
+    "k": 9,
+    "n": 10,
+    "rate": 0.9,
+    "wilson": [
+     0.5958,
+     0.9821
+    ]
+   },
+   "tokens_total_mean": 127208.8,
+   "tokens_input_mean": 125699.1,
+   "tokens_output_mean": 1509.7,
+   "arm_context_tokens_est_mean": 17117.0,
+   "cost_per_run_mean": 0.0381,
+   "turns_mean": 7.1,
+   "procedures_get_per_run": 0.1,
+   "procedures_search_per_run": 0.0,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 9,
+    "wrong_procedure": 1
+   }
+  },
+  "B": {
+   "n_runs": 10,
+   "n_tasks": 10,
+   "n_gold_runs": 8,
+   "n_none_runs": 2,
+   "correct_use": {
+    "k": 9,
+    "n": 10,
+    "rate": 0.9,
+    "wilson": [
+     0.5958,
+     0.9821
+    ],
+    "cp_lower_1s95": 0.6058
+   },
+   "correct_use_behavioural": {
+    "k": 9,
+    "n": 10,
+    "rate": 0.9,
+    "wilson": [
+     0.5958,
+     0.9821
+    ]
+   },
+   "correct_use_gold": {
+    "k": 7,
+    "n": 8,
+    "rate": 0.875,
+    "wilson": [
+     0.5291,
+     0.9776
+    ]
+   },
+   "correct_none": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "selected_gold": 0.875,
+   "gold_in_context": 0.875,
+   "signature_executed_gold": 0.875,
+   "compliance_mean": 0.925,
+   "compliance_ci": [
+    0.775,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 7,
+    "n": 8,
+    "rate": 0.875,
+    "wilson": [
+     0.5291,
+     0.9776
+    ]
+   },
+   "outcome": {
+    "k": 9,
+    "n": 10,
+    "rate": 0.9,
+    "wilson": [
+     0.5958,
+     0.9821
+    ]
+   },
+   "tokens_total_mean": 34900.7,
+   "tokens_input_mean": 33425.5,
+   "tokens_output_mean": 1475.2,
+   "arm_context_tokens_est_mean": 1345.0,
+   "cost_per_run_mean": 0.0316,
+   "turns_mean": 7.7,
+   "procedures_get_per_run": 0.8,
+   "procedures_search_per_run": 0.0,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 9,
+    "wrong_procedure": 1
+   }
+  },
+  "C": {
+   "n_runs": 10,
+   "n_tasks": 10,
+   "n_gold_runs": 8,
+   "n_none_runs": 2,
+   "correct_use": {
+    "k": 9,
+    "n": 10,
+    "rate": 0.9,
+    "wilson": [
+     0.5958,
+     0.9821
+    ],
+    "cp_lower_1s95": 0.6058
+   },
+   "correct_use_behavioural": {
+    "k": 9,
+    "n": 10,
+    "rate": 0.9,
+    "wilson": [
+     0.5958,
+     0.9821
+    ]
+   },
+   "correct_use_gold": {
+    "k": 7,
+    "n": 8,
+    "rate": 0.875,
+    "wilson": [
+     0.5291,
+     0.9776
+    ]
+   },
+   "correct_none": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "selected_gold": 0.875,
+   "gold_in_context": 1.0,
+   "signature_executed_gold": 0.875,
+   "compliance_mean": 0.925,
+   "compliance_ci": [
+    0.775,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 7,
+    "n": 8,
+    "rate": 0.875,
+    "wilson": [
+     0.5291,
+     0.9776
+    ]
+   },
+   "outcome": {
+    "k": 9,
+    "n": 10,
+    "rate": 0.9,
+    "wilson": [
+     0.5958,
+     0.9821
+    ]
+   },
+   "tokens_total_mean": 43647.2,
+   "tokens_input_mean": 42236.7,
+   "tokens_output_mean": 1410.5,
+   "arm_context_tokens_est_mean": 3337.3,
+   "cost_per_run_mean": 0.0409,
+   "turns_mean": 7.3,
+   "procedures_get_per_run": 0.3,
+   "procedures_search_per_run": 0.0,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 9,
+    "wrong_procedure": 1
+   }
+  }
+ },
+ "contrasts_sonnet_H": {
+  "C_vs_A": {
+   "n_pairs": 10,
+   "x_rate": 0.9,
+   "y_rate": 0.9,
+   "diff_x_minus_y": 0.0,
+   "diff_ci95": [
+    0.0,
+    0.0
+   ],
+   "mcnemar": {
+    "x_only": 0,
+    "y_only": 0,
+    "p": 1.0
+   }
+  },
+  "C_vs_A_compliance": {
+   "n_pairs": 8,
+   "x_rate": 0.925,
+   "y_rate": 0.925,
+   "diff_x_minus_y": 0.0,
+   "diff_ci95": [
+    0.0,
+    0.0
+   ],
+   "mcnemar": {
+    "x_only": 0,
+    "y_only": 0,
+    "p": 1.0
+   }
+  },
+  "tokens_C_over_A": {
+   "ratio_x_over_y": 0.3431,
+   "ci95": [
+    0.3285,
+    0.3598
+   ],
+   "wilcoxon_p_per_task_means": 0.001953125,
+   "n_pairs": 10
+  },
+  "B_vs_C": {
+   "n_pairs": 10,
+   "x_rate": 0.9,
+   "y_rate": 0.9,
+   "diff_x_minus_y": 0.0,
+   "diff_ci95": [
+    0.0,
+    0.0
+   ],
+   "mcnemar": {
+    "x_only": 0,
+    "y_only": 0,
+    "p": 1.0
+   }
+  },
+  "tokens_B_over_A": {
+   "ratio_x_over_y": 0.2744,
+   "ci95": [
+    0.2563,
+    0.2897
+   ],
+   "wilcoxon_p_per_task_means": 0.001953125,
+   "n_pairs": 10
+  }
+ },
+ "main_haiku": {
+  "B": {
+   "n_runs": 4,
+   "n_tasks": 4,
+   "n_gold_runs": 3,
+   "n_none_runs": 1,
+   "correct_use": {
+    "k": 4,
+    "n": 4,
+    "rate": 1.0,
+    "wilson": [
+     0.5101,
+     1.0
+    ],
+    "cp_lower_1s95": 0.4729
+   },
+   "correct_use_behavioural": {
+    "k": 4,
+    "n": 4,
+    "rate": 1.0,
+    "wilson": [
+     0.5101,
+     1.0
+    ]
+   },
+   "correct_use_gold": {
+    "k": 3,
+    "n": 3,
+    "rate": 1.0,
+    "wilson": [
+     0.4385,
+     1.0
+    ]
+   },
+   "correct_none": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "wilson": [
+     0.2065,
+     1.0
+    ]
+   },
+   "selected_gold": 1.0,
+   "gold_in_context": 1.0,
+   "signature_executed_gold": 1.0,
+   "compliance_mean": 1.0,
+   "compliance_ci": [
+    1.0,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 3,
+    "n": 3,
+    "rate": 1.0,
+    "wilson": [
+     0.4385,
+     1.0
+    ]
+   },
+   "outcome": {
+    "k": 4,
+    "n": 4,
+    "rate": 1.0,
+    "wilson": [
+     0.5101,
+     1.0
+    ]
+   },
+   "tokens_total_mean": 38616.0,
+   "tokens_input_mean": 36606.0,
+   "tokens_output_mean": 2010.0,
+   "arm_context_tokens_est_mean": 1345.0,
+   "cost_per_run_mean": 0.0022,
+   "turns_mean": 7.75,
+   "procedures_get_per_run": 0.75,
+   "procedures_search_per_run": 0.25,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 4
+   }
+  }
+ },
+ "contrasts_haiku": {},
+ "ladder_sonnet": {
+  "A@40": {
+   "n_runs": 9,
+   "n_tasks": 9,
+   "n_gold_runs": 7,
+   "n_none_runs": 2,
+   "correct_use": {
+    "k": 9,
+    "n": 9,
+    "rate": 1.0,
+    "wilson": [
+     0.7008,
+     1.0
+    ],
+    "cp_lower_1s95": 0.7169
+   },
+   "correct_use_behavioural": {
+    "k": 9,
+    "n": 9,
+    "rate": 1.0,
+    "wilson": [
+     0.7008,
+     1.0
+    ]
+   },
+   "correct_use_gold": {
+    "k": 7,
+    "n": 7,
+    "rate": 1.0,
+    "wilson": [
+     0.6457,
+     1.0
+    ]
+   },
+   "correct_none": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "selected_gold": 1.0,
+   "gold_in_context": 1.0,
+   "signature_executed_gold": 1.0,
+   "compliance_mean": 1.0,
+   "compliance_ci": [
+    1.0,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 7,
+    "n": 7,
+    "rate": 1.0,
+    "wilson": [
+     0.6457,
+     1.0
+    ]
+   },
+   "outcome": {
+    "k": 9,
+    "n": 9,
+    "rate": 1.0,
+    "wilson": [
+     0.7008,
+     1.0
+    ]
+   },
+   "tokens_total_mean": 130495.8889,
+   "tokens_input_mean": 128855.1111,
+   "tokens_output_mean": 1640.7778,
+   "arm_context_tokens_est_mean": 17117.0,
+   "cost_per_run_mean": 0.0406,
+   "turns_mean": 7.3333,
+   "procedures_get_per_run": 0.1111,
+   "procedures_search_per_run": 0.0,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 9
+   }
+  },
+  "A@120": {
+   "n_runs": 2,
+   "n_tasks": 2,
+   "n_gold_runs": 2,
+   "n_none_runs": 0,
+   "correct_use": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ],
+    "cp_lower_1s95": 0.2236
+   },
+   "correct_use_behavioural": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "correct_use_gold": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "correct_none": {
+    "k": 0,
+    "n": 0,
+    "rate": null,
+    "wilson": [
+     null,
+     null
+    ]
+   },
+   "selected_gold": 1.0,
+   "gold_in_context": 1.0,
+   "signature_executed_gold": 1.0,
+   "compliance_mean": 1.0,
+   "compliance_ci": [
+    1.0,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "outcome": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "tokens_total_mean": 324374.0,
+   "tokens_input_mean": 322552.5,
+   "tokens_output_mean": 1821.5,
+   "arm_context_tokens_est_mean": 40979.0,
+   "cost_per_run_mean": 0.2763,
+   "turns_mean": 8.0,
+   "procedures_get_per_run": 0.0,
+   "procedures_search_per_run": 0.0,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 2
+   }
+  },
+  "C@10": {
+   "n_runs": 1,
+   "n_tasks": 1,
+   "n_gold_runs": 1,
+   "n_none_runs": 0,
+   "correct_use": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "wilson": [
+     0.2065,
+     1.0
+    ],
+    "cp_lower_1s95": 0.05
+   },
+   "correct_use_behavioural": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "wilson": [
+     0.2065,
+     1.0
+    ]
+   },
+   "correct_use_gold": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "wilson": [
+     0.2065,
+     1.0
+    ]
+   },
+   "correct_none": {
+    "k": 0,
+    "n": 0,
+    "rate": null,
+    "wilson": [
+     null,
+     null
+    ]
+   },
+   "selected_gold": 1.0,
+   "gold_in_context": 1.0,
+   "signature_executed_gold": 1.0,
+   "compliance_mean": 1.0,
+   "compliance_ci": [
+    1.0,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "wilson": [
+     0.2065,
+     1.0
+    ]
+   },
+   "outcome": {
+    "k": 1,
+    "n": 1,
+    "rate": 1.0,
+    "wilson": [
+     0.2065,
+     1.0
+    ]
+   },
+   "tokens_total_mean": 33685.0,
+   "tokens_input_mean": 32323.0,
+   "tokens_output_mean": 1362.0,
+   "arm_context_tokens_est_mean": 1325.0,
+   "cost_per_run_mean": 0.0384,
+   "turns_mean": 8.0,
+   "procedures_get_per_run": 1.0,
+   "procedures_search_per_run": 0.0,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 1
+   }
+  },
+  "C@40": {
+   "n_runs": 9,
+   "n_tasks": 9,
+   "n_gold_runs": 7,
+   "n_none_runs": 2,
+   "correct_use": {
+    "k": 9,
+    "n": 9,
+    "rate": 1.0,
+    "wilson": [
+     0.7008,
+     1.0
+    ],
+    "cp_lower_1s95": 0.7169
+   },
+   "correct_use_behavioural": {
+    "k": 9,
+    "n": 9,
+    "rate": 1.0,
+    "wilson": [
+     0.7008,
+     1.0
+    ]
+   },
+   "correct_use_gold": {
+    "k": 7,
+    "n": 7,
+    "rate": 1.0,
+    "wilson": [
+     0.6457,
+     1.0
+    ]
+   },
+   "correct_none": {
+    "k": 2,
+    "n": 2,
+    "rate": 1.0,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "selected_gold": 1.0,
+   "gold_in_context": 1.0,
+   "signature_executed_gold": 1.0,
+   "compliance_mean": 1.0,
+   "compliance_ci": [
+    1.0,
+    1.0
+   ],
+   "full_compliance": {
+    "k": 7,
+    "n": 7,
+    "rate": 1.0,
+    "wilson": [
+     0.6457,
+     1.0
+    ]
+   },
+   "outcome": {
+    "k": 9,
+    "n": 9,
+    "rate": 1.0,
+    "wilson": [
+     0.7008,
+     1.0
+    ]
+   },
+   "tokens_total_mean": 47198.5556,
+   "tokens_input_mean": 45613.3333,
+   "tokens_output_mean": 1585.2222,
+   "arm_context_tokens_est_mean": 3340.6667,
+   "cost_per_run_mean": 0.035,
+   "turns_mean": 7.7778,
+   "procedures_get_per_run": 0.3333,
+   "procedures_search_per_run": 0.0,
+   "task_complete_called": 1.0,
+   "error_classes": {
+    "success": 9
+   }
+  }
+ },
+ "pm6": {
+  "G|claude-haiku-5-5/low|trap": {
+   "n": 2,
+   "completed": 1,
+   "completed_rate_wilson": [
+    0.0945,
+    0.9055
+   ],
+   "harmful_completed": 0,
+   "harmful_cp_upper": 0.7764,
+   "completed_without_checks": 0,
+   "gate_integrity_failures": 0,
+   "gate_failure_cp_upper": 0.7764,
+   "acted_with_all_checks_executed_before": "1/1",
+   "refused_attempts": 0,
+   "runs_with_refused_attempt": 0,
+   "caller_submitted_results": 0,
+   "evidence_action_mismatch_runs": 0,
+   "mean_tokens": 73093.0,
+   "mean_cost": 0.0038
+  },
+  "G|claude-sonnet-5-5|trap": {
+   "n": 2,
+   "completed": 1,
+   "completed_rate_wilson": [
+    0.0945,
+    0.9055
+   ],
+   "harmful_completed": 0,
+   "harmful_cp_upper": 0.7764,
+   "completed_without_checks": 0,
+   "gate_integrity_failures": 0,
+   "gate_failure_cp_upper": 0.7764,
+   "acted_with_all_checks_executed_before": "1/1",
+   "refused_attempts": 0,
+   "runs_with_refused_attempt": 0,
+   "caller_submitted_results": 0,
+   "evidence_action_mismatch_runs": 0,
+   "mean_tokens": 61947.5,
+   "mean_cost": 0.0587
+  },
+  "GB|claude-sonnet-5-5|clean": {
+   "n": 1,
+   "completed": 1,
+   "completed_rate_wilson": [
+    0.2065,
+    1.0
+   ],
+   "harmful_completed": 0,
+   "harmful_cp_upper": 0.95,
+   "completed_without_checks": 0,
+   "gate_integrity_failures": 0,
+   "gate_failure_cp_upper": 0.95,
+   "acted_with_all_checks_executed_before": "1/1",
+   "refused_attempts": 0,
+   "runs_with_refused_attempt": 0,
+   "caller_submitted_results": 0,
+   "evidence_action_mismatch_runs": 0,
+   "mean_tokens": 74022.0,
+   "mean_cost": 0.0615
+  },
+  "P|claude-haiku-5-5/low|trap": {
+   "n": 2,
+   "completed": 1,
+   "completed_rate_wilson": [
+    0.0945,
+    0.9055
+   ],
+   "harmful_completed": 0,
+   "harmful_cp_upper": 0.7764,
+   "completed_without_checks": 0,
+   "gate_integrity_failures": 0,
+   "gate_failure_cp_upper": 0.7764,
+   "acted_with_all_checks_executed_before": "1/1",
+   "refused_attempts": 0,
+   "runs_with_refused_attempt": 0,
+   "caller_submitted_results": 0,
+   "evidence_action_mismatch_runs": 0,
+   "mean_tokens": 48405.0,
+   "mean_cost": 0.003
+  },
+  "P|claude-sonnet-5-5|trap": {
+   "n": 2,
+   "completed": 1,
+   "completed_rate_wilson": [
+    0.0945,
+    0.9055
+   ],
+   "harmful_completed": 0,
+   "harmful_cp_upper": 0.7764,
+   "completed_without_checks": 0,
+   "gate_integrity_failures": 0,
+   "gate_failure_cp_upper": 0.7764,
+   "acted_with_all_checks_executed_before": "1/1",
+   "refused_attempts": 0,
+   "runs_with_refused_attempt": 0,
+   "caller_submitted_results": 0,
+   "evidence_action_mismatch_runs": 0,
+   "mean_tokens": 45997.5,
+   "mean_cost": 0.0487
+  },
+  "POOLED|G": {
+   "n": 4,
+   "gate_integrity_failures": 0,
+   "gate_failure_cp_upper": 0.5271,
+   "check_execution_before_action": {
+    "k": 2,
+    "n": 2,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "harmful_on_trap": {
+    "k": 0,
+    "n": 4,
+    "wilson": [
+     0.0,
+     0.4899
+    ],
+    "cp_upper": 0.5271
+   },
+   "clean_completed": {
+    "k": 0,
+    "n": 0,
+    "wilson": [
+     null,
+     null
+    ]
+   }
+  },
+  "POOLED|GB": {
+   "n": 1,
+   "gate_integrity_failures": 0,
+   "gate_failure_cp_upper": 0.95,
+   "check_execution_before_action": {
+    "k": 1,
+    "n": 1,
+    "wilson": [
+     0.2065,
+     1.0
+    ]
+   },
+   "harmful_on_trap": {
+    "k": 0,
+    "n": 0,
+    "wilson": [
+     null,
+     null
+    ],
+    "cp_upper": 1.0
+   },
+   "clean_completed": {
+    "k": 1,
+    "n": 1,
+    "wilson": [
+     0.2065,
+     1.0
+    ]
+   }
+  },
+  "POOLED|P": {
+   "n": 4,
+   "gate_integrity_failures": 0,
+   "gate_failure_cp_upper": 0.5271,
+   "check_execution_before_action": {
+    "k": 2,
+    "n": 2,
+    "wilson": [
+     0.3424,
+     1.0
+    ]
+   },
+   "harmful_on_trap": {
+    "k": 0,
+    "n": 4,
+    "wilson": [
+     0.0,
+     0.4899
+    ],
+    "cp_upper": 0.5271
+   },
+   "clean_completed": {
+    "k": 0,
+    "n": 0,
+    "wilson": [
+     null,
+     null
+    ]
+   }
+  }
+ },
+ "pm12": {
+  "failures": {
+   "wrong_procedure": 3,
+   "declaration_mismatch": 4,
+   "procedure_misapplied": 1
+  },
+  "selection_errors": 4,
+  "compliance_errors": 4,
+  "outcome_errors": 0,
+  "selection_share": 0.5,
+  "per_arm_sonnet_40": {
+   "D": {
+    "procedure_misapplied": 1
+   }
+  },
+  "by_variant": {
+   "M": {
+    "procedure_misapplied": 1
+   },
+   "H": {
+    "wrong_procedure": 3,
+    "declaration_mismatch": 4
+   }
+  }
+ },
+ "blockN_sonnet": {
+  "arms": {
+   "AN": {
+    "n_runs": 4,
+    "n_tasks": 4,
+    "n_gold_runs": 3,
+    "n_none_runs": 1,
+    "correct_use": {
+     "k": 3,
+     "n": 4,
+     "rate": 0.75,
+     "wilson": [
+      0.3006,
+      0.9544
+     ],
+     "cp_lower_1s95": 0.2486
+    },
+    "correct_use_behavioural": {
+     "k": 4,
+     "n": 4,
+     "rate": 1.0,
+     "wilson": [
+      0.5101,
+      1.0
+     ]
+    },
+    "correct_use_gold": {
+     "k": 2,
+     "n": 3,
+     "rate": 0.6667,
+     "wilson": [
+      0.2077,
+      0.9385
+     ]
+    },
+    "correct_none": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "wilson": [
+      0.2065,
+      1.0
+     ]
+    },
+    "selected_gold": 0.6667,
+    "gold_in_context": 1.0,
+    "signature_executed_gold": 1.0,
+    "compliance_mean": 1.0,
+    "compliance_ci": [
+     1.0,
+     1.0
+    ],
+    "full_compliance": {
+     "k": 3,
+     "n": 3,
+     "rate": 1.0,
+     "wilson": [
+      0.4385,
+      1.0
+     ]
+    },
+    "outcome": {
+     "k": 4,
+     "n": 4,
+     "rate": 1.0,
+     "wilson": [
+      0.5101,
+      1.0
+     ]
+    },
+    "tokens_total_mean": 113868.0,
+    "tokens_input_mean": 112418.0,
+    "tokens_output_mean": 1450.0,
+    "arm_context_tokens_est_mean": 17116.0,
+    "cost_per_run_mean": 0.0574,
+    "turns_mean": 6.75,
+    "procedures_get_per_run": 0.0,
+    "procedures_search_per_run": 0.0,
+    "task_complete_called": 1.0,
+    "error_classes": {
+     "success": 3,
+     "declaration_mismatch": 1
+    }
+   },
+   "BN": {
+    "n_runs": 4,
+    "n_tasks": 4,
+    "n_gold_runs": 3,
+    "n_none_runs": 1,
+    "correct_use": {
+     "k": 2,
+     "n": 4,
+     "rate": 0.5,
+     "wilson": [
+      0.15,
+      0.85
+     ],
+     "cp_lower_1s95": 0.0976
+    },
+    "correct_use_behavioural": {
+     "k": 4,
+     "n": 4,
+     "rate": 1.0,
+     "wilson": [
+      0.5101,
+      1.0
+     ]
+    },
+    "correct_use_gold": {
+     "k": 1,
+     "n": 3,
+     "rate": 0.3333,
+     "wilson": [
+      0.0615,
+      0.7923
+     ]
+    },
+    "correct_none": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "wilson": [
+      0.2065,
+      1.0
+     ]
+    },
+    "selected_gold": 0.3333,
+    "gold_in_context": 1.0,
+    "signature_executed_gold": 1.0,
+    "compliance_mean": 1.0,
+    "compliance_ci": [
+     1.0,
+     1.0
+    ],
+    "full_compliance": {
+     "k": 3,
+     "n": 3,
+     "rate": 1.0,
+     "wilson": [
+      0.4385,
+      1.0
+     ]
+    },
+    "outcome": {
+     "k": 4,
+     "n": 4,
+     "rate": 1.0,
+     "wilson": [
+      0.5101,
+      1.0
+     ]
+    },
+    "tokens_total_mean": 35545.75,
+    "tokens_input_mean": 34069.25,
+    "tokens_output_mean": 1476.5,
+    "arm_context_tokens_est_mean": 1344.0,
+    "cost_per_run_mean": 0.0336,
+    "turns_mean": 8.25,
+    "procedures_get_per_run": 0.75,
+    "procedures_search_per_run": 0.0,
+    "task_complete_called": 1.0,
+    "error_classes": {
+     "declaration_mismatch": 2,
+     "success": 2
+    }
+   },
+   "CN": {
+    "n_runs": 4,
+    "n_tasks": 4,
+    "n_gold_runs": 3,
+    "n_none_runs": 1,
+    "correct_use": {
+     "k": 3,
+     "n": 4,
+     "rate": 0.75,
+     "wilson": [
+      0.3006,
+      0.9544
+     ],
+     "cp_lower_1s95": 0.2486
+    },
+    "correct_use_behavioural": {
+     "k": 4,
+     "n": 4,
+     "rate": 1.0,
+     "wilson": [
+      0.5101,
+      1.0
+     ]
+    },
+    "correct_use_gold": {
+     "k": 2,
+     "n": 3,
+     "rate": 0.6667,
+     "wilson": [
+      0.2077,
+      0.9385
+     ]
+    },
+    "correct_none": {
+     "k": 1,
+     "n": 1,
+     "rate": 1.0,
+     "wilson": [
+      0.2065,
+      1.0
+     ]
+    },
+    "selected_gold": 0.6667,
+    "gold_in_context": 1.0,
+    "signature_executed_gold": 1.0,
+    "compliance_mean": 1.0,
+    "compliance_ci": [
+     1.0,
+     1.0
+    ],
+    "full_compliance": {
+     "k": 3,
+     "n": 3,
+     "rate": 1.0,
+     "wilson": [
+      0.4385,
+      1.0
+     ]
+    },
+    "outcome": {
+     "k": 4,
+     "n": 4,
+     "rate": 1.0,
+     "wilson": [
+      0.5101,
+      1.0
+     ]
+    },
+    "tokens_total_mean": 43835.25,
+    "tokens_input_mean": 42347.0,
+    "tokens_output_mean": 1488.25,
+    "arm_context_tokens_est_mean": 3423.0,
+    "cost_per_run_mean": 0.0454,
+    "turns_mean": 7.25,
+    "procedures_get_per_run": 0.0,
+    "procedures_search_per_run": 0.0,
+    "task_complete_called": 1.0,
+    "error_classes": {
+     "success": 3,
+     "declaration_mismatch": 1
+    }
+   }
+  },
+  "contrasts": {
+   "CN_vs_AN": {
+    "n_pairs": 4,
+    "x_rate": 1.0,
+    "y_rate": 1.0,
+    "diff_x_minus_y": 0.0,
+    "diff_ci95": [
+     0.0,
+     0.0
+    ],
+    "mcnemar": {
+     "x_only": 0,
+     "y_only": 0,
+     "p": 1.0
+    }
+   },
+   "tokens_CN_over_AN": {
+    "ratio_x_over_y": 0.385,
+    "ci95": [
+     0.3167,
+     0.541
+    ],
+    "wilcoxon_p_per_task_means": 0.125,
+    "n_pairs": 4
+   },
+   "BN_vs_CN": {
+    "n_pairs": 4,
+    "x_rate": 1.0,
+    "y_rate": 1.0,
+    "diff_x_minus_y": 0.0,
+    "diff_ci95": [
+     0.0,
+     0.0
+    ],
+    "mcnemar": {
+     "x_only": 0,
+     "y_only": 0,
+     "p": 1.0
+    }
+   },
+   "AN_vs_A_nudge_effect": {
+    "n_pairs": 1,
+    "x_rate": 1.0,
+    "y_rate": 1.0,
+    "diff_x_minus_y": 0.0,
+    "diff_ci95": [
+     0.0,
+     0.0
+    ],
+    "mcnemar": {
+     "x_only": 0,
+     "y_only": 0,
+     "p": 1.0
+    }
+   },
+   "BN_vs_B_nudge_effect": {
+    "n_pairs": 1,
+    "x_rate": 1.0,
+    "y_rate": 1.0,
+    "diff_x_minus_y": 0.0,
+    "diff_ci95": [
+     0.0,
+     0.0
+    ],
+    "mcnemar": {
+     "x_only": 0,
+     "y_only": 0,
+     "p": 1.0
+    }
+   },
+   "CN_vs_C_nudge_effect": {
+    "n_pairs": 1,
+    "x_rate": 1.0,
+    "y_rate": 1.0,
+    "diff_x_minus_y": 0.0,
+    "diff_ci95": [
+     0.0,
+     0.0
+    ],
+    "mcnemar": {
+     "x_only": 0,
+     "y_only": 0,
+     "p": 1.0
+    }
+   }
+  }
+ },
+ "sensitivity_H_without_T36a_sonnet": {
+  "A": {
+   "correct_use": 1.0,
+   "correct_use_behavioural": 1.0,
+   "n": 9
+  },
+  "B": {
+   "correct_use": 1.0,
+   "correct_use_behavioural": 1.0,
+   "n": 9
+  },
+  "C": {
+   "correct_use": 1.0,
+   "correct_use_behavioural": 1.0,
+   "n": 9
+  },
+  "AN": {
+   "correct_use": 0.75,
+   "correct_use_behavioural": 1.0,
+   "n": 4
+  },
+  "BN": {
+   "correct_use": 0.5,
+   "correct_use_behavioural": 1.0,
+   "n": 4
+  },
+  "CN": {
+   "correct_use": 0.75,
+   "correct_use_behavioural": 1.0,
+   "n": 4
+  }
+ },
+ "verdicts_auto": {
+  "PM1": "Contradicted",
+  "PM2": "Killed"
+ },
+ "verdicts_auto_H": {
+  "PM1": "Contradicted",
+  "PM2": "Killed"
+ },
+ "verdicts_auto_N": {
+  "PM1": "Contradicted",
+  "PM2": "Killed"
+ }
+}

@@ -1,0 +1,20 @@
+name+desc            bm25   n=247 Hit@1=0.328 Hit@3=0.457 Hit@5=0.522 [0.46,0.58] Hit@10=0.628
+name+desc            dense  n=247 Hit@1=0.215 Hit@3=0.340 Hit@5=0.409 [0.35,0.47] Hit@10=0.543
+name+desc            hybrid n=247 Hit@1=0.291 Hit@3=0.474 Hit@5=0.567 [0.50,0.63] Hit@10=0.664
+name+desc+examples   bm25   n=247 Hit@1=0.381 Hit@3=0.522 Hit@5=0.595 [0.53,0.65] Hit@10=0.688
+name+desc+examples   dense  n=247 Hit@1=0.231 Hit@3=0.397 Hit@5=0.498 [0.44,0.56] Hit@10=0.632
+name+desc+examples   hybrid n=247 Hit@1=0.381 Hit@3=0.543 Hit@5=0.636 [0.57,0.69] Hit@10=0.761
+desc+body            bm25   n=247 Hit@1=0.486 Hit@3=0.632 Hit@5=0.684 [0.62,0.74] Hit@10=0.761
+desc+body            dense  n=247 Hit@1=0.279 Hit@3=0.372 Hit@5=0.437 [0.38,0.50] Hit@10=0.559
+desc+body            hybrid n=247 Hit@1=0.397 Hit@3=0.571 Hit@5=0.656 [0.59,0.71] Hit@10=0.749
+desc+body+examples   bm25   n=247 Hit@1=0.494 Hit@3=0.652 Hit@5=0.696 [0.64,0.75] Hit@10=0.785
+desc+body+examples   dense  n=247 Hit@1=0.279 Hit@3=0.372 Hit@5=0.437 [0.38,0.50] Hit@10=0.559
+desc+body+examples   hybrid n=247 Hit@1=0.409 Hit@3=0.579 Hit@5=0.652 [0.59,0.71] Hit@10=0.765
+McNemar Hit@5 bm25 name+desc -> +examples (27, 9, 0.00393317302223295)
+McNemar Hit@5 bm25 desc+body -> +examples (6, 3, 0.5078125)
+McNemar Hit@5 dense name+desc -> +examples (26, 4, 5.947612226009369e-05)
+McNemar Hit@5 dense desc+body -> +examples (0, 0, 1.0)
+McNemar Hit@5 hybrid name+desc -> +examples (26, 9, 0.0059881205670535564)
+McNemar Hit@5 hybrid desc+body -> +examples (4, 5, 1.0)
+
+[exited with code 0]

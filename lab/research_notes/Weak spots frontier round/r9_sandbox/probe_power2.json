@@ -1,0 +1,127 @@
+[
+ {
+  "p0": 0.005,
+  "p1": 0.03,
+  "delta": 0.02,
+  "W": 300,
+  "cusum_h": 6.0,
+  "CUSUM-20k": {
+   "false_alarm_share_5000_probes": 0.093,
+   "median_delay": 150.5,
+   "p90_delay": 353.1,
+   "missed_within_4000": 0.0
+  },
+  "LCB-W": {
+   "false_alarm_share_5000_probes": 0.0,
+   "median_delay": 413.0,
+   "p90_delay": 1071.8000000000002,
+   "missed_within_4000": 0.0
+  },
+  "CUM-UCB": {
+   "false_alarm_share_5000_probes": 0.663,
+   "median_delay": 0.0,
+   "p90_delay": 198.0,
+   "missed_within_4000": 0.0
+  }
+ },
+ {
+  "p0": 0.005,
+  "p1": 0.05,
+  "delta": 0.02,
+  "W": 300,
+  "cusum_h": 6.5,
+  "CUSUM-20k": {
+   "false_alarm_share_5000_probes": 0.127,
+   "median_delay": 72.0,
+   "p90_delay": 155.5000000000001,
+   "missed_within_4000": 0.0
+  },
+  "LCB-W": {
+   "false_alarm_share_5000_probes": 0.0,
+   "median_delay": 209.0,
+   "p90_delay": 300.5000000000001,
+   "missed_within_4000": 0.0
+  },
+  "CUM-UCB": {
+   "false_alarm_share_5000_probes": 0.683,
+   "median_delay": 0.0,
+   "p90_delay": 103.00000000000114,
+   "missed_within_4000": 0.0
+  }
+ },
+ {
+  "p0": 0.005,
+  "p1": 0.1,
+  "delta": 0.02,
+  "W": 300,
+  "cusum_h": 7.0,
+  "CUSUM-20k": {
+   "false_alarm_share_5000_probes": 0.133,
+   "median_delay": 29.0,
+   "p90_delay": 64.0,
+   "missed_within_4000": 0.0
+  },
+  "LCB-W": {
+   "false_alarm_share_5000_probes": 0.0,
+   "median_delay": 93.0,
+   "p90_delay": 134.0,
+   "missed_within_4000": 0.0
+  },
+  "CUM-UCB": {
+   "false_alarm_share_5000_probes": 0.687,
+   "median_delay": 0.0,
+   "p90_delay": 48.0,
+   "missed_within_4000": 0.0
+  }
+ },
+ {
+  "p0": 0.01,
+  "p1": 0.05,
+  "delta": 0.03,
+  "W": 200,
+  "cusum_h": 6.0,
+  "CUSUM-20k": {
+   "false_alarm_share_5000_probes": 0.197,
+   "median_delay": 104.0,
+   "p90_delay": 222.10000000000002,
+   "missed_within_4000": 0.0
+  },
+  "LCB-W": {
+   "false_alarm_share_5000_probes": 0.007,
+   "median_delay": 213.0,
+   "p90_delay": 477.60000000000014,
+   "missed_within_4000": 0.0
+  },
+  "CUM-UCB": {
+   "false_alarm_share_5000_probes": 0.833,
+   "median_delay": 0.0,
+   "p90_delay": 148.0,
+   "missed_within_4000": 0.0
+  }
+ },
+ {
+  "p0": 0.002,
+  "p1": 0.02,
+  "delta": 0.01,
+  "W": 600,
+  "cusum_h": 5.5,
+  "CUSUM-20k": {
+   "false_alarm_share_5000_probes": 0.12,
+   "median_delay": 134.5,
+   "p90_delay": 341.4000000000001,
+   "missed_within_4000": 0.0
+  },
+  "LCB-W": {
+   "false_alarm_share_5000_probes": 0.0,
+   "median_delay": 508.5,
+   "p90_delay": 909.6000000000004,
+   "missed_within_4000": 0.0
+  },
+  "CUM-UCB": {
+   "false_alarm_share_5000_probes": 0.623,
+   "median_delay": 24.0,
+   "p90_delay": 98.0,
+   "missed_within_4000": 0.0
+  }
+ }
+]

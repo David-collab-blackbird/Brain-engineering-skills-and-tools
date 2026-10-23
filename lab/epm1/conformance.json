@@ -1,0 +1,164 @@
+{
+ "cases": {
+  "as-written/payment": {
+   "CT-23a no receipt refused": true,
+   "CT-23b expired receipt refused": true,
+   "CT-23c other principal's receipt refused": true,
+   "CT-23d other task's receipt refused": true,
+   "CT-23e legit receipt accepted once, reuse refused": true,
+   "CT-23f forged receipt refused": true,
+   "CT-24 'ok'/silence/bulk -> needs_human, no receipt": true,
+   "CT-25a version not in gate table refused": true,
+   "CT-25b tampered body refused": true,
+   "CT-26 caller 'passed' ignored, brain recomputes": true,
+   "CT-27 receipt for checked params refused for different params": false,
+   "CT-28 tap for another run -> needs_human": true,
+   "POS clean run -> receipt accepted": true,
+   "POS trap run -> no receipt": true
+  },
+  "as-written/external_send": {
+   "CT-23a no receipt refused": true,
+   "CT-23b expired receipt refused": true,
+   "CT-23c other principal's receipt refused": true,
+   "CT-23d other task's receipt refused": true,
+   "CT-23e legit receipt accepted once, reuse refused": true,
+   "CT-23f forged receipt refused": true,
+   "CT-24 'ok'/silence/bulk -> needs_human, no receipt": true,
+   "CT-25a version not in gate table refused": true,
+   "CT-25b tampered body refused": true,
+   "CT-26 caller 'passed' ignored, brain recomputes": true,
+   "CT-27 receipt for checked params refused for different params": false,
+   "CT-28 tap for another run -> needs_human": true,
+   "POS clean run -> receipt accepted": true,
+   "POS trap run -> no receipt": true
+  },
+  "as-written/deletion": {
+   "CT-23a no receipt refused": true,
+   "CT-23b expired receipt refused": true,
+   "CT-23c other principal's receipt refused": true,
+   "CT-23d other task's receipt refused": true,
+   "CT-23e legit receipt accepted once, reuse refused": true,
+   "CT-23f forged receipt refused": true,
+   "CT-24 'ok'/silence/bulk -> needs_human, no receipt": true,
+   "CT-25a version not in gate table refused": true,
+   "CT-25b tampered body refused": true,
+   "CT-26 caller 'passed' ignored, brain recomputes": true,
+   "CT-27 receipt for checked params refused for different params": false,
+   "CT-28 tap for another run -> needs_human": true,
+   "POS clean run -> receipt accepted": true,
+   "POS trap run -> no receipt": true
+  },
+  "bound/payment": {
+   "CT-23a no receipt refused": true,
+   "CT-23b expired receipt refused": true,
+   "CT-23c other principal's receipt refused": true,
+   "CT-23d other task's receipt refused": true,
+   "CT-23e legit receipt accepted once, reuse refused": true,
+   "CT-23f forged receipt refused": true,
+   "CT-24 'ok'/silence/bulk -> needs_human, no receipt": true,
+   "CT-25a version not in gate table refused": true,
+   "CT-25b tampered body refused": true,
+   "CT-26 caller 'passed' ignored, brain recomputes": true,
+   "CT-27 receipt for checked params refused for different params": true,
+   "CT-28 tap for another run -> needs_human": true,
+   "POS clean run -> receipt accepted": true,
+   "POS trap run -> no receipt": true
+  },
+  "bound/external_send": {
+   "CT-23a no receipt refused": true,
+   "CT-23b expired receipt refused": true,
+   "CT-23c other principal's receipt refused": true,
+   "CT-23d other task's receipt refused": true,
+   "CT-23e legit receipt accepted once, reuse refused": true,
+   "CT-23f forged receipt refused": true,
+   "CT-24 'ok'/silence/bulk -> needs_human, no receipt": true,
+   "CT-25a version not in gate table refused": true,
+   "CT-25b tampered body refused": true,
+   "CT-26 caller 'passed' ignored, brain recomputes": true,
+   "CT-27 receipt for checked params refused for different params": true,
+   "CT-28 tap for another run -> needs_human": true,
+   "POS clean run -> receipt accepted": true,
+   "POS trap run -> no receipt": true
+  },
+  "bound/deletion": {
+   "CT-23a no receipt refused": true,
+   "CT-23b expired receipt refused": true,
+   "CT-23c other principal's receipt refused": true,
+   "CT-23d other task's receipt refused": true,
+   "CT-23e legit receipt accepted once, reuse refused": true,
+   "CT-23f forged receipt refused": true,
+   "CT-24 'ok'/silence/bulk -> needs_human, no receipt": true,
+   "CT-25a version not in gate table refused": true,
+   "CT-25b tampered body refused": true,
+   "CT-26 caller 'passed' ignored, brain recomputes": true,
+   "CT-27 receipt for checked params refused for different params": true,
+   "CT-28 tap for another run -> needs_human": true,
+   "POS clean run -> receipt accepted": true,
+   "POS trap run -> no receipt": true
+  }
+ },
+ "mutants": {
+  "trust_caller": {
+   "caught": true,
+   "failing_cases": [
+    "payment:CT-26 caller 'passed' ignored, brain recomputes",
+    "external_send:CT-26 caller 'passed' ignored, brain recomputes",
+    "deletion:CT-26 caller 'passed' ignored, brain recomputes"
+   ]
+  },
+  "skip_expiry": {
+   "caught": true,
+   "failing_cases": [
+    "payment:CT-23b expired receipt refused",
+    "external_send:CT-23b expired receipt refused",
+    "deletion:CT-23b expired receipt refused"
+   ]
+  },
+  "allow_reuse": {
+   "caught": true,
+   "failing_cases": [
+    "payment:CT-23e legit receipt accepted once, reuse refused",
+    "external_send:CT-23e legit receipt accepted once, reuse refused",
+    "deletion:CT-23e legit receipt accepted once, reuse refused"
+   ]
+  },
+  "skip_task": {
+   "caught": true,
+   "failing_cases": [
+    "payment:CT-23d other task's receipt refused",
+    "external_send:CT-23d other task's receipt refused",
+    "deletion:CT-23d other task's receipt refused"
+   ]
+  },
+  "accept_any_tap": {
+   "caught": true,
+   "failing_cases": [
+    "payment:CT-28 tap for another run -> needs_human",
+    "external_send:CT-28 tap for another run -> needs_human",
+    "deletion:CT-28 tap for another run -> needs_human"
+   ]
+  },
+  "skip_table": {
+   "caught": true,
+   "failing_cases": [
+    "payment:CT-25a version not in gate table refused"
+   ]
+  },
+  "skip_sig": {
+   "caught": true,
+   "failing_cases": [
+    "payment:CT-25b tampered body refused",
+    "external_send:CT-25b tampered body refused",
+    "deletion:CT-25b tampered body refused"
+   ]
+  },
+  "skip_receipt_sig": {
+   "caught": true,
+   "failing_cases": [
+    "payment:CT-23f forged receipt refused",
+    "external_send:CT-23f forged receipt refused",
+    "deletion:CT-23f forged receipt refused"
+   ]
+  }
+ }
+}

@@ -1,0 +1,1937 @@
+{
+ "J1_test": {
+  "recs": [
+   {
+    "id": "J1-s2-00000",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00001",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00002",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00003",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00004",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00005",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00006",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00007",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00008",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00009",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00010",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00011",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00012",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00013",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.75,
+    "raw": " ANSWER: yes; CONFIDENCE: 75;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00014",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00015",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00016",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00017",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00018",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00019",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00020",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00021",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00022",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00023",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00024",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00025",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00026",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00027",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00028",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00029",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00030",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00031",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00032",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00033",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00034",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00035",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00036",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00037",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00038",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \nYES  \nThe extracted record \"7/47",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00039",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00040",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00041",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00042",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00043",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00044",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00045",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00046",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00047",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00048",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00049",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \nYES  \nThe extracted record \"74 Umber",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00050",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00051",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \nYES  \nThe extracted record \"67 Yarrow",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00052",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00053",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00054",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00055",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00056",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00057",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00058",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00059",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00060",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00061",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \nCONFIDENCE: 100",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00062",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00063",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00064",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00065",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00066",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00067",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00068",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00069",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00070",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00071",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00072",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00073",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00074",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00075",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00076",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00077",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00078",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J1-s2-00079",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   }
+  ],
+  "s_per_row": 8.822323751449584
+ },
+ "J2_test": {
+  "recs": [
+   {
+    "id": "J2-s2-00751",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00752",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \nCONFIDENCE: 100",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00753",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00754",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00755",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00756",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00757",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \nCONFIDENCE: 100",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00583",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00584",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00585",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00586",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00587",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00588",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00589",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \nCONFIDENCE: 100",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00590",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;  \nCONFIDENCE: 95  \nANSWER",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00591",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": "ANSWER: yes; CONFIDENCE: 100  \nANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00020",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00021",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00022",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00023",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00024",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00025",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00026",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;  \nCONFIDENCE: 95",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00027",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00028",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00029",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \nCONFIDENCE: 100",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00446",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00447",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00448",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00449",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00450",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00451",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00452",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00482",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00483",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00484",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00485",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00486",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": "ANSWER: yes; CONFIDENCE: 100  \nANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00487",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00488",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00727",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00728",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00729",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00730",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00731",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00732",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00733",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00734",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00364",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00365",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00366",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;  \nCONFIDENCE: 95",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00367",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00368",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00369",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: <yes>; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00370",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00371",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00372",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;  \nCONFIDENCE: 95",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00535",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;  \nCONFIDENCE: 95",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00536",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00537",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00538",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;  \nCONFIDENCE: 95",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00539",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00540",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00541",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;  \nCONFIDENCE: 95",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00542",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00543",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00418",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00419",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00420",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100  \n ANSWER: yes; CONFIDENCE: ",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00421",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00422",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00423",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00424",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00425",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00426",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00427",
+    "label": 0,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": " ANSWER: yes; CONFIDENCE: 95;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00772",
+    "label": 1,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: yes; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00773",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: YES; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00774",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: YES; CONFIDENCE: 100;",
+    "K": 2
+   },
+   {
+    "id": "J2-s2-00775",
+    "label": 0,
+    "pred": 1,
+    "conf": 1.0,
+    "raw": " ANSWER: YES; CONFIDENCE: 100;",
+    "K": 2
+   }
+  ],
+  "s_per_row": 8.78821567595005
+ },
+ "J3_test": {
+  "recs": [
+   {
+    "id": "J3t-s2-00310",
+    "label": 0,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00311",
+    "label": 1,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00010",
+    "label": 2,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95  \nANSWER: <advice>; CONFID",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00011",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00216",
+    "label": 1,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <lookup>; CONFIDENCE: 95  \nANSWER: <lookup>; CONFIDENCE:",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00217",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/construction>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00002",
+    "label": 2,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95  \nANSWER: <advice>; CONFID",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00003",
+    "label": 5,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00096",
+    "label": 3,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95  \nANSWER: <advice>; CONFID",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00097",
+    "label": 3,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/cafe>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00256",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <lookup>; CONFIDENCE: 95  \nANSWER: <lookup>; CONFIDENCE:",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00257",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00058",
+    "label": 2,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95  \nANSWER: <advice>; CONFID",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00059",
+    "label": 3,
+    "pred": 3,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/finance>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00220",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <history>; CONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00221",
+    "label": 4,
+    "pred": 4,
+    "conf": 0.95,
+    "raw": "ANSWER: <family>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00060",
+    "label": 2,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95  \nANSWER: <advice>; CONFID",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00061",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00024",
+    "label": 2,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <lookup>; CONFIDENCE: 95  \nANSWER: <history>; CONFIDENCE:",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00025",
+    "label": 2,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00276",
+    "label": 0,
+    "pred": null,
+    "conf": 1.0,
+    "raw": "ANSWER: <plan>; CONFIDENCE: 100",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00277",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00000",
+    "label": 2,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>  \nCONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00001",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00292",
+    "label": 0,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>  \nCONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00293",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00316",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <lookup>; CONFIDENCE: 95  \nANSWER: <lookup>; CONFIDENCE:",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00317",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00070",
+    "label": 2,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00071",
+    "label": 2,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/cafe>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00260",
+    "label": 0,
+    "pred": null,
+    "conf": 0.95,
+    "raw": "ANSWER: <latest progress numbers for Clara>; CONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00261",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00104",
+    "label": 3,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95  \nANSWER: <advice>; CONFID",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00105",
+    "label": 3,
+    "pred": 3,
+    "conf": 0.95,
+    "raw": "ANSWER: <finance>  \nCONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00368",
+    "label": 4,
+    "pred": 4,
+    "conf": 1.0,
+    "raw": "ANSWER: media; CONFIDENCE: 100",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00369",
+    "label": 1,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/cafe>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00208",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <history>; CONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00209",
+    "label": 4,
+    "pred": 3,
+    "conf": 0.95,
+    "raw": "ANSWER: <finance>  \nCONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00336",
+    "label": 4,
+    "pred": 4,
+    "conf": 1.0,
+    "raw": "ANSWER: <media>; CONFIDENCE: 100",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00337",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/construction>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00044",
+    "label": 2,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: lookup; CONFIDENCE: 95  \nANSWER: lookup; CONFIDENCE: 9",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00045",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00078",
+    "label": 2,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>  \nCONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00079",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00382",
+    "label": 4,
+    "pred": 0,
+    "conf": 1.0,
+    "raw": "ANSWER: <lookup>; CONFIDENCE: 100",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00383",
+    "label": 2,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/cafe> CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00114",
+    "label": 3,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00115",
+    "label": 3,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/construction>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00160",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <history>; CONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00161",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00068",
+    "label": 2,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <lookup>; CONFIDENCE: 95  \nANSWER: <history>; CONFIDENCE:",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00069",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>  \nCONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00234",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <history>; CONFIDENCE: 95  \nANSWER: <history>; CONFIDENCE:",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00235",
+    "label": 3,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00004",
+    "label": 2,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <lookup>; CONFIDENCE: 95  \nANSWER: <history>; CONFIDENCE:",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00005",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00224",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <history>; CONFIDENCE: 95  \nANSWER: <history>; CONFIDENCE:",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00225",
+    "label": 3,
+    "pred": 3,
+    "conf": 0.95,
+    "raw": "ANSWER: <finance>  \nCONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00018",
+    "label": 2,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <history>; CONFIDENCE: 95  \nANSWER: <advice>; CONFIDENCE",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00019",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00392",
+    "label": 4,
+    "pred": 4,
+    "conf": 1.0,
+    "raw": "ANSWER: <media>; CONFIDENCE: 100",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00393",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/construction>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00174",
+    "label": 1,
+    "pred": null,
+    "conf": 0.01,
+    "raw": "ANSWER: <60 Pelican's debt: first record versus today? thanks>; CONFIDENCE: 1",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00175",
+    "label": 3,
+    "pred": 3,
+    "conf": 0.95,
+    "raw": "ANSWER: <finance> (finance)  \nCONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00212",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <history>; CONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00213",
+    "label": 3,
+    "pred": 3,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/finance>  \nCONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00120",
+    "label": 3,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00121",
+    "label": 3,
+    "pred": 3,
+    "conf": 0.95,
+    "raw": "ANSWER: <finance>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00088",
+    "label": 3,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95  \nANSWER: <advice>; CONFID",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00089",
+    "label": 3,
+    "pred": 3,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/finance>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00254",
+    "label": 0,
+    "pred": null,
+    "conf": 1.0,
+    "raw": "ANSWER: <latest_numbers>; CONFIDENCE: 100",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00255",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00052",
+    "label": 2,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <advice>; CONFIDENCE: 95  \nANSWER: <advice>; CONFID",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00053",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/construction>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00062",
+    "label": 2,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <lookup>; CONFIDENCE: 95  \nANSWER: <lookup>; CONFIDENCE:",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00063",
+    "label": 4,
+    "pred": 2,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/cafe>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00206",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <history>; CONFIDENCE: 95  \nANSWER: <history>; CONFIDENCE:",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00207",
+    "label": 0,
+    "pred": 0,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/gym>; CONFIDENCE: 95",
+    "K": 7
+   },
+   {
+    "id": "J3t-s2-00394",
+    "label": 4,
+    "pred": 4,
+    "conf": 1.0,
+    "raw": "ANSWER: <media>; CONFIDENCE: 100",
+    "K": 5
+   },
+   {
+    "id": "J3a-s2-00395",
+    "label": 1,
+    "pred": 1,
+    "conf": 0.95,
+    "raw": "ANSWER: <business/construction>; CONFIDENCE: 95",
+    "K": 7
+   }
+  ],
+  "s_per_row": 9.560480034351349
+ }
+}

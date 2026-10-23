@@ -1,0 +1,12 @@
+{
+ "probes": 46,
+ "leaks": [],
+ "errors": 0,
+ "by_identity": {
+  "grant_default_only:override_named": "permission_denied",
+  "grant_default_only": {
+   "probes": 46,
+   "leaking_rows": 0
+  }
+ }
+}

@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit|Bash",
+        "hooks": [{ "type": "command", "command": "python3 /opt/e15/hooks/protect_tests.py" }]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "compact|resume",
+        "hooks": [{ "type": "command", "command": "python3 -c \"import json;s=json.load(open('build/state.json'));print('RESUME: package',s.get('package'),'status',s.get('status'),'next',s.get('next'),'last_commit',s.get('last_commit'),'- re-read the brief in packages/ and build/state.json; trust them and git log over memory.')\"" }]
+      }
+    ]
+  }
+}

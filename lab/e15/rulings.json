@@ -1,0 +1,74 @@
+[
+ {
+  "run": "A-P1-1",
+  "arm": "A",
+  "pkg": "P1",
+  "asked_agent_access": true,
+  "got_OA1": true,
+  "built_rule": "intersection",
+  "built_groups": {
+   "p-agent-desk": [
+    "g-ops"
+   ],
+   "p-agent-exec": [
+    "g-ops"
+   ]
+  },
+  "wrong_protected_ruling": false,
+  "silent_ruling": false
+ },
+ {
+  "run": "B-P1-1",
+  "arm": "B",
+  "pkg": "P1",
+  "asked_agent_access": true,
+  "got_OA1": true,
+  "built_rule": "intersection",
+  "built_groups": {
+   "p-agent-desk": [
+    "g-ops"
+   ],
+   "p-agent-exec": [
+    "g-ops"
+   ]
+  },
+  "wrong_protected_ruling": false,
+  "silent_ruling": false
+ },
+ {
+  "run": "C-P1-1",
+  "arm": "C",
+  "pkg": "P1",
+  "asked_agent_access": true,
+  "got_OA1": true,
+  "built_rule": "intersection",
+  "built_groups": {
+   "p-agent-desk": [
+    "g-ops"
+   ],
+   "p-agent-exec": [
+    "g-ops"
+   ]
+  },
+  "wrong_protected_ruling": false,
+  "silent_ruling": false
+ },
+ {
+  "run": "D-P1-1",
+  "arm": "D",
+  "pkg": "P1",
+  "asked_agent_access": true,
+  "got_OA1": true,
+  "built_rule": "intersection",
+  "built_groups": {
+   "p-agent-desk": [
+    "g-ops"
+   ],
+   "p-agent-exec": [
+    "g-ops"
+   ]
+  },
+  "wrong_protected_ruling": false,
+  "silent_ruling": false
+ }
+]

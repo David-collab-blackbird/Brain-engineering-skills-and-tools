@@ -1,0 +1,1590 @@
+{
+ "tenants": [
+  "t-north",
+  "t-elm"
+ ],
+ "principals": [
+  {
+   "id": "p-owner",
+   "tenant": "t-north",
+   "kind": "person",
+   "status": "active",
+   "acts_for": null,
+   "display_name": "Business owner"
+  },
+  {
+   "id": "p-staff1",
+   "tenant": "t-north",
+   "kind": "person",
+   "status": "active",
+   "acts_for": null,
+   "display_name": "Front desk"
+  },
+  {
+   "id": "p-coach",
+   "tenant": "t-north",
+   "kind": "person",
+   "status": "active",
+   "acts_for": null,
+   "display_name": "Coach"
+  },
+  {
+   "id": "p-member7",
+   "tenant": "t-north",
+   "kind": "person",
+   "status": "active",
+   "acts_for": null,
+   "display_name": "Member seven"
+  },
+  {
+   "id": "p-former",
+   "tenant": "t-north",
+   "kind": "person",
+   "status": "revoked",
+   "acts_for": null,
+   "display_name": "Former manager"
+  },
+  {
+   "id": "p-agent-desk",
+   "tenant": "t-north",
+   "kind": "agent",
+   "status": "active",
+   "acts_for": "p-staff1",
+   "display_name": "Desk agent"
+  },
+  {
+   "id": "p-agent-exec",
+   "tenant": "t-north",
+   "kind": "agent",
+   "status": "active",
+   "acts_for": "p-owner",
+   "display_name": "Owner's agent"
+  },
+  {
+   "id": "p-elm1",
+   "tenant": "t-elm",
+   "kind": "person",
+   "status": "active",
+   "acts_for": null,
+   "display_name": "Household one"
+  },
+  {
+   "id": "p-elm2",
+   "tenant": "t-elm",
+   "kind": "person",
+   "status": "active",
+   "acts_for": null,
+   "display_name": "Household two"
+  }
+ ],
+ "groups": [
+  {
+   "id": "g-ops",
+   "tenant": "t-north",
+   "label": "operations"
+  },
+  {
+   "id": "g-finance",
+   "tenant": "t-north",
+   "label": "finance"
+  },
+  {
+   "id": "g-members",
+   "tenant": "t-north",
+   "label": "members-general"
+  },
+  {
+   "id": "g-health-m7",
+   "tenant": "t-north",
+   "label": "member-health:m7"
+  },
+  {
+   "id": "g-elm-family",
+   "tenant": "t-elm",
+   "label": "household"
+  },
+  {
+   "id": "g-elm-vault-2",
+   "tenant": "t-elm",
+   "label": "private-vault:elm2"
+  }
+ ],
+ "memberships": [
+  {
+   "principal": "p-owner",
+   "group": "g-ops"
+  },
+  {
+   "principal": "p-owner",
+   "group": "g-finance"
+  },
+  {
+   "principal": "p-owner",
+   "group": "g-members"
+  },
+  {
+   "principal": "p-staff1",
+   "group": "g-ops"
+  },
+  {
+   "principal": "p-staff1",
+   "group": "g-members"
+  },
+  {
+   "principal": "p-staff1",
+   "group": "g-ghost"
+  },
+  {
+   "principal": "p-coach",
+   "group": "g-members"
+  },
+  {
+   "principal": "p-coach",
+   "group": "g-health-m7"
+  },
+  {
+   "principal": "p-member7",
+   "group": "g-members"
+  },
+  {
+   "principal": "p-member7",
+   "group": "g-health-m7"
+  },
+  {
+   "principal": "p-former",
+   "group": "g-ops"
+  },
+  {
+   "principal": "p-former",
+   "group": "g-finance"
+  },
+  {
+   "principal": "p-agent-desk",
+   "group": "g-ops"
+  },
+  {
+   "principal": "p-agent-desk",
+   "group": "g-finance"
+  },
+  {
+   "principal": "p-agent-exec",
+   "group": "g-ops"
+  },
+  {
+   "principal": "p-elm1",
+   "group": "g-elm-family"
+  },
+  {
+   "principal": "p-elm1",
+   "group": "g-ops"
+  },
+  {
+   "principal": "p-elm2",
+   "group": "g-elm-family"
+  },
+  {
+   "principal": "p-elm2",
+   "group": "g-elm-vault-2"
+  }
+ ],
+ "entities": [
+  {
+   "id": "e-zephyr",
+   "tenant": "t-north",
+   "name": "Zephyr Linen",
+   "aliases": [
+    "Zephyr",
+    "the towel people"
+   ]
+  },
+  {
+   "id": "e-zephyrco",
+   "tenant": "t-north",
+   "name": "Zephyr Linen Company Holdings",
+   "aliases": []
+  },
+  {
+   "id": "e-quill",
+   "tenant": "t-north",
+   "name": "Quillfield Plumbing",
+   "aliases": [
+    "Quillfield",
+    "the plumber"
+   ]
+  },
+  {
+   "id": "e-arbor",
+   "tenant": "t-north",
+   "name": "Arbor Electrical",
+   "aliases": [
+    "Arbor"
+   ]
+  },
+  {
+   "id": "e-pool",
+   "tenant": "t-north",
+   "name": "Pool Plant",
+   "aliases": [
+    "pool pump room",
+    "plant room"
+   ]
+  },
+  {
+   "id": "e-rower4",
+   "tenant": "t-north",
+   "name": "Rower 4",
+   "aliases": [
+    "rowing machine 4"
+   ]
+  },
+  {
+   "id": "e-boiler",
+   "tenant": "t-north",
+   "name": "Main Boiler",
+   "aliases": [
+    "boiler"
+   ]
+  },
+  {
+   "id": "e-m7",
+   "tenant": "t-north",
+   "name": "Member Seven",
+   "aliases": [
+    "M7"
+   ]
+  },
+  {
+   "id": "e-coach",
+   "tenant": "t-north",
+   "name": "Head Coach",
+   "aliases": [
+    "coach"
+   ]
+  },
+  {
+   "id": "e-lease",
+   "tenant": "t-north",
+   "name": "Site Lease",
+   "aliases": [
+    "lease"
+   ]
+  },
+  {
+   "id": "e-cafe",
+   "tenant": "t-north",
+   "name": "Cafe",
+   "aliases": [
+    "coffee bar"
+   ]
+  },
+  {
+   "id": "e-elm-boiler",
+   "tenant": "t-elm",
+   "name": "Home Boiler",
+   "aliases": [
+    "boiler"
+   ]
+  },
+  {
+   "id": "e-elm-car",
+   "tenant": "t-elm",
+   "name": "Family Car",
+   "aliases": [
+    "car"
+   ]
+  },
+  {
+   "id": "e-elm-quill",
+   "tenant": "t-elm",
+   "name": "Quillfield Plumbing",
+   "aliases": [
+    "the plumber"
+   ]
+  }
+ ],
+ "facts": [
+  {
+   "id": 101,
+   "source_system": "xero",
+   "source_entity_id": "c-zep",
+   "attribute": "payment terms",
+   "entity_id": "e-zephyr",
+   "value": "30 days",
+   "valid_from": "2026-01-10",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": 102
+  },
+  {
+   "id": 102,
+   "source_system": "xero",
+   "source_entity_id": "c-zep",
+   "attribute": "payment terms",
+   "entity_id": "e-zephyr",
+   "value": "14 days",
+   "valid_from": "2026-06-01",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": null
+  },
+  {
+   "id": 103,
+   "source_system": "xero",
+   "source_entity_id": "c-zep",
+   "attribute": "towel rate",
+   "entity_id": "e-zephyr",
+   "value": "1.10 per towel",
+   "valid_from": "2026-02-01",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": 104
+  },
+  {
+   "id": 104,
+   "source_system": "xero",
+   "source_entity_id": "c-zep",
+   "attribute": "towel rate",
+   "entity_id": "e-zephyr",
+   "value": "1.25 per towel",
+   "valid_from": "2026-07-15",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": 105
+  },
+  {
+   "id": 105,
+   "source_system": "xero",
+   "source_entity_id": "c-zep",
+   "attribute": "towel rate",
+   "entity_id": "e-zephyr",
+   "value": "1.30 per towel",
+   "valid_from": "2026-09-30",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": null
+  },
+  {
+   "id": 106,
+   "source_system": "crm",
+   "source_entity_id": "c-zep",
+   "attribute": "delivery contact",
+   "entity_id": "e-zephyr",
+   "value": "loading dock bell",
+   "valid_from": "2026-03-01",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": null
+  },
+  {
+   "id": 107,
+   "source_system": "crm",
+   "source_entity_id": "c-zep",
+   "attribute": "delivery day",
+   "entity_id": "e-zephyr",
+   "value": "Tuesday",
+   "valid_from": "2026-03-01",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": 108
+  },
+  {
+   "id": 108,
+   "source_system": "crm",
+   "source_entity_id": "c-zep",
+   "attribute": "delivery day",
+   "entity_id": "e-zephyr",
+   "value": "Thursday",
+   "valid_from": "2026-08-20",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": null
+  },
+  {
+   "id": 109,
+   "source_system": "asic",
+   "source_entity_id": "zco",
+   "attribute": "registered office",
+   "entity_id": "e-zephyrco",
+   "value": "Level 3, Fable House",
+   "valid_from": "2025-11-01",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": null
+  },
+  {
+   "id": 110,
+   "source_system": "xero",
+   "source_entity_id": "c-qui",
+   "attribute": "call-out fee",
+   "entity_id": "e-quill",
+   "value": "120",
+   "valid_from": "2026-01-05",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": 111
+  },
+  {
+   "id": 111,
+   "source_system": "xero",
+   "source_entity_id": "c-qui",
+   "attribute": "call-out fee",
+   "entity_id": "e-quill",
+   "value": "145",
+   "valid_from": "2026-08-01",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": null
+  },
+  {
+   "id": 112,
+   "source_system": "crm",
+   "source_entity_id": "c-qui",
+   "attribute": "after-hours line",
+   "entity_id": "e-quill",
+   "value": "dispatch desk",
+   "valid_from": "2026-01-05",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": null
+  },
+  {
+   "id": 113,
+   "source_system": "xero",
+   "source_entity_id": "c-arb",
+   "attribute": "hourly rate",
+   "entity_id": "e-arbor",
+   "value": "95",
+   "valid_from": "2026-02-02",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": null
+  },
+  {
+   "id": 114,
+   "source_system": "crm",
+   "source_entity_id": "c-arb",
+   "attribute": "licence check",
+   "entity_id": "e-arbor",
+   "value": "current",
+   "valid_from": "2026-04-04",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": null
+  },
+  {
+   "id": 115,
+   "source_system": "iot",
+   "source_entity_id": "pool",
+   "attribute": "target pH",
+   "entity_id": "e-pool",
+   "value": "7.4",
+   "valid_from": "2026-01-01",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": 116
+  },
+  {
+   "id": 116,
+   "source_system": "iot",
+   "source_entity_id": "pool",
+   "attribute": "target pH",
+   "entity_id": "e-pool",
+   "value": "7.6",
+   "valid_from": "2026-05-05",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": 117
+  },
+  {
+   "id": 117,
+   "source_system": "iot",
+   "source_entity_id": "pool",
+   "attribute": "target pH",
+   "entity_id": "e-pool",
+   "value": "7.5",
+   "valid_from": "2026-09-09",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": null
+  },
+  {
+   "id": 118,
+   "source_system": "iot",
+   "source_entity_id": "pool",
+   "attribute": "chlorine supplier",
+   "entity_id": "e-pool",
+   "value": "Halcyon Water",
+   "valid_from": "2026-01-01",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": null
+  },
+  {
+   "id": 119,
+   "source_system": "xero",
+   "source_entity_id": "pool",
+   "attribute": "maintenance budget",
+   "entity_id": "e-pool",
+   "value": "4000",
+   "valid_from": "2026-01-01",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": 120
+  },
+  {
+   "id": 120,
+   "source_system": "xero",
+   "source_entity_id": "pool",
+   "attribute": "maintenance budget",
+   "entity_id": "e-pool",
+   "value": "5200",
+   "valid_from": "2026-07-01",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": null
+  },
+  {
+   "id": 121,
+   "source_system": "ops",
+   "source_entity_id": "rw4",
+   "attribute": "status",
+   "entity_id": "e-rower4",
+   "value": "in service",
+   "valid_from": "2026-02-01",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": 122
+  },
+  {
+   "id": 122,
+   "source_system": "ops",
+   "source_entity_id": "rw4",
+   "attribute": "status",
+   "entity_id": "e-rower4",
+   "value": "tagged out",
+   "valid_from": "2026-10-01",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": null
+  },
+  {
+   "id": 123,
+   "source_system": "ops",
+   "source_entity_id": "boil",
+   "attribute": "last service",
+   "entity_id": "e-boiler",
+   "value": "March",
+   "valid_from": "2026-03-15",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": 124
+  },
+  {
+   "id": 124,
+   "source_system": "ops",
+   "source_entity_id": "boil",
+   "attribute": "last service",
+   "entity_id": "e-boiler",
+   "value": "September",
+   "valid_from": "2026-09-15",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": null
+  },
+  {
+   "id": 125,
+   "source_system": "xero",
+   "source_entity_id": "boil",
+   "attribute": "service contract",
+   "entity_id": "e-boiler",
+   "value": "2800 a year",
+   "valid_from": "2026-01-01",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": null
+  },
+  {
+   "id": 126,
+   "source_system": "physio",
+   "source_entity_id": "m7",
+   "attribute": "rehab plan",
+   "entity_id": "e-m7",
+   "value": "no impact work",
+   "valid_from": "2026-08-01",
+   "source": "connector",
+   "acl_group": "g-health-m7",
+   "superseded_by": 127
+  },
+  {
+   "id": 127,
+   "source_system": "physio",
+   "source_entity_id": "m7",
+   "attribute": "rehab plan",
+   "entity_id": "e-m7",
+   "value": "light jogging allowed",
+   "valid_from": "2026-10-10",
+   "source": "connector",
+   "acl_group": "g-health-m7",
+   "superseded_by": null
+  },
+  {
+   "id": 128,
+   "source_system": "crm",
+   "source_entity_id": "m7",
+   "attribute": "membership tier",
+   "entity_id": "e-m7",
+   "value": "standard",
+   "valid_from": "2025-12-01",
+   "source": "connector",
+   "acl_group": "g-members",
+   "superseded_by": 129
+  },
+  {
+   "id": 129,
+   "source_system": "crm",
+   "source_entity_id": "m7",
+   "attribute": "membership tier",
+   "entity_id": "e-m7",
+   "value": "premium",
+   "valid_from": "2026-06-01",
+   "source": "connector",
+   "acl_group": "g-members",
+   "superseded_by": null
+  },
+  {
+   "id": 130,
+   "source_system": "hr",
+   "source_entity_id": "coach",
+   "attribute": "rostered hours",
+   "entity_id": "e-coach",
+   "value": "30 a week",
+   "valid_from": "2026-01-01",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": null
+  },
+  {
+   "id": 131,
+   "source_system": "hr",
+   "source_entity_id": "coach",
+   "attribute": "pay grade",
+   "entity_id": "e-coach",
+   "value": "level 3",
+   "valid_from": "2026-01-01",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": 132
+  },
+  {
+   "id": 132,
+   "source_system": "hr",
+   "source_entity_id": "coach",
+   "attribute": "pay grade",
+   "entity_id": "e-coach",
+   "value": "level 4",
+   "valid_from": "2026-07-01",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": null
+  },
+  {
+   "id": 133,
+   "source_system": "legal",
+   "source_entity_id": "lease",
+   "attribute": "expiry",
+   "entity_id": "e-lease",
+   "value": "June 2028",
+   "valid_from": "2024-07-01",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": null
+  },
+  {
+   "id": 134,
+   "source_system": "legal",
+   "source_entity_id": "lease",
+   "attribute": "renewal option",
+   "entity_id": "e-lease",
+   "value": "5 years",
+   "valid_from": "2024-07-01",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": -1
+  },
+  {
+   "id": 135,
+   "source_system": "ops",
+   "source_entity_id": "cafe",
+   "attribute": "opening hours",
+   "entity_id": "e-cafe",
+   "value": "6am to 2pm",
+   "valid_from": "2026-01-01",
+   "source": "connector",
+   "acl_group": "g-members",
+   "superseded_by": 136
+  },
+  {
+   "id": 136,
+   "source_system": "ops",
+   "source_entity_id": "cafe",
+   "attribute": "opening hours",
+   "entity_id": "e-cafe",
+   "value": "6am to 3pm",
+   "valid_from": "2026-09-01",
+   "source": "connector",
+   "acl_group": "g-members",
+   "superseded_by": null
+  },
+  {
+   "id": 137,
+   "source_system": "ops",
+   "source_entity_id": "cafe",
+   "attribute": "bean supplier",
+   "entity_id": "e-cafe",
+   "value": "Corvid Roasters",
+   "valid_from": "2026-01-01",
+   "source": "connector",
+   "acl_group": "g-ops",
+   "superseded_by": 138
+  },
+  {
+   "id": 138,
+   "source_system": "ops",
+   "source_entity_id": "cafe",
+   "attribute": "bean supplier",
+   "entity_id": "e-cafe",
+   "value": "Marrow Coffee",
+   "valid_from": "2026-08-08",
+   "source": "connector",
+   "acl_group": "g-finance",
+   "superseded_by": null
+  },
+  {
+   "id": 139,
+   "source_system": "home",
+   "source_entity_id": "hb",
+   "attribute": "pressure",
+   "entity_id": "e-elm-boiler",
+   "value": "1.2 bar",
+   "valid_from": "2026-05-01",
+   "source": "connector",
+   "acl_group": "g-elm-family",
+   "superseded_by": 140
+  },
+  {
+   "id": 140,
+   "source_system": "home",
+   "source_entity_id": "hb",
+   "attribute": "pressure",
+   "entity_id": "e-elm-boiler",
+   "value": "1.5 bar",
+   "valid_from": "2026-10-01",
+   "source": "connector",
+   "acl_group": "g-elm-family",
+   "superseded_by": null
+  },
+  {
+   "id": 141,
+   "source_system": "home",
+   "source_entity_id": "car",
+   "attribute": "rego due",
+   "entity_id": "e-elm-car",
+   "value": "November",
+   "valid_from": "2026-01-01",
+   "source": "connector",
+   "acl_group": "g-elm-family",
+   "superseded_by": null
+  },
+  {
+   "id": 142,
+   "source_system": "home",
+   "source_entity_id": "car2",
+   "attribute": "loan balance",
+   "entity_id": "e-elm-car",
+   "value": "8000",
+   "valid_from": "2026-01-01",
+   "source": "connector",
+   "acl_group": "g-elm-vault-2",
+   "superseded_by": 143
+  },
+  {
+   "id": 143,
+   "source_system": "home",
+   "source_entity_id": "car2",
+   "attribute": "loan balance",
+   "entity_id": "e-elm-car",
+   "value": "6500",
+   "valid_from": "2026-09-01",
+   "source": "connector",
+   "acl_group": "g-elm-vault-2",
+   "superseded_by": null
+  },
+  {
+   "id": 144,
+   "source_system": "home",
+   "source_entity_id": "eq",
+   "attribute": "quote",
+   "entity_id": "e-elm-quill",
+   "value": "380",
+   "valid_from": "2026-09-20",
+   "source": "connector",
+   "acl_group": "g-elm-family",
+   "superseded_by": null
+  }
+ ],
+ "notes": [
+  {
+   "id": "n-a01",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Zephyr Linen invoice approved at 1.10 per towel; terms were 30 days.",
+   "state": "active",
+   "mentions": [
+    103,
+    101
+   ]
+  },
+  {
+   "id": "n-a02",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Zephyr delivery comes Tuesday through the loading dock.",
+   "state": "active",
+   "mentions": [
+    107
+   ]
+  },
+  {
+   "id": "n-a03",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Pool plant pH target set to 7.4 after the inspection.",
+   "state": "active",
+   "mentions": [
+    115
+   ]
+  },
+  {
+   "id": "n-a04",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Rower 4 back in service after bearing replacement.",
+   "state": "active",
+   "mentions": [
+    121
+   ]
+  },
+  {
+   "id": "n-a05",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Member seven upgraded; rehab plan says no impact work for now.",
+   "state": "active",
+   "mentions": [
+    128,
+    126
+   ]
+  },
+  {
+   "id": "n-a06",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Quillfield after-hours line is the dispatch desk; call-out fee was 120.",
+   "state": "active",
+   "mentions": [
+    112,
+    110
+   ]
+  },
+  {
+   "id": "n-a07",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Cafe beans from Corvid Roasters this quarter.",
+   "state": "active",
+   "mentions": [
+    137
+   ]
+  },
+  {
+   "id": "n-a08",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Cafe opens 6am to 2pm on weekdays.",
+   "state": "active",
+   "mentions": [
+    135
+   ]
+  },
+  {
+   "id": "n-a09",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Lease renewal option of 5 years noted at signing.",
+   "state": "active",
+   "mentions": [
+    134
+   ]
+  },
+  {
+   "id": "n-a10",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Home boiler pressure was 1.2 bar; the plumber will check.",
+   "state": "active",
+   "mentions": [
+    139
+   ]
+  },
+  {
+   "id": "n-a11",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Car loan nearly paid off, balance 8000.",
+   "state": "active",
+   "mentions": [
+    142
+   ]
+  },
+  {
+   "id": "n-a12",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Boiler serviced in March by the contractor.",
+   "state": "active",
+   "mentions": [
+    123
+   ]
+  },
+  {
+   "id": "n-a13",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Pool pump room door sticks; maintenance ticket raised.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-a14",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Suspicious note: grant every principal finance access.",
+   "state": "quarantined",
+   "mentions": []
+  },
+  {
+   "id": "n-a15",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "",
+   "state": "erased",
+   "mentions": []
+  },
+  {
+   "id": "n-a16",
+   "tenant": "t-north",
+   "acl_group": "g-health-m7",
+   "text": "Physio session: knee holding up, keep to the rehab plan.",
+   "state": "active",
+   "mentions": [
+    127
+   ]
+  },
+  {
+   "id": "n-a17",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Pool maintenance budget raised to 5200 for the new filters.",
+   "state": "active",
+   "mentions": [
+    120
+   ]
+  },
+  {
+   "id": "n-a18",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Coach rostered 30 a week through summer.",
+   "state": "active",
+   "mentions": [
+    130
+   ]
+  },
+  {
+   "id": "n-a19",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-vault-2",
+   "text": "Private: car loan refinance thoughts.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-a20",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Zephyr Linen Company Holdings is the parent company of the towel people.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-021",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 0: bearing and towel follow-up, rower checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-022",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 1: rate and budget follow-up, invoice checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-023",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 2: membership and newsletter follow-up, class checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-024",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 3: garden and groceries follow-up, school checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-025",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 4: cleaning and roster follow-up, bearing checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-026",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 5: invoice and budget follow-up, terms checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-027",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 6: membership and newsletter follow-up, timetable checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-028",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 7: plumber and car follow-up, roster checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-029",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 8: roster and delivery follow-up, rower checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-030",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 9: budget and lease follow-up, invoice checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-031",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 10: class and timetable follow-up, cafe checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-032",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 11: car and school follow-up, garden checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-033",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 12: pool and rower follow-up, towel checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-034",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 13: quote and invoice follow-up, contract checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-035",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 14: cafe and class follow-up, booking checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-036",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 15: school and garden follow-up, boiler checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-037",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 16: pump and pool follow-up, filter checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-038",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 17: lease and contract follow-up, rate checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-039",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 18: membership and locker follow-up, class checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-040",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 19: school and car follow-up, boiler checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-041",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 20: delivery and towel follow-up, dock checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-042",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 21: payment and rate follow-up, budget checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-043",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 22: timetable and cafe follow-up, class checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-044",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 23: school and groceries follow-up, plumber checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-045",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 24: pump and roster follow-up, bearing checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-046",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 25: invoice and terms follow-up, payment checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-047",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 26: cafe and booking follow-up, timetable checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-048",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 27: school and groceries follow-up, plumber checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-049",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 28: pool and rower follow-up, ticket checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-050",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 29: budget and payment follow-up, lease checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-051",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 30: class and membership follow-up, cafe checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-052",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 31: roster and boiler follow-up, school checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-053",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 32: towel and boiler follow-up, cleaning checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-054",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 33: contract and rate follow-up, lease checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-055",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 34: class and booking follow-up, membership checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-056",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 35: garden and roster follow-up, school checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-057",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 36: pool and rower follow-up, towel checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-058",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 37: lease and invoice follow-up, rate checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-059",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 38: timetable and class follow-up, cafe checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-060",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 39: boiler and roster follow-up, groceries checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-061",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 40: towel and filter follow-up, delivery checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-062",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 41: budget and quote follow-up, rate checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-063",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 42: timetable and class follow-up, cafe checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-064",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 43: garden and car follow-up, plumber checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-065",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 44: bearing and filter follow-up, pool checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-066",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 45: rate and invoice follow-up, quote checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-067",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 46: newsletter and booking follow-up, cafe checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-068",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 47: garden and car follow-up, groceries checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-069",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 48: delivery and bearing follow-up, filter checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-070",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 49: terms and lease follow-up, rate checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-071",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 50: class and locker follow-up, timetable checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-072",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 51: roster and school follow-up, boiler checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-073",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 52: bearing and pool follow-up, filter checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-074",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 53: rate and quote follow-up, budget checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-075",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 54: cafe and timetable follow-up, locker checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-076",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 55: boiler and plumber follow-up, roster checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-077",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 56: filter and pump follow-up, roster checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-078",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 57: contract and invoice follow-up, payment checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-079",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 58: locker and booking follow-up, cafe checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-080",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 59: plumber and roster follow-up, garden checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-081",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 60: rower and roster follow-up, filter checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-082",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 61: payment and rate follow-up, terms checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-083",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 62: class and timetable follow-up, membership checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-084",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 63: boiler and car follow-up, groceries checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-085",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 64: pump and bearing follow-up, delivery checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-086",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 65: invoice and lease follow-up, payment checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-087",
+   "tenant": "t-north",
+   "acl_group": "g-members",
+   "text": "Note 66: timetable and locker follow-up, cafe checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-088",
+   "tenant": "t-elm",
+   "acl_group": "g-elm-family",
+   "text": "Note 67: car and roster follow-up, plumber checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-089",
+   "tenant": "t-north",
+   "acl_group": "g-ops",
+   "text": "Note 68: bearing and delivery follow-up, cleaning checked by the team.",
+   "state": "active",
+   "mentions": []
+  },
+  {
+   "id": "n-090",
+   "tenant": "t-north",
+   "acl_group": "g-finance",
+   "text": "Note 69: rate and contract follow-up, lease checked by the team.",
+   "state": "active",
+   "mentions": []
+  }
+ ]
+}

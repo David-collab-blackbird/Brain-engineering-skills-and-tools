@@ -1,0 +1,11 @@
+{
+  "workflowSizeGuideline": "medium",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit|Bash",
+        "hooks": [{ "type": "command", "command": "python3 /opt/e15/hooks/protect_tests.py" }]
+      }
+    ]
+  }
+}

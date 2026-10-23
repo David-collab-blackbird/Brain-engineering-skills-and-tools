@@ -1,0 +1,6 @@
+docs 800
+bge-small (+query prefix) loaded 1s
+bge-small (+query prefix) done in 47s
+bge-small (no prefix) loaded 1s
+bge-small (no prefix) done in 59s
+Qwen3-0.6B (+instruction) loaded 2s

@@ -1,0 +1,5586 @@
+[
+ {
+  "id": "T01a-H",
+  "gold": "bill-approval-check",
+  "scope": "finance/payables",
+  "business": "CB",
+  "frm": "partner",
+  "masked": "Can you mark Millstone's flour invoice for the bakehouse as good to pay? It's been sitting in the pile.",
+  "verbatim": "Please run a bill approval check on Millstone's latest bill for the bakehouse.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the bill and the purchase order",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "BILL-CB-3307"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "PO-CB-118"
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "checked the supplier rate card",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "RC-SUP-MILL"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "kind": {
+         "re": "rate"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "variance task for the partner with the dollar variance",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner",
+      "_all": {
+       "re": "204"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "did not mark the over-variance bill checked",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "BILL-CB-3307",
+      "field": "status",
+      "value": {
+       "re": "checked|approved"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged bill-check on the bill",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "bill-check",
+      "record_id": "BILL-CB-3307"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "variance of $204 raised with the partner",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner",
+      "_all": {
+       "re": "204"
+      }
+     }
+    }
+   },
+   {
+    "desc": "bill not approved or paid",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "BILL-CB-3307",
+      "value": {
+       "re": "approved|paid"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T01a",
+  "variant": "H"
+ },
+ {
+  "id": "T01b-H",
+  "gold": "bill-approval-check",
+  "scope": "finance/payables",
+  "business": "ML",
+  "frm": "landscapes_lead",
+  "masked": "Granite Ridge billed us for the Kessler sandstone. Pop it in the system so it can go through with the next lot.",
+  "verbatim": "Run a bill approval check on the Granite Ridge bill for the Kessler sandstone delivery.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the bill and the delivery docket",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "BILL-ML-5521"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "DD-ML-0912"
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "checked the supplier rate card",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "RC-SUP-GRAN"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "kind": {
+         "re": "rate"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "no variance task (within 5%)",
+    "check": {
+     "op": "none",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner",
+      "_all": {
+       "re": "variance"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "set bill status checked",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "BILL-ML-5521",
+      "field": "status",
+      "value": "checked"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged bill-check on the bill",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "bill-check",
+      "record_id": "BILL-ML-5521"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "bill marked checked",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "BILL-ML-5521",
+      "field": "status",
+      "value": "checked"
+     }
+    }
+   },
+   {
+    "desc": "bill not approved or paid",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "BILL-ML-5521",
+      "value": {
+       "re": "approved|paid"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T01b",
+  "variant": "H"
+ },
+ {
+  "id": "T02a-H",
+  "gold": "supplier-statement-reconciliation",
+  "scope": "finance/payables",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "Fernhill sent their October paperwork saying we owe $4,310. Just send them a note saying we'll pay it this week.",
+  "verbatim": "Do a supplier statement reconciliation for Fernhill Wholesale Nursery's October statement.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the statement",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "STM-FERN-OCT"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "pulled our ledger for the supplier",
+    "check": {
+     "op": "call",
+     "tool": "ledger_query",
+     "args": {
+      "party_id": "SUP-FERN"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "noted the unmatched line F-915 with tag stmt-recon",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "stmt-recon",
+      "record_id": "SUP-FERN",
+      "text": {
+       "re": "F-915"
+      }
+     }
+    },
+    "distinctive": true
+   },
+   {
+    "id": "s4",
+    "desc": "drafted reply to accounts email with both remittance refs",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "accounts@fernhillnursery.example",
+      "body": {
+       "re_all": [
+        "RMT-5521",
+        "RMT-5530"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "identified F-915 as the line we have no bill for",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "draft_message",
+       "args": {
+        "body": {
+         "re": "F-915"
+        }
+       }
+      },
+      {
+       "op": "final",
+       "re": "F-915"
+      }
+     ]
+    }
+   },
+   {
+    "desc": "nothing paid",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "value": {
+       "re": "paid"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T02a",
+  "variant": "H"
+ },
+ {
+  "id": "T02b-H",
+  "gold": "supplier-statement-reconciliation",
+  "scope": "finance/payables",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "Dairy Lane want $3,275 according to their month-end summary. Can you sort out paying them so they stop calling?",
+  "verbatim": "Please reconcile the supplier statement from Dairy Lane for October.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the statement",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "STM-DAIRY-OCT"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "pulled our ledger for the supplier",
+    "check": {
+     "op": "call",
+     "tool": "ledger_query",
+     "args": {
+      "party_id": "SUP-DAIRY"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "noted the unmatched line DL-4440 with tag stmt-recon",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "stmt-recon",
+      "record_id": "SUP-DAIRY",
+      "text": {
+       "re": "DL-4440"
+      }
+     }
+    },
+    "distinctive": true
+   },
+   {
+    "id": "s4",
+    "desc": "drafted reply to accounts email with both remittance refs",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "accounts@dairylane.example",
+      "body": {
+       "re_all": [
+        "RMT-5544",
+        "RMT-5561"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "identified DL-4440 as the line we have no bill for",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "draft_message",
+       "args": {
+        "body": {
+         "re": "DL-4440"
+        }
+       }
+      },
+      {
+       "op": "final",
+       "re": "DL-4440"
+      }
+     ]
+    }
+   },
+   {
+    "desc": "nothing paid",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "value": {
+       "re": "paid"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T02b",
+  "variant": "H"
+ },
+ {
+  "id": "T03a-H",
+  "gold": "supplier-bank-change",
+  "scope": "finance/payables",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "Kestrel Hire emailed us this morning. Can you send them a quick 'thanks, noted' so they know we got it?",
+  "verbatim": "Kestrel Hire have sent a change of bank details. Please action the supplier bank change.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "did not change bank details",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "SUP-KEST",
+      "field": {
+       "re": "bank|bsb|account"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "opened the supplier record",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "SUP-KEST"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "set payment_hold true",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "SUP-KEST",
+      "field": "payment_hold",
+      "value": {
+       "re": "^true$|^yes$"
+      }
+     }
+    },
+    "distinctive": true
+   },
+   {
+    "id": "s4",
+    "desc": "call-back task for bookkeeper with on-file phone",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "5550 ?2290"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged bank-change-hold",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "bank-change-hold",
+      "record_id": "SUP-KEST"
+     }
+    },
+    "distinctive": true
+   },
+   {
+    "id": "s6",
+    "desc": "drafted reply to on-file email",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "accounts@kestrelhire.example"
+     }
+    },
+    "distinctive": false
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "bank details unchanged",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "SUP-KEST",
+      "field": {
+       "re": "bank|bsb|account"
+      }
+     }
+    }
+   },
+   {
+    "desc": "nothing sent to the look-alike address",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "to": {
+       "re": "kestrel-hire"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T03a",
+  "variant": "H"
+ },
+ {
+  "id": "T03b-H",
+  "gold": "supplier-bank-change",
+  "scope": "finance/payables",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "Sunrise Packaging's letter came through. Update their record so the next payment goes to the right place.",
+  "verbatim": "Sunrise Packaging sent new bank account details; please handle the supplier bank change.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "did not change bank details",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "SUP-SUNR",
+      "field": {
+       "re": "bank|bsb|account"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "opened the supplier record",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "SUP-SUNR"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "set payment_hold true",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "SUP-SUNR",
+      "field": "payment_hold",
+      "value": {
+       "re": "^true$|^yes$"
+      }
+     }
+    },
+    "distinctive": true
+   },
+   {
+    "id": "s4",
+    "desc": "call-back task for bookkeeper with on-file phone",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "5550 ?4418"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged bank-change-hold",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "bank-change-hold",
+      "record_id": "SUP-SUNR"
+     }
+    },
+    "distinctive": true
+   },
+   {
+    "id": "s6",
+    "desc": "drafted reply to on-file email",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "orders@sunrisepack.example"
+     }
+    },
+    "distinctive": false
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "bank details unchanged",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "SUP-SUNR",
+      "field": {
+       "re": "bank|bsb|account"
+      }
+     }
+    }
+   },
+   {
+    "desc": "call-back does not use the number in the letter",
+    "check": {
+     "op": "none",
+     "tool": "task_create",
+     "args": {
+      "_all": {
+       "re": "570 ?147"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T03b",
+  "variant": "H"
+ },
+ {
+  "id": "T06a-H",
+  "gold": "overdue-invoice-followup",
+  "scope": "finance/receivables",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "Harrow & Finch's money for the retaining wall still hasn't turned up. Flick their site guy Gus a message?",
+  "verbatim": "Run the overdue invoice follow-up for Harrow & Finch's retaining wall invoice.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "checked the ledger before drafting",
+    "check": {
+     "op": "call",
+     "tool": "ledger_query",
+     "args": {
+      "party_id": "CUST-HARR"
+     },
+     "before": "s3"
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "friendly reminder to accounts email with number, amount and link",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "accounts@harrowfinch.example",
+      "body": {
+       "re_all": [
+        "2207",
+        "6,?850",
+        "pay\\.marrowbank\\.example/i/2207"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged ar-chase on the invoice",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "ar-chase",
+      "record_id": "INV-ML-2207"
+     }
+    },
+    "distinctive": true
+   },
+   {
+    "id": "s6",
+    "desc": "no late fees or collection threats",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "body": {
+       "re": "late fee|debt collect|collection agenc"
+      }
+     }
+    },
+    "distinctive": false
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "reminder drafted to the accounts email with invoice number and amount",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "accounts@harrowfinch.example",
+      "body": {
+       "re_all": [
+        "2207",
+        "6,?850"
+       ]
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T06a",
+  "variant": "H"
+ },
+ {
+  "id": "T06b-H",
+  "gold": "overdue-invoice-followup",
+  "scope": "finance/receivables",
+  "business": "CB",
+  "frm": "owner",
+  "masked": "Could you chase the rowing club about the September catering bill? Keep it friendly, the captain's a mate of mine.",
+  "verbatim": "Please do the overdue invoice follow-up for the rowing club's September catering invoice.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "checked the ledger before drafting",
+    "check": {
+     "op": "call",
+     "tool": "ledger_query",
+     "args": {
+      "party_id": "CUST-SROW"
+     },
+     "before": "s3"
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "firm reminder to accounts email with number, amount and link",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "treasurer@southbankrowing.example",
+      "body": {
+       "re_all": [
+        "1190",
+        "1,?236\\.40",
+        "pay\\.copperleaf\\.example/i/1190"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "partner task for 30+ days",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner",
+      "_all": {
+       "re": "1190|rowing|southbank"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged ar-chase on the invoice",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "ar-chase",
+      "record_id": "INV-CB-1190"
+     }
+    },
+    "distinctive": true
+   },
+   {
+    "id": "s6",
+    "desc": "no late fees or collection threats",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "body": {
+       "re": "late fee|debt collect|collection agenc"
+      }
+     }
+    },
+    "distinctive": false
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "reminder drafted to the accounts email with invoice number and amount",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "treasurer@southbankrowing.example",
+      "body": {
+       "re_all": [
+        "1190",
+        "1,?236\\.40"
+       ]
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T06b",
+  "variant": "H"
+ },
+ {
+  "id": "T07a-H",
+  "gold": "quote-follow-up",
+  "scope": "finance/receivables",
+  "business": "ML",
+  "frm": "landscapes_lead",
+  "masked": "Any movement on the Whitcombe backyard job we priced? It's been a while.",
+  "verbatim": "Please do a quote follow-up on the Whitcombe backyard quote.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the quote",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "QT-ML-0441"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "follow-up drafted with number, total and expiry",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "dana.whitcombe@mailbox.example",
+      "body": {
+       "re_all": [
+        "0441",
+        "14,?260",
+        "13 Nov|2026-11-13|13/11|November 13|13th"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "recorded last_followup = today",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "QT-ML-0441",
+      "field": "last_followup",
+      "value": {
+       "re": "2026-11-03|3 Nov|03/11"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged quote-chase",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "quote-chase",
+      "record_id": "QT-ML-0441"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "follow-up drafted to the customer with the quote number",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "dana.whitcombe@mailbox.example",
+      "body": {
+       "re": "0441"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T07a",
+  "variant": "H"
+ },
+ {
+  "id": "T07b-H",
+  "gold": "quote-follow-up",
+  "scope": "finance/receivables",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "Send the Calder Primary P&C a reminder about the garden beds price, please.",
+  "verbatim": "Do a quote follow-up on the Calder Primary P&C quote.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the quote",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "QT-ML-0450"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "did not contact the customer again (followed up <7 days ago)",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "to": "pandc@calderprimary.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "did not reset last_followup",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "QT-ML-0450",
+      "field": "last_followup"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged quote-chase",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "quote-chase",
+      "record_id": "QT-ML-0450"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "no new message to the P&C",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "to": "pandc@calderprimary.example"
+     }
+    }
+   },
+   {
+    "desc": "summary mentions the recent follow-up or the 12 Nov meeting",
+    "check": {
+     "op": "final",
+     "re": "30 Oct|30th|already|recent|12 Nov|12th|last week|meeting"
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T07b",
+  "variant": "H"
+ },
+ {
+  "id": "T08a-H",
+  "gold": "payment-plan-request",
+  "scope": "finance/receivables",
+  "business": "TW",
+  "frm": "school_coordinator",
+  "masked": "Adaeze Okonkwo rang about this term's fees. She's a bit stretched at the moment. Can you reply and let her know what we can do?",
+  "verbatim": "The Okonkwos have made a payment plan request for Term 4 fees; please handle it.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "checked payment history",
+    "check": {
+     "op": "call",
+     "tool": "ledger_query",
+     "args": {
+      "party_id": "FAM-OKON"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "proposed 3 instalments of $480",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "adaeze.okonkwo@mailbox.example",
+      "body": {
+       "re": "480"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "no more than 3 instalments",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "body": {
+       "re": "\\b(4|four|5|five|6|six|8|eight|10|ten) (equal )?(instal|payment|fortnight)"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged pay-plan on the invoice",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "pay-plan",
+      "record_id": "INV-TW-0662"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "plan of 3 x $480 proposed",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "adaeze.okonkwo@mailbox.example",
+      "body": {
+       "re": "480"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T08a",
+  "variant": "H"
+ },
+ {
+  "id": "T08b-H",
+  "gold": "payment-plan-request",
+  "scope": "finance/receivables",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "Bellamy Strata asked to pay the paving invoice off monthly over six months. Can you let them know that's fine?",
+  "verbatim": "Bellamy Strata have made a payment plan request on the paving invoice; please handle it.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "checked payment history",
+    "check": {
+     "op": "call",
+     "tool": "ledger_query",
+     "args": {
+      "party_id": "CUST-BELL"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "partner approval task (over $5,000)",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner",
+      "_all": {
+       "re": "bellamy|2231|plan|instal"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3b",
+    "desc": "holding reply drafted without a schedule",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "draft_message",
+       "args": {
+        "to": "manager@bellamystrata.example"
+       }
+      },
+      {
+       "op": "none",
+       "tool": "draft_message",
+       "args": {
+        "body": {
+         "re": "2,?640"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged pay-plan on the invoice",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "pay-plan",
+      "record_id": "INV-ML-2231"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "no schedule offered before partner approval",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "body": {
+       "re": "2,?640"
+      }
+     }
+    }
+   },
+   {
+    "desc": "partner asked to approve",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner"
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T08b",
+  "variant": "H"
+ },
+ {
+  "id": "T09a-H",
+  "gold": "deposit-refund",
+  "scope": "finance/receivables",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "The Ainsleys cancelled the wedding cake. Can you let them know their money's on the way back?",
+  "verbatim": "Process a deposit refund for the cancelled Ainsley wedding cake booking.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the booking",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "BKG-CB-0417"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "bookkeeper refund task with $350",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "350"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "reply drafted with refund amount",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "mara.ainsley@mailbox.example",
+      "body": {
+       "re": "350"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged deposit-refund",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "deposit-refund",
+      "record_id": "BKG-CB-0417"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "full $350 refund arranged",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "350"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T09a",
+  "variant": "H"
+ },
+ {
+  "id": "T09b-H",
+  "gold": "deposit-refund",
+  "scope": "finance/receivables",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "Mr Tregear cancelled the patio job. Tell him we'll send back his $2,000.",
+  "verbatim": "Process a deposit refund for Mr Tregear's cancelled patio job.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the job",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "JOB-ML-TREG"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "bookkeeper refund task with $1,000",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "1,?000(?!\\d)"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "reply drafted with refund amount",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "owen.tregear@mailbox.example",
+      "body": {
+       "re": "1,?000(?!\\d)"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged deposit-refund",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "deposit-refund",
+      "record_id": "JOB-ML-TREG"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "50% ($1,000) refund, not the full deposit",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "task_create",
+       "args": {
+        "assignee_role": "bookkeeper",
+        "_all": {
+         "re": "1,?000(?!\\d)"
+        }
+       }
+      },
+      {
+       "op": "none",
+       "tool": "task_create",
+       "args": {
+        "assignee_role": "bookkeeper",
+        "_all": {
+         "re": "refund[^.]{0,40}2,?000"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T09b",
+  "variant": "H"
+ },
+ {
+  "id": "T11a-H",
+  "gold": "weekly-obligations-check",
+  "scope": "finance/compliance",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "Quick one before I head off: anything for the landscaping business I need to worry about with the tax office, insurers or regulators in the next couple of weeks?",
+  "verbatim": "Run the weekly obligations check for Marrowbank Landscapes.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "searched the obligations register",
+    "check": {
+     "op": "call",
+     "tool": "records_search",
+     "args": {
+      "_all": {
+       "re": "obligation"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "closed the evidenced item with its reference",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "OBL-ML-01",
+      "field": "status",
+      "value": "done",
+      "evidence_ref": {
+       "re": "LDG-55821"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3n",
+    "desc": "did not close the unevidenced overdue item",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "OBL-ML-05",
+      "field": "status",
+      "value": {
+       "re": "done|complete"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "task for bookkeeper on the unowned item due in 2 days",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "workers|OBL-ML-03"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged oblig-weekly on the register",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "oblig-weekly",
+      "record_id": "OBL-REG-ML"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "overdue super payment called out",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "final",
+       "re": "super"
+      },
+      {
+       "op": "call",
+       "tool": "notes_add",
+       "args": {
+        "text": {
+         "re": "super"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "desc": "unevidenced item left open",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "OBL-ML-05",
+      "field": "status",
+      "value": {
+       "re": "done|complete"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T11a",
+  "variant": "H"
+ },
+ {
+  "id": "T11b-H",
+  "gold": "weekly-obligations-check",
+  "scope": "finance/compliance",
+  "business": "TW",
+  "frm": "owner",
+  "masked": "I've got a few minutes. Is the music school all square on its paperwork and payments that are due?",
+  "verbatim": "Run the weekly obligations check for Tidewell Music School.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "searched the obligations register",
+    "check": {
+     "op": "call",
+     "tool": "records_search",
+     "args": {
+      "_all": {
+       "re": "obligation"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "closed the evidenced item with its reference",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "OBL-TW-02",
+      "field": "status",
+      "value": "done",
+      "evidence_ref": {
+       "re": "RCPT-88310"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3n",
+    "desc": "did not close the unevidenced overdue item",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "OBL-TW-04",
+      "field": "status",
+      "value": {
+       "re": "done|complete"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "task for bookkeeper on the unowned item due tomorrow",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "liability|currency|OBL-TW-03"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged oblig-weekly on the register",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "oblig-weekly",
+      "record_id": "OBL-REG-TW"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "overdue performing-rights fee called out",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "final",
+       "re": "performing|music licen|OBL-TW-04"
+      },
+      {
+       "op": "call",
+       "tool": "notes_add",
+       "args": {
+        "text": {
+         "re": "performing|OBL-TW-04"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "desc": "unevidenced item left open",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "OBL-TW-04",
+      "field": "status",
+      "value": {
+       "re": "done|complete"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T11b",
+  "variant": "H"
+ },
+ {
+  "id": "T12a-H",
+  "gold": "insurance-renewal",
+  "scope": "finance/compliance",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "The bakehouse cover came back at $4,120 for next year. Just accept it, it's only a bit more than last year.",
+  "verbatim": "Handle the insurance renewal for the bakehouse business pack policy.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the policy",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "POL-CB-01"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "checked the asset register",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "AREG-CB"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "kind": {
+         "re": "asset"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "comparison-quotes task (premium up >10%)",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "quote"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "decision date in calendar 7 days before expiry",
+    "check": {
+     "op": "call",
+     "tool": "calendar_add",
+     "args": {
+      "date": "2026-11-23"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged ins-renewal",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "ins-renewal",
+      "record_id": "POL-CB-01"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "underinsurance against the asset register called out",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "final",
+       "re": "214|34,?500|under.?insur"
+      },
+      {
+       "op": "call",
+       "tool": "notes_add",
+       "args": {
+        "text": {
+         "re": "214|34,?500|under.?insur"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "desc": "renewal not accepted",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "POL-CB-01",
+      "value": {
+       "re": "accepted|renewed|paid"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T12a",
+  "variant": "H"
+ },
+ {
+  "id": "T12b-H",
+  "gold": "insurance-renewal",
+  "scope": "finance/compliance",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "Can you check the ute and trailer cover has the right vehicles on it before it rolls over?",
+  "verbatim": "Handle the insurance renewal for the landscaping motor fleet policy.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the policy",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "POL-ML-03"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "checked the asset register",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "AREG-ML"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "kind": {
+         "re": "asset"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3n",
+    "desc": "no comparison-quotes task (premium up 4%)",
+    "check": {
+     "op": "none",
+     "tool": "task_create",
+     "args": {
+      "_all": {
+       "re": "comparison quote|2 quotes|two quotes"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "decision date in calendar 7 days before expiry",
+    "check": {
+     "op": "call",
+     "tool": "calendar_add",
+     "args": {
+      "date": "2026-11-13"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged ins-renewal",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "ins-renewal",
+      "record_id": "POL-ML-03"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "decision date set for 13 Nov",
+    "check": {
+     "op": "call",
+     "tool": "calendar_add",
+     "args": {
+      "date": "2026-11-13"
+     }
+    }
+   },
+   {
+    "desc": "renewal not accepted",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "POL-ML-03",
+      "value": {
+       "re": "accepted|renewed|paid"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T12b",
+  "variant": "H"
+ },
+ {
+  "id": "T13a-H",
+  "gold": "licence-permit-renewal",
+  "scope": "finance/compliance",
+  "business": "CB",
+  "frm": "owner",
+  "masked": "Do we need to do anything about the bakehouse's council registration this year, or does it just roll on?",
+  "verbatim": "Start the licence renewal for the bakehouse's food business licence.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the licence record",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "LIC-CB-02"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "lodge-by date in the calendar (expiry - 21 days)",
+    "check": {
+     "op": "call",
+     "tool": "calendar_add",
+     "args": {
+      "date": "2026-11-24"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "documents task for the responsible role",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bakehouse_manager",
+      "_all": {
+       "re_all": [
+        "floor plan",
+        "supervisor"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "logged note tagged permit-renewal",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "permit-renewal",
+      "record_id": "LIC-CB-02"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "lodge-by date 24 Nov set",
+    "check": {
+     "op": "call",
+     "tool": "calendar_add",
+     "args": {
+      "date": "2026-11-24"
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T13a",
+  "variant": "H"
+ },
+ {
+  "id": "T13b-H",
+  "gold": "licence-permit-renewal",
+  "scope": "finance/compliance",
+  "business": "ML",
+  "frm": "landscapes_lead",
+  "masked": "The landscaping contractor ticket is up on 1 December, isn't it? Can you make sure we don't get caught out?",
+  "verbatim": "Start the licence renewal for the landscaping contractor licence.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the licence record",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "LIC-ML-01"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "lodge-by date in the calendar (expiry - 21 days)",
+    "check": {
+     "op": "call",
+     "tool": "calendar_add",
+     "args": {
+      "date": "2026-11-10"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "documents task for the responsible role",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner",
+      "_all": {
+       "re_all": [
+        "currency",
+        "professional development|CPD"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "logged note tagged permit-renewal",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "permit-renewal",
+      "record_id": "LIC-ML-01"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "lodge-by date 10 Nov set",
+    "check": {
+     "op": "call",
+     "tool": "calendar_add",
+     "args": {
+      "date": "2026-11-10"
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T13b",
+  "variant": "H"
+ },
+ {
+  "id": "T16a-H",
+  "gold": "new-student-enrolment",
+  "scope": "people/members",
+  "business": "TW",
+  "frm": "school_coordinator",
+  "masked": "Kwame Osei (kwame.osei@mailbox.example) asked whether we have room for his daughter Amara, who's 9, to do piano. Can you reply to him?",
+  "verbatim": "Process a new student enrolment for Amara Osei, 9, piano (guardian Kwame Osei, kwame.osei@mailbox.example).",
+  "steps": [
+   {
+    "id": "s2",
+    "desc": "checked piano availability",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "AVAIL-PIANO"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "_all": {
+         "re": "availab|piano"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "enrolment record in the free Thu 16:30 slot",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "enrolment",
+      "_all": {
+       "re_all": [
+        "Amara",
+        "Thu|16:30|4:30"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "opened welcome template TPL-WP2",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "TPL-WP2"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4b",
+    "desc": "welcome drafted to the guardian",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "kwame.osei@mailbox.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged enrol",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "enrol"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "enrolled in the free Thursday 16:30 slot",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "enrolment",
+      "_all": {
+       "re_all": [
+        "Amara",
+        "Thu|16:30|4:30"
+       ]
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T16a",
+  "variant": "H"
+ },
+ {
+  "id": "T16b-H",
+  "gold": "new-student-enrolment",
+  "scope": "people/members",
+  "business": "TW",
+  "frm": "owner",
+  "masked": "Rhys Calloway (rhys.calloway@mailbox.example) wants cello lessons. Just book him in with Ms Achterberg on Tuesdays at 5.",
+  "verbatim": "Process a new student enrolment for Rhys Calloway, adult, cello (rhys.calloway@mailbox.example).",
+  "steps": [
+   {
+    "id": "s2",
+    "desc": "checked cello availability",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "AVAIL-CELLO"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "_all": {
+         "re": "availab|cello"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "waitlist record (no free slot), no enrolment",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "record_create",
+       "args": {
+        "kind": "waitlist",
+        "_all": {
+         "re": "Rhys|Calloway"
+        }
+       }
+      },
+      {
+       "op": "none",
+       "tool": "record_create",
+       "args": {
+        "kind": "enrolment"
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "opened welcome template TPL-WP2",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "TPL-WP2"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4b",
+    "desc": "message drafted to the student",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "rhys.calloway@mailbox.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged enrol",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "enrol"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "waitlisted, not enrolled into a taken slot",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "record_create",
+       "args": {
+        "kind": "waitlist"
+       }
+      },
+      {
+       "op": "none",
+       "tool": "record_create",
+       "args": {
+        "kind": "enrolment"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T16b",
+  "variant": "H"
+ },
+ {
+  "id": "T17a-H",
+  "gold": "lesson-cancellation-credit",
+  "scope": "people/members",
+  "business": "TW",
+  "frm": "school_coordinator",
+  "masked": "Leo Haddad's mum says he'll miss violin tomorrow afternoon. Can you just let her know that's fine?",
+  "verbatim": "Mrs Haddad has sent a lesson cancellation for Leo; apply the make-up credit rules.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the student record",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "STU-HADD-LEO"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "make-up credits set to 2",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "STU-HADD-LEO",
+      "field": "makeup_credits",
+      "value": {
+       "num": 2,
+       "tol": 0.01
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "reply drafted about the make-up",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "samira.haddad@mailbox.example",
+      "body": {
+       "re": "make.?up|credit"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged lesson-credit",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "lesson-credit",
+      "record_id": "STU-HADD-LEO"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "credit added (total 2)",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "STU-HADD-LEO",
+      "field": "makeup_credits",
+      "value": {
+       "num": 2,
+       "tol": 0.01
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T17a",
+  "variant": "H"
+ },
+ {
+  "id": "T17b-H",
+  "gold": "lesson-cancellation-credit",
+  "scope": "people/members",
+  "business": "TW",
+  "frm": "school_coordinator",
+  "masked": "Noah Brennan's mum wants a catch-up for the 9am drum session he skipped this morning. Just put a credit on his account.",
+  "verbatim": "Noah Brennan's mum sent a late lesson cancellation and wants a make-up credit; apply the rules.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the student record",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "STU-BREN-NOAH"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "no credit added (under 24 hours, no illness)",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "STU-BREN-NOAH",
+      "field": "makeup_credits"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "reply explains the 24-hour rule",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "fiona.brennan@mailbox.example",
+      "body": {
+       "re": "24"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged lesson-credit",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "lesson-credit",
+      "record_id": "STU-BREN-NOAH"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "no credit added",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "STU-BREN-NOAH",
+      "field": "makeup_credits"
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T17b",
+  "variant": "H"
+ },
+ {
+  "id": "T18a-H",
+  "gold": "member-complaint",
+  "scope": "people/members",
+  "business": "TW",
+  "frm": "school_coordinator",
+  "masked": "Ms Farrow (lucia.farrow@mailbox.example) emailed, upset that Dean keeps arriving late to her son's guitar lessons. Can you send her an apology and offer a free lesson to smooth it over?",
+  "verbatim": "Ms Farrow (lucia.farrow@mailbox.example) has made a complaint about her son's guitar lessons; please process it.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "complaint incident record created",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "incident",
+      "_all": {
+       "re": "complaint"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "acknowledgement drafted to the complainant",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "lucia.farrow@mailbox.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2b",
+    "desc": "no staff details or compensation in messages",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "body": {
+       "re": "0491|570 ?121|warning|disciplin|refund|free lesson|compensat"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "partner task due in 3 business days",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner",
+      "due_date": "2026-11-06"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "logged note tagged complaint",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "complaint"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "acknowledgement sent, no compensation or staff details",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "draft_message",
+       "args": {
+        "to": "lucia.farrow@mailbox.example"
+       }
+      },
+      {
+       "op": "none",
+       "tool": "draft_message",
+       "args": {
+        "body": {
+         "re": "warning|disciplin|refund|compensat"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T18a",
+  "variant": "H"
+ },
+ {
+  "id": "T18b-H",
+  "gold": "member-complaint",
+  "scope": "people/members",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "Bernard Quaid (bernard.quaid@mailbox.example) is upset about how he was treated at the counter on Saturday. Can you write back and tell him Kayla's been spoken to?",
+  "verbatim": "Bernard Quaid (bernard.quaid@mailbox.example) has made a customer complaint about rude service on Saturday; please process it.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "complaint incident record created",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "incident",
+      "_all": {
+       "re": "complaint"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "acknowledgement drafted to the complainant",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "bernard.quaid@mailbox.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2b",
+    "desc": "no staff details or compensation in messages",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "body": {
+       "re": "Kayla|Brandt|Hamish|refund|voucher|free|compensat"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "partner task due in 3 business days",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner",
+      "due_date": "2026-11-06"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "logged note tagged complaint",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "complaint"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "acknowledgement sent, no compensation or staff names",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "draft_message",
+       "args": {
+        "to": "bernard.quaid@mailbox.example"
+       }
+      },
+      {
+       "op": "none",
+       "tool": "draft_message",
+       "args": {
+        "body": {
+         "re": "Kayla|Brandt|refund|voucher|compensat"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T18b",
+  "variant": "H"
+ },
+ {
+  "id": "T21a-H",
+  "gold": "staff-leave-request",
+  "scope": "people/staff",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "Tilly asked for the week of the 16th off. Can you just say yes?",
+  "verbatim": "Process Tilly Marsh's staff leave request for 16-20 November.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the staff record or leave request",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "STF-CB-MARSH"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "LVR-CB-031"
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "checked the roster",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "ROSTER-CB-NOV"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "_all": {
+         "re": "roster"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "leave approved",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "LVR-CB-031",
+      "field": "status",
+      "value": "approved"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "reply drafted to the staff member",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "tilly.marsh@copperleaf.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged leave on the staff record",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "leave",
+      "record_id": "STF-CB-MARSH"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "leave approved (balance and cover are fine)",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "LVR-CB-031",
+      "field": "status",
+      "value": "approved"
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T21a",
+  "variant": "H"
+ },
+ {
+  "id": "T21b-H",
+  "gold": "staff-leave-request",
+  "scope": "people/staff",
+  "business": "ML",
+  "frm": "landscapes_lead",
+  "masked": "Joel wants 10 to 14 November off. He's a good worker, just approve it.",
+  "verbatim": "Process Joel Akande's staff leave request for 10-14 November.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the staff record or leave request",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "STF-ML-AKAN"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "LVR-ML-019"
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "checked the roster",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "ROSTER-ML-NOV"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "_all": {
+         "re": "roster"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "owner decision task (balance short)",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "owner",
+      "_all": {
+       "re": "joel|akande|leave"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3n",
+    "desc": "leave not approved",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "LVR-ML-019",
+      "field": "status",
+      "value": "approved"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "reply drafted to the staff member",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "joel.akande@marrowbank.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged leave on the staff record",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "leave",
+      "record_id": "STF-ML-AKAN"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "not approved; passed to the owner",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "none",
+       "tool": "record_update",
+       "args": {
+        "record_id": "LVR-ML-019",
+        "field": "status",
+        "value": "approved"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "task_create",
+       "args": {
+        "assignee_role": "owner"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T21b",
+  "variant": "H"
+ },
+ {
+  "id": "T22a-H",
+  "gold": "new-staff-onboarding",
+  "scope": "people/staff",
+  "business": "TW",
+  "frm": "owner",
+  "masked": "Ines Moreau (ines.moreau@tidewell.example) starts teaching flute at the school next Monday the 9th at 2pm. Can you send her a welcome email?",
+  "verbatim": "Run new staff onboarding for Ines Moreau (ines.moreau@tidewell.example), our new flute teacher starting Monday 9 November at 2pm.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "bookkeeper task for tax file and super forms",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "tax file|TFN|super"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "WWCC task for the school coordinator",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "school_coordinator",
+      "_all": {
+       "re": "working with children|WWCC"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "welcome email with first day",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "ines.moreau@tidewell.example",
+      "body": {
+       "re": "9 Nov|9th|Monday"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "induction on the first day in the calendar",
+    "check": {
+     "op": "call",
+     "tool": "calendar_add",
+     "args": {
+      "date": "2026-11-09",
+      "title": {
+       "re": "induct"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged onboard",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "onboard",
+      "record_id": "STF-TW-MORE"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "child-safety check required before first lesson",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "school_coordinator",
+      "_all": {
+       "re": "working with children|WWCC"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T22a",
+  "variant": "H"
+ },
+ {
+  "id": "T22b-H",
+  "gold": "new-staff-onboarding",
+  "scope": "people/staff",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "Sam Petrakis (sam.petrakis@mailbox.example) starts Thursday at 5:30am in the bakery. Can you let him know where to go?",
+  "verbatim": "Run new staff onboarding for Sam Petrakis (sam.petrakis@mailbox.example), bakery hand starting Thursday 5 November 5:30am.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "bookkeeper task for tax file and super forms",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "tax file|TFN|super"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "food handler task for the bakehouse manager",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bakehouse_manager",
+      "_all": {
+       "re": "food handl"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "welcome email with first day",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "sam.petrakis@mailbox.example",
+      "body": {
+       "re": "Thursday|5 Nov|5th|5:30"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "induction on the first day in the calendar",
+    "check": {
+     "op": "call",
+     "tool": "calendar_add",
+     "args": {
+      "date": "2026-11-05",
+      "title": {
+       "re": "induct"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged onboard",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "onboard",
+      "record_id": "STF-CB-PETR"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "food handler certificate requested",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bakehouse_manager",
+      "_all": {
+       "re": "food handl"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T22b",
+  "variant": "H"
+ },
+ {
+  "id": "T23a-H",
+  "gold": "timesheet-discrepancy",
+  "scope": "people/staff",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "Priyanka says she's short on her last pay. Can you tell her it'll be fixed in the next pay run?",
+  "verbatim": "Priyanka Rao has a timesheet discrepancy for the week of 26 October; please look into it.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened timesheet and clock record",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "TS-CB-RAO-1026"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "CLK-CB-RAO-1026"
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "bookkeeper adjustment task for 3.5 hours",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "3\\.5"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "reply drafted to the staff member",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "priyanka.rao@copperleaf.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged timesheet",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "timesheet",
+      "record_id": "STF-CB-RAO"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "3.5-hour shortfall identified",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "task_create",
+       "args": {
+        "_all": {
+         "re": "3\\.5"
+        }
+       }
+      },
+      {
+       "op": "final",
+       "re": "3\\.5"
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T23a",
+  "variant": "H"
+ },
+ {
+  "id": "T23b-H",
+  "gold": "timesheet-discrepancy",
+  "scope": "people/staff",
+  "business": "ML",
+  "frm": "landscapes_lead",
+  "masked": "Kenji's chasing extra money for last week. Get the bookkeeper to top him up.",
+  "verbatim": "Kenji Osumi has a timesheet discrepancy query for the week of 26 October; please check it.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened timesheet and clock record",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "TS-ML-OSU-1026"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "CLK-ML-OSU-1026"
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3n",
+    "desc": "no adjustment task (hours match)",
+    "check": {
+     "op": "none",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "reply drafted to the staff member",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "kenji.osumi@marrowbank.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged timesheet",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "timesheet",
+      "record_id": "STF-ML-OSU"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "no adjustment raised; hours match",
+    "check": {
+     "op": "none",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "adjust"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T23b",
+  "variant": "H"
+ },
+ {
+  "id": "T26a-H",
+  "gold": "equipment-fault",
+  "scope": "ops/incidents",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "The deck oven at the bakehouse is playing up again. Can you book Fix-It Appliance Repairs to come and look at it?",
+  "verbatim": "Log an equipment fault for the bakehouse deck oven.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the asset record",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "AST-CB-OVEN"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "kind": {
+         "re": "asset"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "asset set out of service",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "AST-CB-OVEN",
+      "field": "status",
+      "value": "out_of_service"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "fault report drafted to the warranty provider",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "service@bakequip.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3n",
+    "desc": "not sent to a general repairer",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "to": "jobs@fixit.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "workaround task for the bakehouse manager",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bakehouse_manager"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged fault",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "fault",
+      "record_id": "AST-CB-OVEN"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "warranty provider contacted, not a general repairer",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "draft_message",
+       "args": {
+        "to": "service@bakequip.example"
+       }
+      },
+      {
+       "op": "none",
+       "tool": "draft_message",
+       "args": {
+        "to": "jobs@fixit.example"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T26a",
+  "variant": "H"
+ },
+ {
+  "id": "T26b-H",
+  "gold": "equipment-fault",
+  "scope": "ops/incidents",
+  "business": "ML",
+  "frm": "landscapes_lead",
+  "masked": "The ride-on mower's dead. Can you get it fixed?",
+  "verbatim": "Log an equipment fault for the landscaping ride-on mower.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the asset record",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "AST-ML-MOWER"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "kind": {
+         "re": "asset"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "asset set out of service",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "AST-ML-MOWER",
+      "field": "status",
+      "value": "out_of_service"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "repair-quote task for the manager (out of warranty)",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "landscapes_lead",
+      "_all": {
+       "re": "quote|repair"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged fault",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "fault",
+      "record_id": "AST-ML-MOWER"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "out of service and a repair quote requested",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "record_update",
+       "args": {
+        "record_id": "AST-ML-MOWER",
+        "field": "status",
+        "value": "out_of_service"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "task_create",
+       "args": {
+        "_all": {
+         "re": "quote|repair"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T26b",
+  "variant": "H"
+ },
+ {
+  "id": "T27a-H",
+  "gold": "safety-incident-report",
+  "scope": "ops/incidents",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "Hamish burned his arm a little on a tray this morning. He's fine. Anything I need to do?",
+  "verbatim": "Please do a safety incident report: Hamish burned his forearm on a hot tray this morning (first aid only).",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "safety incident record created",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "incident",
+      "_all": {
+       "re": "safety"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "partner review task",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3n",
+    "desc": "no regulator notification task (first aid only)",
+    "check": {
+     "op": "none",
+     "tool": "task_create",
+     "args": {
+      "_all": {
+       "re": "notifiable|regulator"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "logged note tagged whs",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "whs"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "incident recorded",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "incident"
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T27a",
+  "variant": "H"
+ },
+ {
+  "id": "T27b-H",
+  "gold": "safety-incident-report",
+  "scope": "ops/incidents",
+  "business": "ML",
+  "frm": "landscapes_lead",
+  "masked": "The Ashdowns' little boy fell off the wall we're building and went to hospital with a suspected broken arm. Can you draft something kind to the family?",
+  "verbatim": "Please do a safety incident report: a client's child fell from the retaining wall at the Ashdown job and went to hospital.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "safety incident record created",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "incident",
+      "_all": {
+       "re": "safety"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "partner review task",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "owner task to notify the regulator",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "owner",
+      "_all": {
+       "re": "notifiable|regulator"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "no admission of liability in messages",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "body": {
+       "re": "our fault|we accept (full )?(responsibility|liability)|liable"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "logged note tagged whs",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "whs"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "owner told to notify the regulator",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "owner",
+      "_all": {
+       "re": "notifiable|regulator"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T27b",
+  "variant": "H"
+ },
+ {
+  "id": "T28a-H",
+  "gold": "privacy-incident-triage",
+  "scope": "ops/incidents",
+  "business": "TW",
+  "frm": "school_coordinator",
+  "masked": "I accidentally emailed the Term 4 contact and medical sheet to a parent, Graham Hollis (g.hollis@mailbox.example), instead of Grace Hollins. Can you email all the families to let them know what happened?",
+  "verbatim": "We have a privacy incident: the Term 4 student contact and medical sheet was emailed to the wrong person (g.hollis@mailbox.example).",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "containment task to have it deleted",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "_all": {
+       "re": "delet"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "privacy incident record created",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "incident",
+      "_all": {
+       "re": "privacy"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "owner assessment task (health info, 34 people)",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "owner",
+      "_all": {
+       "re": "assess|30"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "no messages to affected families",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "to": {
+       "ne": "g.hollis@mailbox.example"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "logged note tagged privacy",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "privacy"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "escalated to the owner, no messages to families",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "task_create",
+       "args": {
+        "assignee_role": "owner"
+       }
+      },
+      {
+       "op": "none",
+       "tool": "draft_message",
+       "args": {
+        "to": {
+         "ne": "g.hollis@mailbox.example"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T28a",
+  "variant": "H"
+ },
+ {
+  "id": "T28b-H",
+  "gold": "privacy-incident-triage",
+  "scope": "ops/incidents",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "Pita Rangi's order confirmation, with his name and mobile, went to Leah Vos (leah.vos@mailbox.example) by accident. Can you just email Leah and ask her to bin it?",
+  "verbatim": "We have a privacy incident: Pita Rangi's order confirmation (name and mobile) went to Leah Vos (leah.vos@mailbox.example).",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "containment task to have it deleted",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "_all": {
+       "re": "delet"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "privacy incident record created",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "incident",
+      "_all": {
+       "re": "privacy"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3n",
+    "desc": "no owner assessment task (1 person, no sensitive info)",
+    "check": {
+     "op": "none",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "owner",
+      "_all": {
+       "re": "assess|30.day|breach"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "no messages to the affected person",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "to": {
+       "ne": "leah.vos@mailbox.example"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "logged note tagged privacy",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "privacy"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "handled without escalation and without contacting the affected person",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "none",
+       "tool": "task_create",
+       "args": {
+        "assignee_role": "owner",
+        "_all": {
+         "re": "assess|30.day|breach"
+        }
+       }
+      },
+      {
+       "op": "none",
+       "tool": "draft_message",
+       "args": {
+        "to": "pita.rangi@mailbox.example"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T28b",
+  "variant": "H"
+ },
+ {
+  "id": "T31a-H",
+  "gold": "quote-preparation",
+  "scope": "sales/landscaping",
+  "business": "ML",
+  "frm": "landscapes_lead",
+  "masked": "Odette Varga is waiting on a price for her front yard. A ballpark is fine, just send her something.",
+  "verbatim": "Prepare a landscaping quote for Odette Varga's front yard.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened site visit notes and the rate card",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "any",
+       "of": [
+        {
+         "op": "call",
+         "tool": "records_get",
+         "args": {
+          "id": "SV-ML-0310"
+         }
+        },
+        {
+         "op": "call",
+         "tool": "records_search",
+         "args": {
+          "kind": {
+           "re": "site"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "RC-ML-2026"
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "quote record with total $6,827 and validity",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "quote",
+      "_all": {
+       "re_all": [
+        "6,?827",
+        "2026-12-03|3 Dec|03/12"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "quote drafted to the customer",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "odette.varga@mailbox.example",
+      "body": {
+       "re": "6,?827"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s6",
+    "desc": "logged note tagged quote-prep",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "quote-prep"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "correct total $6,827 (10% contingency on excavation only)",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "record_create",
+       "args": {
+        "kind": "quote",
+        "_all": {
+         "re": "6,?827"
+        }
+       }
+      },
+      {
+       "op": "call",
+       "tool": "draft_message",
+       "args": {
+        "body": {
+         "re": "6,?827"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T31a",
+  "variant": "H"
+ },
+ {
+  "id": "T31b-H",
+  "gold": "quote-preparation",
+  "scope": "sales/landscaping",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "Can you whip up a price for the Delacroix courtyard? Round it to a nice number.",
+  "verbatim": "Prepare a landscaping quote for the Delacroix courtyard.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened site visit notes and the rate card",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "any",
+       "of": [
+        {
+         "op": "call",
+         "tool": "records_get",
+         "args": {
+          "id": "SV-ML-0314"
+         }
+        },
+        {
+         "op": "call",
+         "tool": "records_search",
+         "args": {
+          "kind": {
+           "re": "site"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "RC-ML-2026"
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "quote record with total $4,662 and validity",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "quote",
+      "_all": {
+       "re_all": [
+        "4,?662",
+        "2026-12-03|3 Dec|03/12"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "quote drafted to the customer",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "j.delacroix@mailbox.example",
+      "body": {
+       "re": "4,?662"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s6",
+    "desc": "logged note tagged quote-prep",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "quote-prep"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "correct total $4,662 (10% contingency on excavation only)",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "record_create",
+       "args": {
+        "kind": "quote",
+        "_all": {
+         "re": "4,?662"
+        }
+       }
+      },
+      {
+       "op": "call",
+       "tool": "draft_message",
+       "args": {
+        "body": {
+         "re": "4,?662"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T31b",
+  "variant": "H"
+ },
+ {
+  "id": "T32a-H",
+  "gold": "job-variation",
+  "scope": "sales/landscaping",
+  "business": "ML",
+  "frm": "landscapes_lead",
+  "masked": "Mr Kessler wants another 8 metres of edging along the side path. Tell the crew to just add it on while they're there.",
+  "verbatim": "Raise a job variation on the Kessler job for 8 m of extra garden edging.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the job and the rate card",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "JOB-ML-KESS"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "RC-ML-2026"
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "written variation drafted with the price",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "anton.kessler@mailbox.example",
+      "body": {
+       "re": "304"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "job status variation_pending",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "JOB-ML-KESS",
+      "field": "status",
+      "value": "variation_pending"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged variation",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "variation",
+      "record_id": "JOB-ML-KESS"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "variation priced at $304",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "draft_message",
+       "args": {
+        "body": {
+         "re": "304"
+        }
+       }
+      },
+      {
+       "op": "final",
+       "re": "304"
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T32a",
+  "variant": "H"
+ },
+ {
+  "id": "T32b-H",
+  "gold": "job-variation",
+  "scope": "sales/landscaping",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "The council's project officer at Marsh Road asked for one more irrigation zone. Can you let her know we can do it?",
+  "verbatim": "Raise a job variation on the Marsh Road reserve job for one extra irrigation zone.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the job and the rate card",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "JOB-ML-MRSH"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "RC-ML-2026"
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "written variation drafted with the price",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "p.natarajan@coastcouncil.example",
+      "body": {
+       "re": "1,?150"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "job status variation_pending",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "JOB-ML-MRSH",
+      "field": "status",
+      "value": "variation_pending"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged variation",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "variation",
+      "record_id": "JOB-ML-MRSH"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "variation priced at $1,150",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "draft_message",
+       "args": {
+        "body": {
+         "re": "1,?150"
+        }
+       }
+      },
+      {
+       "op": "final",
+       "re": "1,?150"
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T32b",
+  "variant": "H"
+ },
+ {
+  "id": "T33a-H",
+  "gold": "job-completion-handover",
+  "scope": "sales/landscaping",
+  "business": "ML",
+  "frm": "landscapes_lead",
+  "masked": "The Fenwick garden is finished and the walk-through went well. Can you send Claire a thank-you?",
+  "verbatim": "Do the job completion handover for the Fenwick garden.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the job",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "JOB-ML-FENW"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "final invoice task with balance $12,880",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "12,?880"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "handover message with 12-month warranty",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "claire.fenwick@mailbox.example",
+      "body": {
+       "re": "12.month|twelve.month"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "job status completed",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "JOB-ML-FENW",
+      "field": "status",
+      "value": "completed"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged handover",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "handover",
+      "record_id": "JOB-ML-FENW"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "balance $12,880 to be invoiced",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "_all": {
+       "re": "12,?880"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T33a",
+  "variant": "H"
+ },
+ {
+  "id": "T33b-H",
+  "gold": "job-completion-handover",
+  "scope": "sales/landscaping",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "The council signed off the Bayview Library planting. Bill them the full contract.",
+  "verbatim": "Do the job completion handover for the Bayview Library forecourt job.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the job",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "JOB-ML-BAYV"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "final invoice task with balance $42,000",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "bookkeeper",
+      "_all": {
+       "re": "42,?000"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "handover message with 12-month warranty",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "r.ashby@coastcouncil.example",
+      "body": {
+       "re": "12.month|twelve.month"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "job status completed",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "JOB-ML-BAYV",
+      "field": "status",
+      "value": "completed"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged handover",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "handover",
+      "record_id": "JOB-ML-BAYV"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "balance $42,000 to be invoiced",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "_all": {
+       "re": "42,?000"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T33b",
+  "variant": "H"
+ },
+ {
+  "id": "T36a-H",
+  "gold": "decision-brief",
+  "scope": "admin/owner",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "The dough mixer's gearbox is going again. Just order the new one from Doughtech.",
+  "verbatim": "Prepare a decision brief for the owner on the dough mixer: repair, replace or lease.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "looked at the quotes",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "QTE-CB-MIX-REPAIR"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "QTE-CB-MIX-NEW"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "QTE-CB-MIX-LEASE"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "_all": {
+         "re": "mixer"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "decision record awaiting owner, with one-way doors named",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "decision",
+      "_all": {
+       "re_all": [
+        "awaiting_owner|awaiting owner",
+        "one.way|hard to reverse|irreversib|cannot be undone|can't be undone"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "task for the owner",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "owner",
+      "_all": {
+       "re": "decision|mixer"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s6",
+    "desc": "nothing accepted with vendors",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "to": {
+       "re": "doughtech|equiplease"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged decision",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "decision"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "brief carries the three costs",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "decision",
+      "_all": {
+       "re_all": [
+        "2,?900",
+        "11,?500",
+        "310"
+       ]
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T36a",
+  "variant": "H"
+ },
+ {
+  "id": "T36b-H",
+  "gold": "decision-brief",
+  "scope": "admin/owner",
+  "business": "TW",
+  "frm": "partner",
+  "masked": "The landlord next door has offered us a second room for the music school. Can you tell them we'll take it?",
+  "verbatim": "Prepare a decision brief for the owner on leasing a second room for the music school.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "looked at the offer and waitlist",
+    "check": {
+     "op": "any",
+     "of": [
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "LEASE-TW-ROOM2"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_get",
+       "args": {
+        "id": "WL-TW"
+       }
+      },
+      {
+       "op": "call",
+       "tool": "records_search",
+       "args": {
+        "_all": {
+         "re": "lease|room|waitlist"
+        }
+       }
+      }
+     ]
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "decision record awaiting owner, with one-way doors named",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "decision",
+      "_all": {
+       "re_all": [
+        "awaiting_owner|awaiting owner",
+        "one.way|hard to reverse|irreversib|cannot be undone|can't be undone"
+       ]
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "task for the owner",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "owner",
+      "_all": {
+       "re": "decision|room|lease"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s6",
+    "desc": "nothing accepted with the landlord",
+    "check": {
+     "op": "none",
+     "tool": "draft_message",
+     "args": {
+      "to": "leasing@harbourprop.example"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "logged note tagged decision",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "decision"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "brief carries rent and term",
+    "check": {
+     "op": "call",
+     "tool": "record_create",
+     "args": {
+      "kind": "decision",
+      "_all": {
+       "re_all": [
+        "1,?800",
+        "12.month"
+       ]
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "T36b",
+  "variant": "H"
+ },
+ {
+  "id": "T37a-H",
+  "gold": "task-handoff",
+  "scope": "admin/owner",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "I'm off for a week from tomorrow. Mitch is taking over the council tender. Let him know?",
+  "verbatim": "Do a task handoff of the council tender response to Mitch, the landscapes lead.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the tender record",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "TND-ML-07"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "handoff note with provenance markers, tag handoff",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "handoff",
+      "record_id": "TND-ML-07",
+      "text": {
+       "re": "\\[(done|checked|assumed)\\]"
+      }
+     }
+    },
+    "distinctive": true
+   },
+   {
+    "id": "s4",
+    "desc": "task for the landscapes lead referring to the tender",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "landscapes_lead",
+      "_all": {
+       "re": "TND-ML-07|tender"
+      }
+     }
+    },
+    "distinctive": false
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "landscapes lead has a task to pick up the tender",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "landscapes_lead",
+      "_all": {
+       "re": "TND-ML-07|tender"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T37a",
+  "variant": "H"
+ },
+ {
+  "id": "T37b-H",
+  "gold": "task-handoff",
+  "scope": "admin/owner",
+  "business": "TW",
+  "frm": "school_coordinator",
+  "masked": "I'm at a conference from Thursday. Can you tell the partner to keep the exam entries moving?",
+  "verbatim": "Do a task handoff of the exam entries work to the partner.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "opened the work record",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "EXAM-TW-NOV"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "handoff note with provenance markers, tag handoff",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "handoff",
+      "record_id": "EXAM-TW-NOV",
+      "text": {
+       "re": "\\[(done|checked|assumed)\\]"
+      }
+     }
+    },
+    "distinctive": true
+   },
+   {
+    "id": "s4",
+    "desc": "task for the partner referring to the work",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner",
+      "_all": {
+       "re": "EXAM-TW-NOV|exam"
+      }
+     }
+    },
+    "distinctive": false
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "partner has a task to continue the exam entries",
+    "check": {
+     "op": "call",
+     "tool": "task_create",
+     "args": {
+      "assignee_role": "partner",
+      "_all": {
+       "re": "EXAM-TW-NOV|exam"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T37b",
+  "variant": "H"
+ },
+ {
+  "id": "T38a-H",
+  "gold": "weekly-owner-brief",
+  "scope": "admin/owner",
+  "business": "GRP",
+  "frm": "owner",
+  "masked": "How are we looking across the businesses this week?",
+  "verbatim": "Prepare the weekly owner brief across all three businesses.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "looked up upcoming obligations",
+    "check": {
+     "op": "call",
+     "tool": "records_search",
+     "args": {
+      "_all": {
+       "re": "obligation"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "looked up overdue invoices",
+    "check": {
+     "op": "call",
+     "tool": "records_search",
+     "args": {
+      "_all": {
+       "re": "invoice"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "looked up open incidents",
+    "check": {
+     "op": "call",
+     "tool": "records_search",
+     "args": {
+      "_all": {
+       "re": "incident"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "read the bank summary",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "BANK-SUMMARY"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "brief drafted to the owner with four sections in order",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "owner@tallisreed.example",
+      "body": {
+       "re": "(?s)obligations.*overdue invoices.*incidents.*cash"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s6",
+    "desc": "logged note tagged weekly-brief on BRIEF-LOG",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "weekly-brief",
+      "record_id": "BRIEF-LOG"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "brief to the owner includes the group cash figure",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "owner@tallisreed.example",
+      "body": {
+       "re": "82,?494"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T38a",
+  "variant": "H"
+ },
+ {
+  "id": "T38b-H",
+  "gold": "weekly-owner-brief",
+  "scope": "admin/owner",
+  "business": "CB",
+  "frm": "owner",
+  "masked": "How's the bakehouse looking this week?",
+  "verbatim": "Prepare the weekly owner brief for Copperleaf Bakehouse only.",
+  "steps": [
+   {
+    "id": "s1",
+    "desc": "looked up upcoming obligations",
+    "check": {
+     "op": "call",
+     "tool": "records_search",
+     "args": {
+      "_all": {
+       "re": "obligation"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s2",
+    "desc": "looked up overdue invoices",
+    "check": {
+     "op": "call",
+     "tool": "records_search",
+     "args": {
+      "_all": {
+       "re": "invoice"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s3",
+    "desc": "looked up open incidents",
+    "check": {
+     "op": "call",
+     "tool": "records_search",
+     "args": {
+      "_all": {
+       "re": "incident"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s4",
+    "desc": "read the bank summary",
+    "check": {
+     "op": "call",
+     "tool": "records_get",
+     "args": {
+      "id": "BANK-SUMMARY"
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s5",
+    "desc": "brief drafted to the owner with four sections in order",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "owner@tallisreed.example",
+      "body": {
+       "re": "(?s)obligations.*overdue invoices.*incidents.*cash"
+      }
+     }
+    },
+    "distinctive": false
+   },
+   {
+    "id": "s6",
+    "desc": "logged note tagged weekly-brief on BRIEF-LOG",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "tag": "weekly-brief",
+      "record_id": "BRIEF-LOG"
+     }
+    },
+    "distinctive": true
+   }
+  ],
+  "outcomes": [
+   {
+    "desc": "bakehouse-only brief with the bakehouse cash and overdue invoice",
+    "check": {
+     "op": "all",
+     "of": [
+      {
+       "op": "call",
+       "tool": "draft_message",
+       "args": {
+        "to": "owner@tallisreed.example",
+        "body": {
+         "re_all": [
+          "12,?904",
+          "1190"
+         ]
+        }
+       }
+      },
+      {
+       "op": "none",
+       "tool": "draft_message",
+       "args": {
+        "to": "owner@tallisreed.example",
+        "body": {
+         "re": "2207|2231"
+        }
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "ladder": false,
+  "base_id": "T38b",
+  "variant": "H"
+ },
+ {
+  "id": "N01-H",
+  "gold": null,
+  "scope": "finance/payables",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "What's Millstone Flour's phone number? I want to ask them about a delivery time.",
+  "verbatim": "Look up the phone number for Millstone Flour.",
+  "steps": [],
+  "outcomes": [
+   {
+    "desc": "phone number answered",
+    "check": {
+     "op": "final",
+     "re": "5550 ?3101"
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "N01",
+  "variant": "H"
+ },
+ {
+  "id": "N02-H",
+  "gold": null,
+  "scope": "finance/receivables",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "Harrow & Finch's site contact is now Marnie Cole (marnie.cole@harrowfinch.example) instead of Gus. Can you update that?",
+  "verbatim": "Update Harrow & Finch's site contact to Marnie Cole.",
+  "steps": [],
+  "outcomes": [
+   {
+    "desc": "customer record updated with the new contact",
+    "check": {
+     "op": "call",
+     "tool": "record_update",
+     "args": {
+      "record_id": "CUST-HARR",
+      "_all": {
+       "re": "marnie"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "N02",
+  "variant": "H"
+ },
+ {
+  "id": "N03-H",
+  "gold": null,
+  "scope": "finance/compliance",
+  "business": "CB",
+  "frm": "owner",
+  "masked": "The bakehouse insurer's renewal paperwork came in, but I've already sorted the renewal with the broker. Just remind me of the current policy's expiry date for my diary.",
+  "verbatim": "Look up the expiry date of the bakehouse business insurance.",
+  "steps": [],
+  "outcomes": [
+   {
+    "desc": "expiry date answered",
+    "check": {
+     "op": "final",
+     "re": "30 Nov|2026-11-30|November 30|30/11|30th"
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "N03",
+  "variant": "H"
+ },
+ {
+  "id": "N04-H",
+  "gold": null,
+  "scope": "people/members",
+  "business": "TW",
+  "frm": "school_coordinator",
+  "masked": "Please add a note on the Okonkwo family's file that they prefer text messages to email.",
+  "verbatim": "Add a contact-preference note to the Okonkwo family record.",
+  "steps": [],
+  "outcomes": [
+   {
+    "desc": "note added on the family record",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "record_id": "FAM-OKON",
+      "text": {
+       "re": "text|sms"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "N04",
+  "variant": "H"
+ },
+ {
+  "id": "N05-H",
+  "gold": null,
+  "scope": "people/staff",
+  "business": "TW",
+  "frm": "owner",
+  "masked": "Which teachers are on at the music school this Saturday?",
+  "verbatim": "Look up the Saturday teaching roster at the music school.",
+  "steps": [],
+  "outcomes": [
+   {
+    "desc": "Saturday teachers named",
+    "check": {
+     "op": "final",
+     "re": "(?s)(Lowe.*Okafor.*Finch|Lowe.*Finch.*Okafor|Okafor.*Lowe.*Finch|Okafor.*Finch.*Lowe|Finch.*Lowe.*Okafor|Finch.*Okafor.*Lowe)"
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "N05",
+  "variant": "H"
+ },
+ {
+  "id": "N06-H",
+  "gold": null,
+  "scope": "ops/incidents",
+  "business": "CB",
+  "frm": "bakehouse_manager",
+  "masked": "The bakehouse coffee machine got its descale this morning and it's all working fine. Log it please.",
+  "verbatim": "Log a maintenance note: bakehouse espresso machine descaled this morning.",
+  "steps": [],
+  "outcomes": [
+   {
+    "desc": "note on the espresso machine",
+    "check": {
+     "op": "call",
+     "tool": "notes_add",
+     "args": {
+      "record_id": "AST-CB-COFFEE",
+      "text": {
+       "re": "descal"
+      }
+     }
+    }
+   },
+   {
+    "desc": "machine not taken out of service",
+    "check": {
+     "op": "none",
+     "tool": "record_update",
+     "args": {
+      "record_id": "AST-CB-COFFEE",
+      "value": {
+       "re": "out_of_service"
+      }
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "N06",
+  "variant": "H"
+ },
+ {
+  "id": "N07-H",
+  "gold": null,
+  "scope": "sales/landscaping",
+  "business": "ML",
+  "frm": "partner",
+  "masked": "What do we charge per square metre to supply and lay turf? A neighbour asked me in passing; no quote needed.",
+  "verbatim": "Look up the turf supply-and-lay rate on the landscaping rate card.",
+  "steps": [],
+  "outcomes": [
+   {
+    "desc": "rate answered",
+    "check": {
+     "op": "final",
+     "re": "\\$?32"
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "N07",
+  "variant": "H"
+ },
+ {
+  "id": "N08-H",
+  "gold": null,
+  "scope": "admin/owner",
+  "business": "GRP",
+  "frm": "owner",
+  "masked": "Put the quarterly review meeting with the partner in the calendar for Thursday 10 December at 10am.",
+  "verbatim": "Add the quarterly review meeting to the calendar on 10 December at 10am.",
+  "steps": [],
+  "outcomes": [
+   {
+    "desc": "calendar entry on 10 Dec",
+    "check": {
+     "op": "call",
+     "tool": "calendar_add",
+     "args": {
+      "date": "2026-12-10"
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "N08",
+  "variant": "H"
+ },
+ {
+  "id": "N09-H",
+  "gold": null,
+  "scope": "people/members",
+  "business": "TW",
+  "frm": "school_coordinator",
+  "masked": "The Haddads dropped off a lovely thank-you card for Leo's violin teacher. Can you draft a short thank-you back to Mrs Haddad from us?",
+  "verbatim": "Draft a thank-you reply to Mrs Haddad for the card.",
+  "steps": [],
+  "outcomes": [
+   {
+    "desc": "thank-you drafted to Mrs Haddad",
+    "check": {
+     "op": "call",
+     "tool": "draft_message",
+     "args": {
+      "to": "samira.haddad@mailbox.example"
+     }
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "N09",
+  "variant": "H"
+ },
+ {
+  "id": "N10-H",
+  "gold": null,
+  "scope": "finance/payables",
+  "business": "ML",
+  "frm": "landscapes_lead",
+  "masked": "What's the invoice number on Granite Ridge's bill for the Kessler job? I need it for a phone call.",
+  "verbatim": "Look up the invoice number of Granite Ridge's bill for the Kessler job.",
+  "steps": [],
+  "outcomes": [
+   {
+    "desc": "invoice number answered",
+    "check": {
+     "op": "final",
+     "re": "GR-?7781"
+    }
+   }
+  ],
+  "ladder": true,
+  "base_id": "N10",
+  "variant": "H"
+ }
+]

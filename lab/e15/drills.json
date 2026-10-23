@@ -1,0 +1,30 @@
+[
+ {
+  "run": "C-P3-9",
+  "arm": "C",
+  "killed_at_s": 90.1,
+  "commits_before_kill": 1,
+  "commits_after": 4,
+  "first_actions": [
+   "Skill:brain-builder",
+   "Bash:cd /home/claude/e15/runs/C/P3/9/work; cat packages/WP-E15C.md; cat build/state.json; cat build/questions.json; git log --stat | head -30; ls -R src tests provided | head -50",
+   "Bash:cd /home/claude/e15/runs/C/P3/9/work; make test 2>&1 | tail -5; python -m pytest -q tests/unit 2>&1 | tail -3; python scripts/gate_scan.py; git status --short",
+   "Agent:",
+   "Bash:cat packages/WP-E15C.md && git log --oneline 5926e45..HEAD && git diff 5926e45..HEAD --stat",
+   "Bash:cat -n src/cards/__init__.py; git diff 5926e45..HEAD -- build/ tests/; ls tests/acceptance provided/factstore"
+  ],
+  "read_state_first": true,
+  "reverified_first": true,
+  "cost_before_kill": 0.27359,
+  "cost_after": 0.4222,
+  "hidden": "40/40",
+  "visible": 8,
+  "completed": true,
+  "msgs_after": [
+   "WP-E15C: record commit id",
+   "WP-E15C: apply owner rulings OA-1, OA-2 (k=10)",
+   "WP-E15C: state passed",
+   "WP-E15C: review fixes (default k, stale card recompile)"
+  ]
+ }
+]

@@ -1,0 +1,108 @@
+{
+ "run": "/home/claude/e15/runs/B/P3/3",
+ "reviewer_id": "c72c961ef4",
+ "model": "claude-opus-5-5",
+ "cost_usd": 0.17277119999999999,
+ "wall_s": 34.8,
+ "parsed": {
+  "defects": [
+   {
+    "rule": "Interface",
+    "severity": "critical",
+    "location": "src/vretrieval/ (absent)",
+    "description": "The required package src/vretrieval/ does not exist, so `from vretrieval import Retriever, Hit, VisibleSet` fails. None of Retriever, Hit, VisibleSet, visible_set, search, get, refresh or rebuild is implemented.",
+    "evidence": "`ls -laR src` shows only src/cards/__init__.py; `find / -type d -name vretrieval` returns nothing; probe output: `ModuleNotFoundError No module named 'vretrieval'`"
+   },
+   {
+    "rule": "R2",
+    "severity": "critical",
+    "location": "src/vretrieval/ (absent)",
+    "description": "No visible-set resolution exists for retrieval, so the per-call, fail-closed, tenant-scoped, agent-delegation rules cannot hold.",
+    "evidence": "The package is missing (see above)."
+   },
+   {
+    "rule": "R2a",
+    "severity": "critical",
+    "location": "src/vretrieval/ (absent)",
+    "description": "There is no implementation, so no-standing-owner-access is not enforced by any retriever.",
+    "evidence": "The package is missing."
+   },
+   {
+    "rule": "R3",
+    "severity": "critical",
+    "location": "src/vretrieval/ (absent)",
+    "description": "There is no pre-filtered lexical or dense channel.",
+    "evidence": "The package is missing."
+   },
+   {
+    "rule": "R4",
+    "severity": "critical",
+    "location": "src/vretrieval/ (absent)",
+    "description": "There are no BM25 statistics restricted to the visible set.",
+    "evidence": "The package is missing."
+   },
+   {
+    "rule": "R6",
+    "severity": "critical",
+    "location": "src/vretrieval/ (absent)",
+    "description": "There is no exit check (active, current version, visible) before results are returned.",
+    "evidence": "The package is missing."
+   },
+   {
+    "rule": "R7",
+    "severity": "critical",
+    "location": "src/vretrieval/ (absent)",
+    "description": "There is no get() that returns None identically for unknown, hidden, erased and quarantined records.",
+    "evidence": "The package is missing."
+   },
+   {
+    "rule": "R1",
+    "severity": "major",
+    "location": "src/vretrieval/ (absent)",
+    "description": "There is no query handling or tokenisation.",
+    "evidence": "The package is missing."
+   },
+   {
+    "rule": "R5",
+    "severity": "major",
+    "location": "src/vretrieval/ (absent)",
+    "description": "There are no lexical or dense channels, no stored vr_ vectors, and no RRF fusion; the default top-5 from the done line is also missing.",
+    "evidence": "The package is missing; no vr_ tables are created anywhere in src/."
+   },
+   {
+    "rule": "R8",
+    "severity": "major",
+    "location": "src/vretrieval/ (absent)",
+    "description": "There is no index, refresh() or rebuild().",
+    "evidence": "The package is missing."
+   },
+   {
+    "rule": "R9",
+    "severity": "minor",
+    "location": "src/vretrieval/ (absent)",
+    "description": "There is no INFO audit logging on the `vretrieval` logger.",
+    "evidence": "The package is missing."
+   },
+   {
+    "rule": "R10",
+    "severity": "minor",
+    "location": "src/vretrieval/ (absent)",
+    "description": "The ADR-005 fusion marker is absent. The only ADR-007 marker in src/ is in the unrelated cards package, and the code with the required markers does not exist.",
+    "evidence": "The package is missing; src/cards/__init__.py:60 marks a different package's visible_set."
+   },
+   {
+    "rule": "Interface",
+    "severity": "major",
+    "location": "src/cards/__init__.py:6",
+    "description": "The only code in src/ belongs to a different work package (WP-E15C) and depends on a module that is not available, so it cannot be imported.",
+    "evidence": "src/cards/__init__.py:1 `\"\"\"WP-E15C entity cards and context assembly...` ; line 6 `from factstore.text import tokens`; probe: `import cards` -> `ModuleNotFoundError No module named 'factstore'`"
+   }
+  ],
+  "ambiguities": [
+   "The spec says agents use 'the access of the person it acts for' while also saying agents have their own membership rows 'to limit what each agent may use'. Whether access is the person's groups or the intersection with the agent's own rows is unclear. This could not be tested because vretrieval does not exist.",
+   "R6 says the snippet 'should be the part of the text that best matches the query', but the Interface says the snippet is 'the first 120 characters of the current version's body'. These conflict."
+  ],
+  "verdict": "does not meet spec"
+ },
+ "raw_tail": "tion\": \"The required package src/vretrieval/ does not exist, so `from vretrieval import Retriever, Hit, VisibleSet` fails. None of Retriever, Hit, VisibleSet, visible_set, search, get, refresh or rebuild is implemented.\", \"evidence\": \"`ls -laR src` shows only src/cards/__init__.py; `find / -type d -name vretrieval` returns nothing; probe output: `ModuleNotFoundError No module named 'vretrieval'`\"}, {\"rule\": \"R2\", \"severity\": \"critical\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"No visible-set resolution exists for retrieval, so the per-call, fail-closed, tenant-scoped, agent-delegation rules cannot hold.\", \"evidence\": \"The package is missing (see above).\"}, {\"rule\": \"R2a\", \"severity\": \"critical\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"There is no implementation, so no-standing-owner-access is not enforced by any retriever.\", \"evidence\": \"The package is missing.\"}, {\"rule\": \"R3\", \"severity\": \"critical\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"There is no pre-filtered lexical or dense channel.\", \"evidence\": \"The package is missing.\"}, {\"rule\": \"R4\", \"severity\": \"critical\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"There are no BM25 statistics restricted to the visible set.\", \"evidence\": \"The package is missing.\"}, {\"rule\": \"R6\", \"severity\": \"critical\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"There is no exit check (active, current version, visible) before results are returned.\", \"evidence\": \"The package is missing.\"}, {\"rule\": \"R7\", \"severity\": \"critical\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"There is no get() that returns None identically for unknown, hidden, erased and quarantined records.\", \"evidence\": \"The package is missing.\"}, {\"rule\": \"R1\", \"severity\": \"major\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"There is no query handling or tokenisation.\", \"evidence\": \"The package is missing.\"}, {\"rule\": \"R5\", \"severity\": \"major\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"There are no lexical or dense channels, no stored vr_ vectors, and no RRF fusion; the default top-5 from the done line is also missing.\", \"evidence\": \"The package is missing; no vr_ tables are created anywhere in src/.\"}, {\"rule\": \"R8\", \"severity\": \"major\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"There is no index, refresh() or rebuild().\", \"evidence\": \"The package is missing.\"}, {\"rule\": \"R9\", \"severity\": \"minor\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"There is no INFO audit logging on the `vretrieval` logger.\", \"evidence\": \"The package is missing.\"}, {\"rule\": \"R10\", \"severity\": \"minor\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"The ADR-005 fusion marker is absent. The only ADR-007 marker in src/ is in the unrelated cards package, and the code with the required markers does not exist.\", \"evidence\": \"The package is missing; src/cards/__init__.py:60 marks a different package's visible_set.\"}, {\"rule\": \"Interface\", \"severity\": \"major\", \"location\": \"src/cards/__init__.py:6\", \"description\": \"The only code in src/ belongs to a different work package (WP-E15C) and depends on a module that is not available, so it cannot be imported.\", \"evidence\": \"src/cards/__init__.py:1 `\\\"\\\"\\\"WP-E15C entity cards and context assembly...` ; line 6 `from factstore.text import tokens`; probe: `import cards` -> `ModuleNotFoundError No module named 'factstore'`\"}],\n \"ambiguities\": [\"The spec says agents use 'the access of the person it acts for' while also saying agents have their own membership rows 'to limit what each agent may use'. Whether access is the person's groups or the intersection with the agent's own rows is unclear. This could not be tested because vretrieval does not exist.\", \"R6 says the snippet 'should be the part of the text that best matches the query', but the Interface says the snippet is 'the first 120 characters of the current version's body'. These conflict.\"],\n \"verdict\": \"does not meet spec\"}\n```"
+}

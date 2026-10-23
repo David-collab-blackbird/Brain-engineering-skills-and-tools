@@ -1,0 +1,2166 @@
+{
+ "40": {
+  "T01a": {
+   "push": "bill-approval-check",
+   "probs": {
+    "bill-approval-check": 0.9136,
+    "supplier-statement-reconciliation": 0.0299,
+    "supplier-bank-change": 0.0009,
+    "payment-run-prep": 0.006,
+    "credit-note-handling": 0.0014,
+    "None": 0.0481
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T01b": {
+   "push": "bill-approval-check",
+   "probs": {
+    "bill-approval-check": 0.5961,
+    "supplier-statement-reconciliation": 0.0806,
+    "supplier-bank-change": 0.009,
+    "payment-run-prep": 0.0395,
+    "credit-note-handling": 0.0909,
+    "None": 0.184
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T02a": {
+   "push": "supplier-statement-reconciliation",
+   "probs": {
+    "bill-approval-check": 0.0762,
+    "supplier-statement-reconciliation": 0.7164,
+    "supplier-bank-change": 0.0042,
+    "payment-run-prep": 0.0567,
+    "credit-note-handling": 0.0178,
+    "None": 0.1288
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T02b": {
+   "push": "supplier-statement-reconciliation",
+   "probs": {
+    "bill-approval-check": 0.0205,
+    "supplier-statement-reconciliation": 0.413,
+    "supplier-bank-change": 0.0052,
+    "payment-run-prep": 0.0705,
+    "credit-note-handling": 0.3214,
+    "None": 0.1695
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T03a": {
+   "push": "supplier-bank-change",
+   "probs": {
+    "bill-approval-check": 0.0411,
+    "supplier-statement-reconciliation": 0.0523,
+    "supplier-bank-change": 0.6613,
+    "payment-run-prep": 0.0304,
+    "credit-note-handling": 0.0182,
+    "None": 0.1967
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T03b": {
+   "push": "supplier-bank-change",
+   "probs": {
+    "bill-approval-check": 0.0263,
+    "supplier-statement-reconciliation": 0.0195,
+    "supplier-bank-change": 0.7164,
+    "payment-run-prep": 0.027,
+    "credit-note-handling": 0.0087,
+    "None": 0.2022
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T06a": {
+   "push": "overdue-invoice-followup",
+   "probs": {
+    "overdue-invoice-followup": 0.7427,
+    "quote-follow-up": 0.0822,
+    "payment-plan-request": 0.0107,
+    "deposit-refund": 0.0046,
+    "invoice-dispute": 0.0061,
+    "None": 0.1538
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T06b": {
+   "push": "overdue-invoice-followup",
+   "probs": {
+    "overdue-invoice-followup": 0.8642,
+    "quote-follow-up": 0.0113,
+    "payment-plan-request": 0.0019,
+    "deposit-refund": 0.0043,
+    "invoice-dispute": 0.0093,
+    "None": 0.109
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T07a": {
+   "push": "quote-follow-up",
+   "probs": {
+    "overdue-invoice-followup": 0.0047,
+    "quote-follow-up": 0.9735,
+    "payment-plan-request": 0.0004,
+    "deposit-refund": 0.0011,
+    "invoice-dispute": 0.0006,
+    "None": 0.0197
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T07b": {
+   "push": null,
+   "probs": {
+    "overdue-invoice-followup": 0.1393,
+    "quote-follow-up": 0.3424,
+    "payment-plan-request": 0.0155,
+    "deposit-refund": 0.0597,
+    "invoice-dispute": 0.0323,
+    "None": 0.4107
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T08a": {
+   "push": "payment-plan-request",
+   "probs": {
+    "overdue-invoice-followup": 0.0062,
+    "quote-follow-up": 0.0009,
+    "payment-plan-request": 0.9364,
+    "deposit-refund": 0.0009,
+    "invoice-dispute": 0.0007,
+    "None": 0.0549
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T08b": {
+   "push": "payment-plan-request",
+   "probs": {
+    "overdue-invoice-followup": 0.0099,
+    "quote-follow-up": 0.0023,
+    "payment-plan-request": 0.8816,
+    "deposit-refund": 0.0029,
+    "invoice-dispute": 0.0032,
+    "None": 0.1002
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T09a": {
+   "push": "deposit-refund",
+   "probs": {
+    "overdue-invoice-followup": 0.0936,
+    "quote-follow-up": 0.0079,
+    "payment-plan-request": 0.0088,
+    "deposit-refund": 0.5321,
+    "invoice-dispute": 0.0531,
+    "None": 0.3044
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T09b": {
+   "push": "deposit-refund",
+   "probs": {
+    "overdue-invoice-followup": 0.0414,
+    "quote-follow-up": 0.0048,
+    "payment-plan-request": 0.0302,
+    "deposit-refund": 0.7543,
+    "invoice-dispute": 0.0049,
+    "None": 0.1644
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T11a": {
+   "push": "weekly-obligations-check",
+   "probs": {
+    "weekly-obligations-check": 0.3578,
+    "insurance-renewal": 0.0389,
+    "licence-permit-renewal": 0.178,
+    "bas-preparation": 0.1467,
+    "super-payment-check": 0.0103,
+    "None": 0.2683
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T11b": {
+   "push": null,
+   "probs": {
+    "weekly-obligations-check": 0.2316,
+    "insurance-renewal": 0.0107,
+    "licence-permit-renewal": 0.3144,
+    "bas-preparation": 0.0676,
+    "super-payment-check": 0.0073,
+    "None": 0.3684
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T12a": {
+   "push": "insurance-renewal",
+   "probs": {
+    "weekly-obligations-check": 0.0144,
+    "insurance-renewal": 0.818,
+    "licence-permit-renewal": 0.0093,
+    "bas-preparation": 0.0146,
+    "super-payment-check": 0.002,
+    "None": 0.1418
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T12b": {
+   "push": "insurance-renewal",
+   "probs": {
+    "weekly-obligations-check": 0.0468,
+    "insurance-renewal": 0.4986,
+    "licence-permit-renewal": 0.0821,
+    "bas-preparation": 0.0487,
+    "super-payment-check": 0.0033,
+    "None": 0.3205
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T13a": {
+   "push": "licence-permit-renewal",
+   "probs": {
+    "weekly-obligations-check": 0.0644,
+    "insurance-renewal": 0.0184,
+    "licence-permit-renewal": 0.7384,
+    "bas-preparation": 0.0446,
+    "super-payment-check": 0.0017,
+    "None": 0.1325
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T13b": {
+   "push": "licence-permit-renewal",
+   "probs": {
+    "weekly-obligations-check": 0.0048,
+    "insurance-renewal": 0.0016,
+    "licence-permit-renewal": 0.9592,
+    "bas-preparation": 0.0039,
+    "super-payment-check": 0.0004,
+    "None": 0.0301
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T16a": {
+   "push": "new-student-enrolment",
+   "probs": {
+    "new-student-enrolment": 0.7151,
+    "lesson-cancellation-credit": 0.0092,
+    "member-complaint": 0.0072,
+    "term-fee-reminder": 0.002,
+    "withdrawal-exit": 0.0016,
+    "None": 0.2649
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T16b": {
+   "push": "new-student-enrolment",
+   "probs": {
+    "new-student-enrolment": 0.563,
+    "lesson-cancellation-credit": 0.0064,
+    "member-complaint": 0.0039,
+    "term-fee-reminder": 0.0028,
+    "withdrawal-exit": 0.002,
+    "None": 0.4219
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T17a": {
+   "push": "lesson-cancellation-credit",
+   "probs": {
+    "new-student-enrolment": 0.0273,
+    "lesson-cancellation-credit": 0.3971,
+    "member-complaint": 0.1922,
+    "term-fee-reminder": 0.0032,
+    "withdrawal-exit": 0.0036,
+    "None": 0.3765
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T17b": {
+   "push": "lesson-cancellation-credit",
+   "probs": {
+    "new-student-enrolment": 0.006,
+    "lesson-cancellation-credit": 0.8532,
+    "member-complaint": 0.0491,
+    "term-fee-reminder": 0.0021,
+    "withdrawal-exit": 0.0016,
+    "None": 0.0881
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T18a": {
+   "push": "member-complaint",
+   "probs": {
+    "new-student-enrolment": 0.0056,
+    "lesson-cancellation-credit": 0.0129,
+    "member-complaint": 0.9231,
+    "term-fee-reminder": 0.0015,
+    "withdrawal-exit": 0.0007,
+    "None": 0.0561
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T18b": {
+   "push": "member-complaint",
+   "probs": {
+    "new-student-enrolment": 0.0006,
+    "lesson-cancellation-credit": 0.0006,
+    "member-complaint": 0.9336,
+    "term-fee-reminder": 0.0005,
+    "withdrawal-exit": 0.0004,
+    "None": 0.0642
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T21a": {
+   "push": "staff-leave-request",
+   "probs": {
+    "staff-leave-request": 0.6136,
+    "new-staff-onboarding": 0.002,
+    "timesheet-discrepancy": 0.0023,
+    "staff-offboarding": 0.0019,
+    "roster-swap": 0.0041,
+    "None": 0.3761
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T21b": {
+   "push": "staff-leave-request",
+   "probs": {
+    "staff-leave-request": 0.665,
+    "new-staff-onboarding": 0.001,
+    "timesheet-discrepancy": 0.0013,
+    "staff-offboarding": 0.0013,
+    "roster-swap": 0.0028,
+    "None": 0.3286
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T22a": {
+   "push": "new-staff-onboarding",
+   "probs": {
+    "staff-leave-request": 0.0027,
+    "new-staff-onboarding": 0.6322,
+    "timesheet-discrepancy": 0.0015,
+    "staff-offboarding": 0.0018,
+    "roster-swap": 0.0033,
+    "None": 0.3585
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T22b": {
+   "push": "new-staff-onboarding",
+   "probs": {
+    "staff-leave-request": 0.0011,
+    "new-staff-onboarding": 0.8768,
+    "timesheet-discrepancy": 0.001,
+    "staff-offboarding": 0.0009,
+    "roster-swap": 0.0068,
+    "None": 0.1135
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T23a": {
+   "push": "timesheet-discrepancy",
+   "probs": {
+    "staff-leave-request": 0.0014,
+    "new-staff-onboarding": 0.0019,
+    "timesheet-discrepancy": 0.8566,
+    "staff-offboarding": 0.0014,
+    "roster-swap": 0.001,
+    "None": 0.1377
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T23b": {
+   "push": "timesheet-discrepancy",
+   "probs": {
+    "staff-leave-request": 0.0009,
+    "new-staff-onboarding": 0.0005,
+    "timesheet-discrepancy": 0.9232,
+    "staff-offboarding": 0.0012,
+    "roster-swap": 0.0006,
+    "None": 0.0735
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T26a": {
+   "push": "equipment-fault",
+   "probs": {
+    "equipment-fault": 0.478,
+    "safety-incident-report": 0.0118,
+    "privacy-incident-triage": 0.0023,
+    "food-safety-temp-breach": 0.2196,
+    "customer-feedback-review": 0.003,
+    "None": 0.2852
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T26b": {
+   "push": "equipment-fault",
+   "probs": {
+    "equipment-fault": 0.8962,
+    "safety-incident-report": 0.0095,
+    "privacy-incident-triage": 0.0007,
+    "food-safety-temp-breach": 0.0005,
+    "customer-feedback-review": 0.0007,
+    "None": 0.0925
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T27a": {
+   "push": "safety-incident-report",
+   "probs": {
+    "equipment-fault": 0.023,
+    "safety-incident-report": 0.6325,
+    "privacy-incident-triage": 0.0061,
+    "food-safety-temp-breach": 0.0648,
+    "customer-feedback-review": 0.0228,
+    "None": 0.2507
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T27b": {
+   "push": "safety-incident-report",
+   "probs": {
+    "equipment-fault": 0.0014,
+    "safety-incident-report": 0.9048,
+    "privacy-incident-triage": 0.0014,
+    "food-safety-temp-breach": 0.0006,
+    "customer-feedback-review": 0.0207,
+    "None": 0.0712
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T28a": {
+   "push": "privacy-incident-triage",
+   "probs": {
+    "equipment-fault": 0.0017,
+    "safety-incident-report": 0.0098,
+    "privacy-incident-triage": 0.8774,
+    "food-safety-temp-breach": 0.0011,
+    "customer-feedback-review": 0.006,
+    "None": 0.1039
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T28b": {
+   "push": "privacy-incident-triage",
+   "probs": {
+    "equipment-fault": 0.0019,
+    "safety-incident-report": 0.002,
+    "privacy-incident-triage": 0.8877,
+    "food-safety-temp-breach": 0.0015,
+    "customer-feedback-review": 0.0043,
+    "None": 0.1026
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T31a": {
+   "push": "quote-preparation",
+   "probs": {
+    "quote-preparation": 0.7149,
+    "job-variation": 0.0137,
+    "job-completion-handover": 0.0106,
+    "site-visit-booking": 0.1189,
+    "subcontractor-engagement": 0.0057,
+    "None": 0.1362
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T31b": {
+   "push": null,
+   "probs": {
+    "quote-preparation": 0.1947,
+    "job-variation": 0.0811,
+    "job-completion-handover": 0.117,
+    "site-visit-booking": 0.2097,
+    "subcontractor-engagement": 0.0243,
+    "None": 0.3733
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T32a": {
+   "push": "job-variation",
+   "probs": {
+    "quote-preparation": 0.0404,
+    "job-variation": 0.6586,
+    "job-completion-handover": 0.03,
+    "site-visit-booking": 0.065,
+    "subcontractor-engagement": 0.0065,
+    "None": 0.1994
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T32b": {
+   "push": null,
+   "probs": {
+    "quote-preparation": 0.0241,
+    "job-variation": 0.1255,
+    "job-completion-handover": 0.0068,
+    "site-visit-booking": 0.249,
+    "subcontractor-engagement": 0.0079,
+    "None": 0.5866
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T33a": {
+   "push": "job-completion-handover",
+   "probs": {
+    "quote-preparation": 0.094,
+    "job-variation": 0.0181,
+    "job-completion-handover": 0.6187,
+    "site-visit-booking": 0.0551,
+    "subcontractor-engagement": 0.0127,
+    "None": 0.2013
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T33b": {
+   "push": "job-completion-handover",
+   "probs": {
+    "quote-preparation": 0.0084,
+    "job-variation": 0.0086,
+    "job-completion-handover": 0.5686,
+    "site-visit-booking": 0.0043,
+    "subcontractor-engagement": 0.0032,
+    "None": 0.4069
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T36a": {
+   "push": null,
+   "probs": {
+    "decision-brief": 0.3174,
+    "task-handoff": 0.0379,
+    "weekly-owner-brief": 0.0091,
+    "meeting-minutes": 0.0044,
+    "rule-change-request": 0.0194,
+    "None": 0.6118
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "T36b": {
+   "push": null,
+   "probs": {
+    "decision-brief": 0.3499,
+    "task-handoff": 0.0288,
+    "weekly-owner-brief": 0.0064,
+    "meeting-minutes": 0.0049,
+    "rule-change-request": 0.0338,
+    "None": 0.5763
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "T37a": {
+   "push": "task-handoff",
+   "probs": {
+    "decision-brief": 0.0205,
+    "task-handoff": 0.569,
+    "weekly-owner-brief": 0.007,
+    "meeting-minutes": 0.0038,
+    "rule-change-request": 0.0071,
+    "None": 0.3925
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "T37b": {
+   "push": null,
+   "probs": {
+    "decision-brief": 0.0554,
+    "task-handoff": 0.3185,
+    "weekly-owner-brief": 0.0095,
+    "meeting-minutes": 0.0396,
+    "rule-change-request": 0.1136,
+    "None": 0.4634
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "T38a": {
+   "push": "weekly-owner-brief",
+   "probs": {
+    "decision-brief": 0.0247,
+    "task-handoff": 0.0054,
+    "weekly-owner-brief": 0.5428,
+    "meeting-minutes": 0.0179,
+    "rule-change-request": 0.0177,
+    "None": 0.3915
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "T38b": {
+   "push": null,
+   "probs": {
+    "decision-brief": 0.03,
+    "task-handoff": 0.0086,
+    "weekly-owner-brief": 0.1329,
+    "meeting-minutes": 0.0073,
+    "rule-change-request": 0.047,
+    "None": 0.7742
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "N01": {
+   "push": null,
+   "probs": {
+    "bill-approval-check": 0.0682,
+    "supplier-statement-reconciliation": 0.1004,
+    "supplier-bank-change": 0.0782,
+    "payment-run-prep": 0.0546,
+    "credit-note-handling": 0.0241,
+    "None": 0.6744
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "N02": {
+   "push": null,
+   "probs": {
+    "overdue-invoice-followup": 0.0058,
+    "quote-follow-up": 0.0034,
+    "payment-plan-request": 0.0016,
+    "deposit-refund": 0.0012,
+    "invoice-dispute": 0.0021,
+    "None": 0.9859
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "N03": {
+   "push": "insurance-renewal",
+   "probs": {
+    "weekly-obligations-check": 0.0142,
+    "insurance-renewal": 0.6148,
+    "licence-permit-renewal": 0.058,
+    "bas-preparation": 0.0085,
+    "super-payment-check": 0.0015,
+    "None": 0.303
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "N04": {
+   "push": null,
+   "probs": {
+    "new-student-enrolment": 0.0152,
+    "lesson-cancellation-credit": 0.0081,
+    "member-complaint": 0.0394,
+    "term-fee-reminder": 0.0048,
+    "withdrawal-exit": 0.0022,
+    "None": 0.9304
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "N05": {
+   "push": null,
+   "probs": {
+    "staff-leave-request": 0.0046,
+    "new-staff-onboarding": 0.0128,
+    "timesheet-discrepancy": 0.0031,
+    "staff-offboarding": 0.0025,
+    "roster-swap": 0.0122,
+    "None": 0.9649
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "N06": {
+   "push": "equipment-fault",
+   "probs": {
+    "equipment-fault": 0.5563,
+    "safety-incident-report": 0.0047,
+    "privacy-incident-triage": 0.0022,
+    "food-safety-temp-breach": 0.0034,
+    "customer-feedback-review": 0.0084,
+    "None": 0.425
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "N07": {
+   "push": "quote-preparation",
+   "probs": {
+    "quote-preparation": 0.6752,
+    "job-variation": 0.0057,
+    "job-completion-handover": 0.02,
+    "site-visit-booking": 0.0563,
+    "subcontractor-engagement": 0.0042,
+    "None": 0.2386
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "N08": {
+   "push": null,
+   "probs": {
+    "decision-brief": 0.0089,
+    "task-handoff": 0.0027,
+    "weekly-owner-brief": 0.0129,
+    "meeting-minutes": 0.0421,
+    "rule-change-request": 0.0134,
+    "None": 0.9199
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "N09": {
+   "push": null,
+   "probs": {
+    "new-student-enrolment": 0.0114,
+    "lesson-cancellation-credit": 0.0072,
+    "member-complaint": 0.0274,
+    "term-fee-reminder": 0.0025,
+    "withdrawal-exit": 0.0043,
+    "None": 0.9471
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "N10": {
+   "push": null,
+   "probs": {
+    "bill-approval-check": 0.1037,
+    "supplier-statement-reconciliation": 0.3,
+    "supplier-bank-change": 0.004,
+    "payment-run-prep": 0.0118,
+    "credit-note-handling": 0.0323,
+    "None": 0.5483
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  }
+ },
+ "40H": {
+  "T01a-H": {
+   "push": null,
+   "probs": {
+    "bill-approval-check": 0.2795,
+    "supplier-statement-reconciliation": 0.1009,
+    "supplier-bank-change": 0.0147,
+    "payment-run-prep": 0.1387,
+    "credit-note-handling": 0.1419,
+    "None": 0.3242
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T01b-H": {
+   "push": null,
+   "probs": {
+    "bill-approval-check": 0.1531,
+    "supplier-statement-reconciliation": 0.0794,
+    "supplier-bank-change": 0.0794,
+    "payment-run-prep": 0.0618,
+    "credit-note-handling": 0.2415,
+    "None": 0.3849
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T02a-H": {
+   "push": null,
+   "probs": {
+    "bill-approval-check": 0.1368,
+    "supplier-statement-reconciliation": 0.092,
+    "supplier-bank-change": 0.0171,
+    "payment-run-prep": 0.2252,
+    "credit-note-handling": 0.1737,
+    "None": 0.3552
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T02b-H": {
+   "push": "supplier-statement-reconciliation",
+   "probs": {
+    "bill-approval-check": 0.0799,
+    "supplier-statement-reconciliation": 0.4463,
+    "supplier-bank-change": 0.011,
+    "payment-run-prep": 0.1446,
+    "credit-note-handling": 0.0289,
+    "None": 0.2894
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T03a-H": {
+   "push": null,
+   "probs": {
+    "bill-approval-check": 0.041,
+    "supplier-statement-reconciliation": 0.0423,
+    "supplier-bank-change": 0.0113,
+    "payment-run-prep": 0.0331,
+    "credit-note-handling": 0.0501,
+    "None": 0.8222
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T03b-H": {
+   "push": "supplier-statement-reconciliation",
+   "probs": {
+    "bill-approval-check": 0.0912,
+    "supplier-statement-reconciliation": 0.3475,
+    "supplier-bank-change": 0.1312,
+    "payment-run-prep": 0.0573,
+    "credit-note-handling": 0.0392,
+    "None": 0.3335
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "T06a-H": {
+   "push": "quote-follow-up",
+   "probs": {
+    "overdue-invoice-followup": 0.4042,
+    "quote-follow-up": 0.4376,
+    "payment-plan-request": 0.0043,
+    "deposit-refund": 0.0073,
+    "invoice-dispute": 0.0123,
+    "None": 0.1342
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T06b-H": {
+   "push": "overdue-invoice-followup",
+   "probs": {
+    "overdue-invoice-followup": 0.3941,
+    "quote-follow-up": 0.148,
+    "payment-plan-request": 0.009,
+    "deposit-refund": 0.0121,
+    "invoice-dispute": 0.06,
+    "None": 0.3768
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T07a-H": {
+   "push": "quote-follow-up",
+   "probs": {
+    "overdue-invoice-followup": 0.0689,
+    "quote-follow-up": 0.7783,
+    "payment-plan-request": 0.002,
+    "deposit-refund": 0.011,
+    "invoice-dispute": 0.0037,
+    "None": 0.136
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T07b-H": {
+   "push": null,
+   "probs": {
+    "overdue-invoice-followup": 0.3658,
+    "quote-follow-up": 0.107,
+    "payment-plan-request": 0.0036,
+    "deposit-refund": 0.0034,
+    "invoice-dispute": 0.0032,
+    "None": 0.5171
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T08a-H": {
+   "push": null,
+   "probs": {
+    "overdue-invoice-followup": 0.2373,
+    "quote-follow-up": 0.1348,
+    "payment-plan-request": 0.1924,
+    "deposit-refund": 0.0134,
+    "invoice-dispute": 0.0078,
+    "None": 0.4144
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T08b-H": {
+   "push": "payment-plan-request",
+   "probs": {
+    "overdue-invoice-followup": 0.0056,
+    "quote-follow-up": 0.0009,
+    "payment-plan-request": 0.9298,
+    "deposit-refund": 0.0009,
+    "invoice-dispute": 0.0009,
+    "None": 0.0619
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T09a-H": {
+   "push": "deposit-refund",
+   "probs": {
+    "overdue-invoice-followup": 0.0198,
+    "quote-follow-up": 0.0041,
+    "payment-plan-request": 0.0059,
+    "deposit-refund": 0.6914,
+    "invoice-dispute": 0.0113,
+    "None": 0.2675
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T09b-H": {
+   "push": "deposit-refund",
+   "probs": {
+    "overdue-invoice-followup": 0.0117,
+    "quote-follow-up": 0.0058,
+    "payment-plan-request": 0.0032,
+    "deposit-refund": 0.7804,
+    "invoice-dispute": 0.0128,
+    "None": 0.1862
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "T11a-H": {
+   "push": "weekly-obligations-check",
+   "probs": {
+    "weekly-obligations-check": 0.3164,
+    "insurance-renewal": 0.083,
+    "licence-permit-renewal": 0.1799,
+    "bas-preparation": 0.1593,
+    "super-payment-check": 0.0043,
+    "None": 0.2571
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T11b-H": {
+   "push": null,
+   "probs": {
+    "weekly-obligations-check": 0.3018,
+    "insurance-renewal": 0.0062,
+    "licence-permit-renewal": 0.1477,
+    "bas-preparation": 0.1006,
+    "super-payment-check": 0.0153,
+    "None": 0.4283
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T12a-H": {
+   "push": null,
+   "probs": {
+    "weekly-obligations-check": 0.0349,
+    "insurance-renewal": 0.0429,
+    "licence-permit-renewal": 0.0369,
+    "bas-preparation": 0.1777,
+    "super-payment-check": 0.0045,
+    "None": 0.7031
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T12b-H": {
+   "push": null,
+   "probs": {
+    "weekly-obligations-check": 0.0351,
+    "insurance-renewal": 0.0636,
+    "licence-permit-renewal": 0.0335,
+    "bas-preparation": 0.0232,
+    "super-payment-check": 0.0029,
+    "None": 0.8417
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T13a-H": {
+   "push": "licence-permit-renewal",
+   "probs": {
+    "weekly-obligations-check": 0.1904,
+    "insurance-renewal": 0.0067,
+    "licence-permit-renewal": 0.4973,
+    "bas-preparation": 0.0233,
+    "super-payment-check": 0.0017,
+    "None": 0.2806
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T13b-H": {
+   "push": "licence-permit-renewal",
+   "probs": {
+    "weekly-obligations-check": 0.186,
+    "insurance-renewal": 0.0311,
+    "licence-permit-renewal": 0.508,
+    "bas-preparation": 0.0246,
+    "super-payment-check": 0.003,
+    "None": 0.2473
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "T16a-H": {
+   "push": "new-student-enrolment",
+   "probs": {
+    "new-student-enrolment": 0.4398,
+    "lesson-cancellation-credit": 0.0583,
+    "member-complaint": 0.0695,
+    "term-fee-reminder": 0.0035,
+    "withdrawal-exit": 0.0022,
+    "None": 0.4268
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T16b-H": {
+   "push": "new-student-enrolment",
+   "probs": {
+    "new-student-enrolment": 0.518,
+    "lesson-cancellation-credit": 0.0096,
+    "member-complaint": 0.0063,
+    "term-fee-reminder": 0.0041,
+    "withdrawal-exit": 0.0025,
+    "None": 0.4595
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T17a-H": {
+   "push": "member-complaint",
+   "probs": {
+    "new-student-enrolment": 0.03,
+    "lesson-cancellation-credit": 0.1454,
+    "member-complaint": 0.4433,
+    "term-fee-reminder": 0.0041,
+    "withdrawal-exit": 0.0047,
+    "None": 0.3726
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T17b-H": {
+   "push": "lesson-cancellation-credit",
+   "probs": {
+    "new-student-enrolment": 0.0057,
+    "lesson-cancellation-credit": 0.7534,
+    "member-complaint": 0.0498,
+    "term-fee-reminder": 0.0133,
+    "withdrawal-exit": 0.0014,
+    "None": 0.1763
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T18a-H": {
+   "push": "member-complaint",
+   "probs": {
+    "new-student-enrolment": 0.0089,
+    "lesson-cancellation-credit": 0.0433,
+    "member-complaint": 0.8149,
+    "term-fee-reminder": 0.0016,
+    "withdrawal-exit": 0.001,
+    "None": 0.1304
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T18b-H": {
+   "push": "member-complaint",
+   "probs": {
+    "new-student-enrolment": 0.0011,
+    "lesson-cancellation-credit": 0.0012,
+    "member-complaint": 0.9055,
+    "term-fee-reminder": 0.0008,
+    "withdrawal-exit": 0.0007,
+    "None": 0.0908
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "T21a-H": {
+   "push": "staff-leave-request",
+   "probs": {
+    "staff-leave-request": 0.5149,
+    "new-staff-onboarding": 0.0025,
+    "timesheet-discrepancy": 0.0029,
+    "staff-offboarding": 0.0022,
+    "roster-swap": 0.0056,
+    "None": 0.4719
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T21b-H": {
+   "push": "staff-leave-request",
+   "probs": {
+    "staff-leave-request": 0.7011,
+    "new-staff-onboarding": 0.001,
+    "timesheet-discrepancy": 0.0013,
+    "staff-offboarding": 0.0014,
+    "roster-swap": 0.004,
+    "None": 0.2912
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T22a-H": {
+   "push": "new-staff-onboarding",
+   "probs": {
+    "staff-leave-request": 0.0018,
+    "new-staff-onboarding": 0.6357,
+    "timesheet-discrepancy": 0.001,
+    "staff-offboarding": 0.0013,
+    "roster-swap": 0.0019,
+    "None": 0.3583
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T22b-H": {
+   "push": "new-staff-onboarding",
+   "probs": {
+    "staff-leave-request": 0.0032,
+    "new-staff-onboarding": 0.5654,
+    "timesheet-discrepancy": 0.0017,
+    "staff-offboarding": 0.0019,
+    "roster-swap": 0.0034,
+    "None": 0.4243
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T23a-H": {
+   "push": null,
+   "probs": {
+    "staff-leave-request": 0.0166,
+    "new-staff-onboarding": 0.0263,
+    "timesheet-discrepancy": 0.3273,
+    "staff-offboarding": 0.0069,
+    "roster-swap": 0.0092,
+    "None": 0.6138
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T23b-H": {
+   "push": null,
+   "probs": {
+    "staff-leave-request": 0.0048,
+    "new-staff-onboarding": 0.0044,
+    "timesheet-discrepancy": 0.3267,
+    "staff-offboarding": 0.0033,
+    "roster-swap": 0.0085,
+    "None": 0.6523
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "T26a-H": {
+   "push": "equipment-fault",
+   "probs": {
+    "equipment-fault": 0.893,
+    "safety-incident-report": 0.0016,
+    "privacy-incident-triage": 0.0006,
+    "food-safety-temp-breach": 0.0018,
+    "customer-feedback-review": 0.0012,
+    "None": 0.1018
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T26b-H": {
+   "push": "equipment-fault",
+   "probs": {
+    "equipment-fault": 0.9239,
+    "safety-incident-report": 0.0029,
+    "privacy-incident-triage": 0.0006,
+    "food-safety-temp-breach": 0.0005,
+    "customer-feedback-review": 0.0008,
+    "None": 0.0713
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T27a-H": {
+   "push": "safety-incident-report",
+   "probs": {
+    "equipment-fault": 0.0198,
+    "safety-incident-report": 0.7763,
+    "privacy-incident-triage": 0.002,
+    "food-safety-temp-breach": 0.0095,
+    "customer-feedback-review": 0.0044,
+    "None": 0.188
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T27b-H": {
+   "push": "safety-incident-report",
+   "probs": {
+    "equipment-fault": 0.0021,
+    "safety-incident-report": 0.7927,
+    "privacy-incident-triage": 0.0033,
+    "food-safety-temp-breach": 0.0009,
+    "customer-feedback-review": 0.0153,
+    "None": 0.1857
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T28a-H": {
+   "push": "privacy-incident-triage",
+   "probs": {
+    "equipment-fault": 0.002,
+    "safety-incident-report": 0.0061,
+    "privacy-incident-triage": 0.7543,
+    "food-safety-temp-breach": 0.0013,
+    "customer-feedback-review": 0.0023,
+    "None": 0.2339
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T28b-H": {
+   "push": "privacy-incident-triage",
+   "probs": {
+    "equipment-fault": 0.0015,
+    "safety-incident-report": 0.0016,
+    "privacy-incident-triage": 0.8969,
+    "food-safety-temp-breach": 0.001,
+    "customer-feedback-review": 0.0063,
+    "None": 0.0927
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "T31a-H": {
+   "push": "quote-preparation",
+   "probs": {
+    "quote-preparation": 0.6566,
+    "job-variation": 0.0076,
+    "job-completion-handover": 0.0171,
+    "site-visit-booking": 0.0295,
+    "subcontractor-engagement": 0.0045,
+    "None": 0.2846
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T31b-H": {
+   "push": "quote-preparation",
+   "probs": {
+    "quote-preparation": 0.7844,
+    "job-variation": 0.0114,
+    "job-completion-handover": 0.0076,
+    "site-visit-booking": 0.0167,
+    "subcontractor-engagement": 0.0036,
+    "None": 0.1762
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T32a-H": {
+   "push": "job-variation",
+   "probs": {
+    "quote-preparation": 0.0105,
+    "job-variation": 0.8151,
+    "job-completion-handover": 0.0069,
+    "site-visit-booking": 0.0176,
+    "subcontractor-engagement": 0.0038,
+    "None": 0.146
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T32b-H": {
+   "push": null,
+   "probs": {
+    "quote-preparation": 0.027,
+    "job-variation": 0.3404,
+    "job-completion-handover": 0.009,
+    "site-visit-booking": 0.0747,
+    "subcontractor-engagement": 0.005,
+    "None": 0.5438
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T33a-H": {
+   "push": "job-completion-handover",
+   "probs": {
+    "quote-preparation": 0.0089,
+    "job-variation": 0.0037,
+    "job-completion-handover": 0.5167,
+    "site-visit-booking": 0.0052,
+    "subcontractor-engagement": 0.0025,
+    "None": 0.4629
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T33b-H": {
+   "push": null,
+   "probs": {
+    "quote-preparation": 0.0861,
+    "job-variation": 0.0112,
+    "job-completion-handover": 0.3473,
+    "site-visit-booking": 0.0262,
+    "subcontractor-engagement": 0.0075,
+    "None": 0.5218
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "T36a-H": {
+   "push": null,
+   "probs": {
+    "decision-brief": 0.0554,
+    "task-handoff": 0.0738,
+    "weekly-owner-brief": 0.0129,
+    "meeting-minutes": 0.0106,
+    "rule-change-request": 0.0382,
+    "None": 0.8091
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "T36b-H": {
+   "push": null,
+   "probs": {
+    "decision-brief": 0.1508,
+    "task-handoff": 0.0142,
+    "weekly-owner-brief": 0.014,
+    "meeting-minutes": 0.0083,
+    "rule-change-request": 0.0677,
+    "None": 0.7451
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "T37a-H": {
+   "push": null,
+   "probs": {
+    "decision-brief": 0.036,
+    "task-handoff": 0.3771,
+    "weekly-owner-brief": 0.0154,
+    "meeting-minutes": 0.0194,
+    "rule-change-request": 0.0314,
+    "None": 0.5206
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "T37b-H": {
+   "push": null,
+   "probs": {
+    "decision-brief": 0.0357,
+    "task-handoff": 0.1719,
+    "weekly-owner-brief": 0.0206,
+    "meeting-minutes": 0.1579,
+    "rule-change-request": 0.0442,
+    "None": 0.5697
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "T38a-H": {
+   "push": "weekly-owner-brief",
+   "probs": {
+    "decision-brief": 0.0101,
+    "task-handoff": 0.0019,
+    "weekly-owner-brief": 0.8345,
+    "meeting-minutes": 0.0044,
+    "rule-change-request": 0.0035,
+    "None": 0.1457
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "T38b-H": {
+   "push": "weekly-owner-brief",
+   "probs": {
+    "decision-brief": 0.016,
+    "task-handoff": 0.0028,
+    "weekly-owner-brief": 0.7424,
+    "meeting-minutes": 0.0062,
+    "rule-change-request": 0.0056,
+    "None": 0.2269
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "N01-H": {
+   "push": null,
+   "probs": {
+    "bill-approval-check": 0.033,
+    "supplier-statement-reconciliation": 0.0177,
+    "supplier-bank-change": 0.0444,
+    "payment-run-prep": 0.0131,
+    "credit-note-handling": 0.0119,
+    "None": 0.8799
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  },
+  "N02-H": {
+   "push": null,
+   "probs": {
+    "overdue-invoice-followup": 0.0056,
+    "quote-follow-up": 0.0054,
+    "payment-plan-request": 0.0019,
+    "deposit-refund": 0.0015,
+    "invoice-dispute": 0.0026,
+    "None": 0.983
+   },
+   "declared": [
+    "overdue-invoice-followup",
+    "quote-follow-up",
+    "payment-plan-request",
+    "deposit-refund",
+    "invoice-dispute"
+   ]
+  },
+  "N03-H": {
+   "push": "insurance-renewal",
+   "probs": {
+    "weekly-obligations-check": 0.0061,
+    "insurance-renewal": 0.908,
+    "licence-permit-renewal": 0.0067,
+    "bas-preparation": 0.0034,
+    "super-payment-check": 0.0006,
+    "None": 0.075
+   },
+   "declared": [
+    "weekly-obligations-check",
+    "insurance-renewal",
+    "licence-permit-renewal",
+    "bas-preparation",
+    "super-payment-check"
+   ]
+  },
+  "N04-H": {
+   "push": null,
+   "probs": {
+    "new-student-enrolment": 0.0152,
+    "lesson-cancellation-credit": 0.0081,
+    "member-complaint": 0.0394,
+    "term-fee-reminder": 0.0048,
+    "withdrawal-exit": 0.0022,
+    "None": 0.9304
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "N05-H": {
+   "push": null,
+   "probs": {
+    "staff-leave-request": 0.0046,
+    "new-staff-onboarding": 0.0128,
+    "timesheet-discrepancy": 0.0031,
+    "staff-offboarding": 0.0025,
+    "roster-swap": 0.0122,
+    "None": 0.9649
+   },
+   "declared": [
+    "staff-leave-request",
+    "new-staff-onboarding",
+    "timesheet-discrepancy",
+    "staff-offboarding",
+    "roster-swap"
+   ]
+  },
+  "N06-H": {
+   "push": null,
+   "probs": {
+    "equipment-fault": 0.4432,
+    "safety-incident-report": 0.0032,
+    "privacy-incident-triage": 0.0023,
+    "food-safety-temp-breach": 0.002,
+    "customer-feedback-review": 0.0282,
+    "None": 0.5211
+   },
+   "declared": [
+    "equipment-fault",
+    "safety-incident-report",
+    "privacy-incident-triage",
+    "food-safety-temp-breach",
+    "customer-feedback-review"
+   ]
+  },
+  "N07-H": {
+   "push": "quote-preparation",
+   "probs": {
+    "quote-preparation": 0.67,
+    "job-variation": 0.0057,
+    "job-completion-handover": 0.0217,
+    "site-visit-booking": 0.0891,
+    "subcontractor-engagement": 0.0055,
+    "None": 0.2081
+   },
+   "declared": [
+    "quote-preparation",
+    "job-variation",
+    "job-completion-handover",
+    "site-visit-booking",
+    "subcontractor-engagement"
+   ]
+  },
+  "N08-H": {
+   "push": null,
+   "probs": {
+    "decision-brief": 0.0089,
+    "task-handoff": 0.0027,
+    "weekly-owner-brief": 0.0129,
+    "meeting-minutes": 0.0421,
+    "rule-change-request": 0.0134,
+    "None": 0.9199
+   },
+   "declared": [
+    "decision-brief",
+    "task-handoff",
+    "weekly-owner-brief",
+    "meeting-minutes",
+    "rule-change-request"
+   ]
+  },
+  "N09-H": {
+   "push": null,
+   "probs": {
+    "new-student-enrolment": 0.0114,
+    "lesson-cancellation-credit": 0.0072,
+    "member-complaint": 0.0274,
+    "term-fee-reminder": 0.0025,
+    "withdrawal-exit": 0.0043,
+    "None": 0.9471
+   },
+   "declared": [
+    "new-student-enrolment",
+    "lesson-cancellation-credit",
+    "member-complaint",
+    "term-fee-reminder",
+    "withdrawal-exit"
+   ]
+  },
+  "N10-H": {
+   "push": null,
+   "probs": {
+    "bill-approval-check": 0.1739,
+    "supplier-statement-reconciliation": 0.1124,
+    "supplier-bank-change": 0.0079,
+    "payment-run-prep": 0.0242,
+    "credit-note-handling": 0.0328,
+    "None": 0.6487
+   },
+   "declared": [
+    "bill-approval-check",
+    "supplier-statement-reconciliation",
+    "supplier-bank-change",
+    "payment-run-prep",
+    "credit-note-handling"
+   ]
+  }
+ }
+}

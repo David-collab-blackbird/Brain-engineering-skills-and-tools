@@ -1,0 +1,64 @@
+{
+ "recall": [
+  [
+   "INV-20417 Zephyr Linen towels",
+   "p-owner",
+   "r-fin-101"
+  ],
+  [
+   "rowing machine flywheel squeak",
+   "p-staff1",
+   "r-ops-101"
+  ],
+  [
+   "boiler service checklist",
+   "p-staff1",
+   "r-ops-103"
+  ],
+  [
+   "fire drill muster point radios",
+   "p-staff1",
+   "r-ops-105"
+  ],
+  [
+   "master keys duty manager safe",
+   "p-owner",
+   "r-ops-106"
+  ],
+  [
+   "quarterly budget utilities",
+   "p-owner",
+   "r-fin-102"
+  ],
+  [
+   "payroll October superannuation",
+   "p-owner",
+   "r-fin-103"
+  ],
+  [
+   "locker hire lost property",
+   "p-member7",
+   "r-mem-101"
+  ],
+  [
+   "knee rehab plan meniscus",
+   "p-coach",
+   "r-hm7-101"
+  ],
+  [
+   "boiler pressure Quillfield",
+   "p-elm1",
+   "r-elm-101"
+  ],
+  [
+   "espresso machine descaling",
+   "p-staff1",
+   "r-ops-104"
+  ]
+ ],
+ "dense_only": [
+  "defibrillators",
+  "p-staff1",
+  "r-ops-109"
+ ]
+}

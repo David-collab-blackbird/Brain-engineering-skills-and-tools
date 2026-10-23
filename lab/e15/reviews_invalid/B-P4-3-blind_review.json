@@ -1,0 +1,30 @@
+{
+ "run": "/home/claude/e15/runs/B/P4/3",
+ "reviewer_id": "58121ab8e0",
+ "model": "claude-opus-5-5",
+ "cost_usd": 0.1364382,
+ "wall_s": 25.0,
+ "parsed": {
+  "defects": [
+   {
+    "rule": "Outputs/Interface",
+    "severity": "critical",
+    "location": "src/vretrieval/ (absent)",
+    "description": "The required package src/vretrieval/ does not exist, so `from vretrieval import Retriever, Hit, VisibleSet` fails. None of the interface (Retriever, visible_set, search, get, refresh, rebuild, Hit, VisibleSet) is provided, and none of R1-R12 can be met or checked.",
+    "evidence": "`ls -laR src` lists only src/cards/__init__.py. A probe with src and provided on sys.path printed `ModuleNotFoundError No module named 'vretrieval'`. `find / -name 'vretrieval*'` returned nothing."
+   },
+   {
+    "rule": "Outputs",
+    "severity": "major",
+    "location": "src/cards/__init__.py:1",
+    "description": "The only code under src/ is a different work package (WP-E15C entity cards, class Brain). It depends on a module that doesn't exist, so it can't even be imported, and it can't stand in for vretrieval.",
+    "evidence": "src/cards/__init__.py:1 `\"\"\"WP-E15C entity cards and context assembly.\"\"\"`; src/cards/__init__.py:9 `from factstore.text import tokens`. Importing it gave `ModuleNotFoundError No module named 'factstore'`."
+   }
+  ],
+  "ambiguities": [
+   "No rule-level ambiguities were assessed, because the package under review is missing."
+  ],
+  "verdict": "does not meet spec"
+ },
+ "raw_tail": "The code under review doesn't exist. `src/vretrieval/` is missing from the work tree, and a search of the whole filesystem found no `vretrieval` file or directory. Because of that, none of the rules R1\u2013R12 could be checked against real code.\n\nThe only package under `src/` is `src/cards/__init__.py`. It's a different work package (\"WP-E15C entity cards\", class `Brain`) and it imports `factstore`, which isn't installed (importing it fails with `ModuleNotFoundError`). It has no `Retriever` or `Hit` and doesn't meet the WP-E15 interface, so I didn't review it against this spec. You may have pointed me at the wrong tree, or the `vretrieval` package was never added.\n\n```json\n{\"defects\": [{\"rule\": \"Outputs/Interface\", \"severity\": \"critical\", \"location\": \"src/vretrieval/ (absent)\", \"description\": \"The required package src/vretrieval/ does not exist, so `from vretrieval import Retriever, Hit, VisibleSet` fails. None of the interface (Retriever, visible_set, search, get, refresh, rebuild, Hit, VisibleSet) is provided, and none of R1-R12 can be met or checked.\", \"evidence\": \"`ls -laR src` lists only src/cards/__init__.py. A probe with src and provided on sys.path printed `ModuleNotFoundError No module named 'vretrieval'`. `find / -name 'vretrieval*'` returned nothing.\"}, {\"rule\": \"Outputs\", \"severity\": \"major\", \"location\": \"src/cards/__init__.py:1\", \"description\": \"The only code under src/ is a different work package (WP-E15C entity cards, class Brain). It depends on a module that doesn't exist, so it can't even be imported, and it can't stand in for vretrieval.\", \"evidence\": \"src/cards/__init__.py:1 `\\\"\\\"\\\"WP-E15C entity cards and context assembly.\\\"\\\"\\\"`; src/cards/__init__.py:9 `from factstore.text import tokens`. Importing it gave `ModuleNotFoundError No module named 'factstore'`.\"}],\n \"ambiguities\": [\"No rule-level ambiguities were assessed, because the package under review is missing.\"],\n \"verdict\": \"does not meet spec\"}\n```"
+}

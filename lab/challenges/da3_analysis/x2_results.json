@@ -1,0 +1,307 @@
+{
+ "trials": [
+  {
+   "M": 5,
+   "true": "refinance",
+   "A": {
+    "guess": "refinance",
+    "correct": true,
+    "max_abs_delta": 3.022254664514044
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": true,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "refinance",
+    "correct": true,
+    "max_abs_delta": 0.05314433574676514
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": true,
+    "max_abs_delta": 0.0
+   }
+  },
+  {
+   "M": 5,
+   "true": "divorce",
+   "A": {
+    "guess": "divorce",
+    "correct": true,
+    "max_abs_delta": 6.9346879450860826
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.18194693326950073
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   }
+  },
+  {
+   "M": 5,
+   "true": "sale",
+   "A": {
+    "guess": "sale",
+    "correct": true,
+    "max_abs_delta": 5.819955263177945
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.05324488878250122
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   }
+  },
+  {
+   "M": 5,
+   "true": "illness",
+   "A": {
+    "guess": "illness",
+    "correct": true,
+    "max_abs_delta": 7.974331741220652
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.4524751305580139
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   }
+  },
+  {
+   "M": 5,
+   "true": "lawsuit",
+   "A": {
+    "guess": "lawsuit",
+    "correct": true,
+    "max_abs_delta": 4.522160836501634
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.053182899951934814
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   }
+  },
+  {
+   "M": 5,
+   "true": "hire",
+   "A": {
+    "guess": "hire",
+    "correct": true,
+    "max_abs_delta": 4.861953430995236
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "hire",
+    "correct": true,
+    "max_abs_delta": 0.05315464735031128
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   }
+  },
+  {
+   "M": 20,
+   "true": "refinance",
+   "A": {
+    "guess": "refinance",
+    "correct": true,
+    "max_abs_delta": 6.918644319632115
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": true,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "refinance",
+    "correct": true,
+    "max_abs_delta": 0.1656004786491394
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": true,
+    "max_abs_delta": 0.0
+   }
+  },
+  {
+   "M": 20,
+   "true": "divorce",
+   "A": {
+    "guess": "divorce",
+    "correct": true,
+    "max_abs_delta": 12.98997692461041
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.3499487042427063
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   }
+  },
+  {
+   "M": 20,
+   "true": "sale",
+   "A": {
+    "guess": "sale",
+    "correct": true,
+    "max_abs_delta": 11.415003659056808
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "sale",
+    "correct": true,
+    "max_abs_delta": 0.05633044242858887
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   }
+  },
+  {
+   "M": 20,
+   "true": "illness",
+   "A": {
+    "guess": "illness",
+    "correct": true,
+    "max_abs_delta": 14.47332087909151
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.5213666260242462
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   }
+  },
+  {
+   "M": 20,
+   "true": "lawsuit",
+   "A": {
+    "guess": "lawsuit",
+    "correct": true,
+    "max_abs_delta": 8.67857120417576
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "lawsuit",
+    "correct": true,
+    "max_abs_delta": 0.05112189054489136
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   }
+  },
+  {
+   "M": 20,
+   "true": "hire",
+   "A": {
+    "guess": "hire",
+    "correct": true,
+    "max_abs_delta": 9.662298855952393
+   },
+   "B": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   },
+   "C": {
+    "guess": "hire",
+    "correct": true,
+    "max_abs_delta": 0.19073748588562012
+   },
+   "D": {
+    "guess": "refinance",
+    "correct": false,
+    "max_abs_delta": 0.0
+   }
+  }
+ ],
+ "summary": {
+  "5": {
+   "A": "6/6",
+   "B": "1/6",
+   "C": "2/6",
+   "D": "1/6"
+  },
+  "20": {
+   "A": "6/6",
+   "B": "1/6",
+   "C": "4/6",
+   "D": "1/6"
+  }
+ },
+ "chance": "1/6"
+}

@@ -1,0 +1,15 @@
+{
+ "n_gold": 50,
+ "s1_scoped_hit1": 0.6,
+ "bm25_scoped_hit1": 0.64,
+ "mcnemar": {
+  "s1_only": 9,
+  "bm25_only": 11,
+  "p": 0.8238029479980469
+ },
+ "bm25_unscoped_hit1": 0.42,
+ "bm25_unscoped_hit5": 0.72,
+ "s1_none_correct": 8,
+ "ece": 0.061483333333333424,
+ "abstain_auc": 0.802
+}

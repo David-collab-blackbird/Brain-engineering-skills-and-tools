@@ -1,0 +1,152 @@
+{
+ "reference": {
+  "stats": {
+   "rec_raw": 890,
+   "fact_raw": 293,
+   "fact_kept": 293,
+   "rec_kept": 597,
+   "link_invalid_entity": 58,
+   "alias_kept": 54,
+   "alias_rejected": 1
+  },
+  "facts": 293,
+  "kept": 293
+ },
+ "reference_quality": {
+  "link_precision": 1.0,
+  "link_recall": 0.9936109275170742,
+  "link_recall_implicit": 0.9934774506149833,
+  "link_recall_explicit": 0.9938038793103449,
+  "n_implicit": 5366,
+  "n_explicit": 3712,
+  "record_coverage": {
+   "fact": 0.1785496648385131,
+   "decision": 1.0,
+   "constraint": 1.0,
+   "issue": 1.0,
+   "offer": 1.0,
+   "preference": 1.0,
+   "plan": 1.0
+  },
+  "record_coverage_n": {
+   "fact": 1641,
+   "decision": 58,
+   "constraint": 59,
+   "issue": 233,
+   "offer": 77,
+   "preference": 100,
+   "plan": 70
+  },
+  "record_coverage_implicit_items": {
+   "fact": 0.5826771653543307,
+   "decision": 1.0,
+   "constraint": 1.0,
+   "issue": 1.0,
+   "offer": 1.0,
+   "preference": 1.0,
+   "plan": 1.0
+  },
+  "keyed_fact_recall": 1.0,
+  "keyed_fact_wrong_value": 0.0,
+  "keyed_fact_n": 293
+ },
+ "broken": {
+  "planted": {
+   "invented_value": 73,
+   "paraphrased_quote": 73,
+   "foreign_entity": 73,
+   "bad_attribute": 73
+  },
+  "survived": {},
+  "stats": {
+   "rec_raw": 890,
+   "fact_raw": 293,
+   "fact_bad_attr": 73,
+   "fact_span_not_verbatim": 73,
+   "fact_value_not_in_item": 73,
+   "fact_bad_entity": 73,
+   "rec_kept": 597,
+   "fact_kept": 1,
+   "link_invalid_entity": 58,
+   "alias_kept": 54,
+   "alias_rejected": 1
+  }
+ },
+ "checks": [
+  {
+   "name": "validators keep >= 97% of reference facts",
+   "ok": true,
+   "detail": "293/293"
+  },
+  {
+   "name": "validators keep >= 99% of reference typed records",
+   "ok": true,
+   "detail": "597/597"
+  },
+  {
+   "name": "reference link precision/recall >= 0.99",
+   "ok": true,
+   "detail": "P 1.000 R 0.994"
+  },
+  {
+   "name": "reference keyed-fact recall >= 0.97",
+   "ok": true,
+   "detail": "1.000"
+  },
+  {
+   "name": "every planted extraction error rejected",
+   "ok": true,
+   "detail": "planted {'invented_value': 73, 'paraphrased_quote': 73, 'foreign_entity': 73, 'bad_attribute': 73} survived {}"
+  },
+  {
+   "name": "scorer passes the exact required set",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "scorer fails a context missing one vital item",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "CR_vital passes without helpful items; CR_all fails if helpful exist",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "cards never credit an item whose value was extracted wrongly",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "name": "no-grant credential sees nothing",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "owner has no standing access to member health spaces",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "expired coach shares are not visible now",
+   "ok": true,
+   "detail": "10 expired"
+  },
+  {
+   "name": "every task's required items are visible to its requester",
+   "ok": true,
+   "detail": "0 bad"
+  },
+  {
+   "name": "held-out nicknames never appear in the corpus",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "pipeline view carries no gold tags",
+   "ok": true,
+   "detail": "0"
+  }
+ ]
+}

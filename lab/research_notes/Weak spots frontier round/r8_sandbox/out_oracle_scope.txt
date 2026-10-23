@@ -1,0 +1,10 @@
+queries 247 sections [('Brain operations', 83), ('Operational', 69), ('Content & media ingestion', 47), ('Research & synthesis', 36), ('Setup & migration', 12)]
+in-scope library size median 23 min 6 max 24
+bm25   scope=declared n=247 Hit@1=0.591 (0.53, 0.65) Hit@3=0.769 Hit@5=0.850 (0.8, 0.89)
+bm25   scope=none     n=247 Hit@1=0.486 (0.42, 0.55) Hit@3=0.632 Hit@5=0.684 (0.62, 0.74)
+dense  scope=declared n=247 Hit@1=0.421 (0.36, 0.48) Hit@3=0.632 Hit@5=0.761 (0.7, 0.81)
+dense  scope=none     n=247 Hit@1=0.279 (0.23, 0.34) Hit@3=0.372 Hit@5=0.437 (0.38, 0.5)
+hybrid scope=declared n=247 Hit@1=0.534 (0.47, 0.6) Hit@3=0.761 Hit@5=0.830 (0.78, 0.87)
+hybrid scope=none     n=247 Hit@1=0.397 (0.34, 0.46) Hit@3=0.571 Hit@5=0.656 (0.59, 0.71)
+
+[exited with code 0]

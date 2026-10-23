@@ -1,0 +1,44 @@
+{
+ "P1": {
+  "Makefile": "3979c825d62c37fbdc8dfad309493fa65e481f3d4d94f3f686f7f9ee60976e6b",
+  "conftest.py": "dab1d6037ad30ac19faa901f781fe99ab0220c2dd4395d5ee64a8613af63bd84",
+  "packages/WP-E15.md": "16134b87ca45b86930e8e352666accdece7f62d9c05c5896af84e205b092fdc3",
+  "provided/fixture.json": "9aa374a3b76d1b8b55e7b9a35779d4fcc70e3ba05e48ca178d73d5a179ed684f",
+  "tests/acceptance/test_visible.py": "295909a4de5abdc7dc4436b0e205e8396037c7f007bd0b718118c385665b2599",
+  "provided/e15store/__init__.py": "a40d1cefa01284adad10887f1aacd8de6e2f86f0e406e927347df5d73edf474a",
+  "provided/e15store/embedder.py": "eb5d8e0f3eed153b64d2ca772bf0acd863916ffa3f9f45b3b95d43fe90e41814",
+  "provided/e15store/store.py": "6f93e5ef41339d0cba3ac09e2c48dd47627cc6f97900300f1520e819ce818aaf"
+ },
+ "P2": {
+  "Makefile": "3979c825d62c37fbdc8dfad309493fa65e481f3d4d94f3f686f7f9ee60976e6b",
+  "conftest.py": "dab1d6037ad30ac19faa901f781fe99ab0220c2dd4395d5ee64a8613af63bd84",
+  "packages/WP-E15.md": "16134b87ca45b86930e8e352666accdece7f62d9c05c5896af84e205b092fdc3",
+  "provided/fixture.json": "9aa374a3b76d1b8b55e7b9a35779d4fcc70e3ba05e48ca178d73d5a179ed684f",
+  "tests/acceptance/test_visible.py": "295909a4de5abdc7dc4436b0e205e8396037c7f007bd0b718118c385665b2599",
+  "provided/e15store/__init__.py": "a40d1cefa01284adad10887f1aacd8de6e2f86f0e406e927347df5d73edf474a",
+  "provided/e15store/embedder.py": "eb5d8e0f3eed153b64d2ca772bf0acd863916ffa3f9f45b3b95d43fe90e41814",
+  "provided/e15store/store.py": "6f93e5ef41339d0cba3ac09e2c48dd47627cc6f97900300f1520e819ce818aaf",
+  "tests/acceptance/test_owner_review.py": "569c87fb8e37f7d5607f4582e33112cf786c86d877c74252fcd389ffb69a5c03"
+ },
+ "P3": {
+  "Makefile": "3979c825d62c37fbdc8dfad309493fa65e481f3d4d94f3f686f7f9ee60976e6b",
+  "conftest.py": "dab1d6037ad30ac19faa901f781fe99ab0220c2dd4395d5ee64a8613af63bd84",
+  "packages/WP-E15C.md": "e18f638b2658cfd773e97ae26a90988cfe235e22231c5754fe6170a94c4f24b7",
+  "provided/fixture.json": "006b68742142ea5fede0e0c66cbe19deaa519c2d42d6ddc69ce78c7af1c1c2dc",
+  "tests/acceptance/test_cards.py": "03487b1c6bdd6cdad38cf97e15dec601f2a08fc53bc7550cc024517230c3f576",
+  "provided/factstore/__init__.py": "1cbda902129f0eb84c82e8beb672abfd4701249dfeec044fc1c6a9abc993da20",
+  "provided/factstore/text.py": "f4e5ac149fd1099e44ac10e39049a96518034aefde217deb694163e234358a72",
+  "provided/factstore/store.py": "382cb5b992268e6b628b74fd04beb458b8080062c7755b6b51924db948af1241"
+ },
+ "P4": {
+  "Makefile": "3979c825d62c37fbdc8dfad309493fa65e481f3d4d94f3f686f7f9ee60976e6b",
+  "conftest.py": "dab1d6037ad30ac19faa901f781fe99ab0220c2dd4395d5ee64a8613af63bd84",
+  "packages/WP-E15C.md": "e18f638b2658cfd773e97ae26a90988cfe235e22231c5754fe6170a94c4f24b7",
+  "provided/fixture.json": "006b68742142ea5fede0e0c66cbe19deaa519c2d42d6ddc69ce78c7af1c1c2dc",
+  "tests/acceptance/test_cards.py": "03487b1c6bdd6cdad38cf97e15dec601f2a08fc53bc7550cc024517230c3f576",
+  "provided/factstore/__init__.py": "1cbda902129f0eb84c82e8beb672abfd4701249dfeec044fc1c6a9abc993da20",
+  "provided/factstore/text.py": "f4e5ac149fd1099e44ac10e39049a96518034aefde217deb694163e234358a72",
+  "provided/factstore/store.py": "382cb5b992268e6b628b74fd04beb458b8080062c7755b6b51924db948af1241",
+  "tests/acceptance/test_owner_dashboard.py": "6359030e7cb97ad51de795b444a5ae7daf98ef71e8684815e7b57d8bb9d4cceb"
+ }
+}

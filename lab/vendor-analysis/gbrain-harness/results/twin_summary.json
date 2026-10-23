@@ -1,0 +1,58 @@
+{
+ "control": {
+  "n": 112,
+  "lists_changed": 0,
+  "set_changed": 0,
+  "order_only": 0,
+  "queries_with_score_delta": 0,
+  "max_score_delta": 0.0
+ },
+ "treatment": {
+  "n": 112,
+  "lists_changed": 0,
+  "set_changed": 0,
+  "order_only": 0,
+  "queries_with_score_delta": 0,
+  "max_score_delta": 0.0
+ },
+ "owner_rows": 0,
+ "secret_rows": 0,
+ "by_identity": {
+  "household": [
+   17,
+   0,
+   0
+  ],
+  "partner_gym": [
+   17,
+   0,
+   0
+  ],
+  "partner_construction": [
+   17,
+   0,
+   0
+  ],
+  "partner_cafe": [
+   17,
+   0,
+   0
+  ],
+  "member_m03": [
+   15,
+   0,
+   0
+  ],
+  "member_m17": [
+   14,
+   0,
+   0
+  ],
+  "member_m28": [
+   15,
+   0,
+   0
+  ]
+ },
+ "examples": []
+}

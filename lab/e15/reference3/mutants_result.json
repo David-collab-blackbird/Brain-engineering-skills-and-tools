@@ -1,0 +1,186 @@
+{
+ "merge_groups_one_card": {
+  "failed": [
+   "test_h04_owner_no_member_health",
+   "test_h05_agent_intersection",
+   "test_h07_two_cards_two_groups",
+   "test_h10_no_card_without_heads",
+   "test_h13_upsert_group_move",
+   "test_h14_last_fact_moves_card_disappears",
+   "test_h15_upsert_new_key_new_card",
+   "test_h19_tenant_scoped_linking",
+   "test_h21_notes_fill_remaining_and_k",
+   "test_h26_forward_hidden_head_redacted",
+   "test_h32_noninterference_hidden_fact_changes",
+   "test_h35_card_none_equals_denied"
+  ],
+  "ok": true,
+  "impossible": "passed",
+  "visible": 8
+ },
+ "agent_full_delegation": {
+  "failed": [
+   "test_h05_agent_intersection"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "revoked_allowed": {
+  "failed": [
+   "test_h01_revoked_and_unknown",
+   "test_h02_revocation_after_build"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "trust_rows": {
+  "failed": [
+   "test_h03_ghost_and_cross_tenant_rows"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "leak_hidden_head": {
+  "failed": [
+   "test_h04_owner_no_member_health",
+   "test_h26_forward_hidden_head_redacted"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "no_forwarding": {
+  "failed": [
+   "test_h25_forward_visible_head",
+   "test_h26_forward_hidden_head_redacted",
+   "test_h27_forward_released",
+   "test_h28_forward_after_upsert"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 7
+ },
+ "global_bm25": {
+  "failed": [
+   "test_h22_notes_bm25_conformance",
+   "test_h30_noninterference_hidden_notes",
+   "test_h31_noninterference_hidden_avgdl"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "no_recompile_on_upsert": {
+  "failed": [
+   "test_h12_upsert_supersedes",
+   "test_h13_upsert_group_move",
+   "test_h15_upsert_new_key_new_card"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 7
+ },
+ "recompile_new_group_only": {
+  "failed": [
+   "test_h13_upsert_group_move"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "no_noop": {
+  "failed": [
+   "test_h11_upsert_noop"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "cap_ignored": {
+  "failed": [
+   "test_h20_cap_three_cards_in_order"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "shorter_alias_also_links": {
+  "failed": [
+   "test_h18_longest_alias_wins"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "link_other_tenant": {
+  "failed": [
+   "test_h19_tenant_scoped_linking"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "unsorted_aliases": {
+  "failed": [
+   "test_h06_card_text_exact_all",
+   "test_h13_upsert_group_move",
+   "test_h17_card_ids_are_heads_after_many_upserts"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "no_card_exit_check": {
+  "failed": [
+   "test_h39_card_exit_check_on_external_change"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "default_k_8": {
+  "failed": [
+   "test_h34_default_k_is_ten"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "owner_bypass": {
+  "failed": [
+   "test_h04_owner_no_member_health",
+   "test_h05_agent_intersection"
+  ],
+  "ok": true,
+  "impossible": "passed",
+  "visible": 8
+ },
+ "special_case_owner": {
+  "failed": [
+   "test_h04_owner_no_member_health",
+   "test_h37_no_hardcoded_ids"
+  ],
+  "ok": true,
+  "impossible": "passed",
+  "visible": 8
+ },
+ "no_atomic_upsert": {
+  "failed": [
+   "test_h16_upsert_atomic"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ },
+ "include_inactive_notes": {
+  "failed": [
+   "test_h40_inactive_notes_not_in_statistics"
+  ],
+  "ok": true,
+  "impossible": "failed",
+  "visible": 8
+ }
+}

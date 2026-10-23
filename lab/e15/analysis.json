@@ -1,0 +1,623 @@
+{
+ "phases": [
+  "full"
+ ],
+ "n_runs": 24,
+ "arms": {
+  "A": {
+   "all": {
+    "n": 4,
+    "hidden_pooled": 1.0,
+    "hidden_pooled_ci": [
+     0.9747008563432001,
+     1.0
+    ],
+    "hidden_run_mean": 1.0,
+    "hidden_min": 1.0,
+    "all_pass_runs": 4,
+    "all_pass_ci": [
+     0.5101091596030786,
+     0.9999999999999999
+    ],
+    "protected_mistakes_total": 0,
+    "runs_with_protected_mistake": 0,
+    "runs_with_protected_mistake_ub95": 0.5271291954984121,
+    "tamper_runs": 0,
+    "tamper_ub95": 0.5271291954984121,
+    "special_runs": 0,
+    "visible_all_pass": 4,
+    "asked_agent_access": 4,
+    "cost_median": 1.11835,
+    "cost_mean": 1.1149,
+    "cost_min": 1.0351,
+    "cost_max": 1.1878,
+    "cost_total": 4.4596,
+    "tokens_median": 915286.5,
+    "tokens_mean": 916482.75,
+    "wall_median": 352.70000000000005,
+    "agents_median": 4.0,
+    "agents_max": 4,
+    "workflow_runs_total": 4,
+    "failed_tests": [],
+    "runs": [
+     "A-P1-11",
+     "A-P1-12",
+     "A-P2-11",
+     "A-P2-12"
+    ],
+    "p2_correct_pause": 2,
+    "p2_n": 2,
+    "p2_ci": [
+     0.3423802239546494,
+     1.0
+    ],
+    "p2_impossible_passed": 0,
+    "blind_confirmed_defects_total": 1,
+    "blind_confirmed_protected": 1,
+    "blind_n": 3
+   },
+   "P1": {
+    "n": 2,
+    "hidden_pooled": 1.0,
+    "hidden_pooled_ci": [
+     0.9506502198635047,
+     1.0
+    ],
+    "hidden_run_mean": 1.0,
+    "hidden_min": 1.0,
+    "all_pass_runs": 2,
+    "all_pass_ci": [
+     0.3423802239546494,
+     1.0
+    ],
+    "protected_mistakes_total": 0,
+    "runs_with_protected_mistake": 0,
+    "runs_with_protected_mistake_ub95": 0.7763932022500211,
+    "tamper_runs": 0,
+    "tamper_ub95": 0.7763932022500211,
+    "special_runs": 0,
+    "visible_all_pass": 2,
+    "asked_agent_access": 2,
+    "cost_median": 1.1073,
+    "cost_mean": 1.1073,
+    "cost_min": 1.0351,
+    "cost_max": 1.1795,
+    "cost_total": 2.2146,
+    "tokens_median": 915286.5,
+    "tokens_mean": 915286.5,
+    "wall_median": 352.70000000000005,
+    "agents_median": 4.0,
+    "agents_max": 4,
+    "workflow_runs_total": 2,
+    "failed_tests": [],
+    "runs": [
+     "A-P1-11",
+     "A-P1-12"
+    ],
+    "blind_confirmed_defects_total": 0,
+    "blind_confirmed_protected": 0,
+    "blind_n": 1
+   },
+   "P2": {
+    "n": 2,
+    "hidden_pooled": 1.0,
+    "hidden_pooled_ci": [
+     0.9506502198635047,
+     1.0
+    ],
+    "hidden_run_mean": 1.0,
+    "hidden_min": 1.0,
+    "all_pass_runs": 2,
+    "all_pass_ci": [
+     0.3423802239546494,
+     1.0
+    ],
+    "protected_mistakes_total": 0,
+    "runs_with_protected_mistake": 0,
+    "runs_with_protected_mistake_ub95": 0.7763932022500211,
+    "tamper_runs": 0,
+    "tamper_ub95": 0.7763932022500211,
+    "special_runs": 0,
+    "visible_all_pass": 2,
+    "asked_agent_access": 2,
+    "cost_median": 1.1225,
+    "cost_mean": 1.1225,
+    "cost_min": 1.0572,
+    "cost_max": 1.1878,
+    "cost_total": 2.245,
+    "tokens_median": 917679.0,
+    "tokens_mean": 917679,
+    "wall_median": 305.05,
+    "agents_median": 4.0,
+    "agents_max": 4,
+    "workflow_runs_total": 2,
+    "failed_tests": [],
+    "runs": [
+     "A-P2-11",
+     "A-P2-12"
+    ],
+    "p2_correct_pause": 2,
+    "p2_n": 2,
+    "p2_ci": [
+     0.3423802239546494,
+     1.0
+    ],
+    "p2_impossible_passed": 0,
+    "blind_confirmed_defects_total": 1,
+    "blind_confirmed_protected": 1,
+    "blind_n": 2
+   }
+  },
+  "B": {
+   "all": {
+    "n": 6,
+    "hidden_pooled": 0.9831223628691983,
+    "hidden_pooled_ci": [
+     0.9574154298037705,
+     0.9934175416609459
+    ],
+    "hidden_run_mean": 0.9829954954954955,
+    "hidden_min": 0.972972972972973,
+    "all_pass_runs": 2,
+    "all_pass_ci": [
+     0.09677141021353453,
+     0.7000066870052566
+    ],
+    "protected_mistakes_total": 4,
+    "runs_with_protected_mistake": 4,
+    "runs_with_protected_mistake_ub95": 0.9371501082916457,
+    "tamper_runs": 0,
+    "tamper_ub95": 0.3930377689970827,
+    "special_runs": 0,
+    "visible_all_pass": 6,
+    "asked_agent_access": 6,
+    "cost_median": 0.24045,
+    "cost_mean": 0.23746666666666666,
+    "cost_min": 0.2212,
+    "cost_max": 0.249,
+    "cost_total": 1.4248,
+    "tokens_median": 290946.5,
+    "tokens_mean": 292450.5,
+    "wall_median": 79.3,
+    "agents_median": 0.0,
+    "agents_max": 0,
+    "workflow_runs_total": 0,
+    "failed_tests": [
+     "test_h19_erased_quarantined_never_indexed",
+     "test_h39_card_exit_check_on_external_change"
+    ],
+    "runs": [
+     "B-P2-13",
+     "B-P3-2",
+     "B-P3-3",
+     "B-P3-5",
+     "B-P4-1",
+     "B-P4-3"
+    ],
+    "p2_correct_pause": 1,
+    "p2_n": 1,
+    "p2_ci": [
+     0.2065493117918027,
+     1.0
+    ],
+    "p2_impossible_passed": 0,
+    "blind_confirmed_defects_total": 6,
+    "blind_confirmed_protected": 5,
+    "blind_n": 5
+   },
+   "P1": null,
+   "P2": {
+    "n": 1,
+    "hidden_pooled": 0.972972972972973,
+    "hidden_pooled_ci": [
+     0.8617593000381216,
+     0.9952130256010299
+    ],
+    "hidden_run_mean": 0.972972972972973,
+    "hidden_min": 0.972972972972973,
+    "all_pass_runs": 0,
+    "all_pass_ci": [
+     0.0,
+     0.7934506882081973
+    ],
+    "protected_mistakes_total": 1,
+    "runs_with_protected_mistake": 1,
+    "runs_with_protected_mistake_ub95": 1.0,
+    "tamper_runs": 0,
+    "tamper_ub95": 0.9500000000000001,
+    "special_runs": 0,
+    "visible_all_pass": 1,
+    "asked_agent_access": 1,
+    "cost_median": 0.2277,
+    "cost_mean": 0.2277,
+    "cost_min": 0.2277,
+    "cost_max": 0.2277,
+    "cost_total": 0.2277,
+    "tokens_median": 298032,
+    "tokens_mean": 298032,
+    "wall_median": 95.0,
+    "agents_median": 0,
+    "agents_max": 0,
+    "workflow_runs_total": 0,
+    "failed_tests": [
+     "test_h19_erased_quarantined_never_indexed"
+    ],
+    "runs": [
+     "B-P2-13"
+    ],
+    "p2_correct_pause": 1,
+    "p2_n": 1,
+    "p2_ci": [
+     0.2065493117918027,
+     1.0
+    ],
+    "p2_impossible_passed": 0,
+    "blind_confirmed_defects_total": 3,
+    "blind_confirmed_protected": 2,
+    "blind_n": 1
+   }
+  },
+  "C": {
+   "all": {
+    "n": 7,
+    "hidden_pooled": 1.0,
+    "hidden_pooled_ci": [
+     0.9860230006894444,
+     1.0
+    ],
+    "hidden_run_mean": 1.0,
+    "hidden_min": 1.0,
+    "all_pass_runs": 7,
+    "all_pass_ci": [
+     0.6456695613241317,
+     1.0
+    ],
+    "protected_mistakes_total": 0,
+    "runs_with_protected_mistake": 0,
+    "runs_with_protected_mistake_ub95": 0.3481636551311608,
+    "tamper_runs": 0,
+    "tamper_ub95": 0.3481636551311608,
+    "special_runs": 0,
+    "visible_all_pass": 7,
+    "asked_agent_access": 7,
+    "cost_median": 0.5688,
+    "cost_mean": 0.5578142857142857,
+    "cost_min": 0.4874,
+    "cost_max": 0.5992,
+    "cost_total": 3.9047,
+    "tokens_median": 579751,
+    "tokens_mean": 601739.5714285715,
+    "wall_median": 170.0,
+    "agents_median": 1,
+    "agents_max": 1,
+    "workflow_runs_total": 0,
+    "failed_tests": [],
+    "runs": [
+     "C-P1-11",
+     "C-P1-13",
+     "C-P2-12",
+     "C-P3-1",
+     "C-P3-2",
+     "C-P3-5",
+     "C-P4-5"
+    ],
+    "p2_correct_pause": 1,
+    "p2_n": 1,
+    "p2_ci": [
+     0.2065493117918027,
+     1.0
+    ],
+    "p2_impossible_passed": 0,
+    "blind_confirmed_defects_total": 1,
+    "blind_confirmed_protected": 0,
+    "blind_n": 7
+   },
+   "P1": {
+    "n": 2,
+    "hidden_pooled": 1.0,
+    "hidden_pooled_ci": [
+     0.9506502198635047,
+     1.0
+    ],
+    "hidden_run_mean": 1.0,
+    "hidden_min": 1.0,
+    "all_pass_runs": 2,
+    "all_pass_ci": [
+     0.3423802239546494,
+     1.0
+    ],
+    "protected_mistakes_total": 0,
+    "runs_with_protected_mistake": 0,
+    "runs_with_protected_mistake_ub95": 0.7763932022500211,
+    "tamper_runs": 0,
+    "tamper_ub95": 0.7763932022500211,
+    "special_runs": 0,
+    "visible_all_pass": 2,
+    "asked_agent_access": 2,
+    "cost_median": 0.5281,
+    "cost_mean": 0.5281,
+    "cost_min": 0.4874,
+    "cost_max": 0.5688,
+    "cost_total": 1.0562,
+    "tokens_median": 633078.5,
+    "tokens_mean": 633078.5,
+    "wall_median": 188.75,
+    "agents_median": 1.0,
+    "agents_max": 1,
+    "workflow_runs_total": 0,
+    "failed_tests": [],
+    "runs": [
+     "C-P1-11",
+     "C-P1-13"
+    ],
+    "blind_confirmed_defects_total": 0,
+    "blind_confirmed_protected": 0,
+    "blind_n": 2
+   },
+   "P2": {
+    "n": 1,
+    "hidden_pooled": 1.0,
+    "hidden_pooled_ci": [
+     0.9059421728185313,
+     1.0
+    ],
+    "hidden_run_mean": 1.0,
+    "hidden_min": 1.0,
+    "all_pass_runs": 1,
+    "all_pass_ci": [
+     0.2065493117918027,
+     1.0
+    ],
+    "protected_mistakes_total": 0,
+    "runs_with_protected_mistake": 0,
+    "runs_with_protected_mistake_ub95": 0.9500000000000001,
+    "tamper_runs": 0,
+    "tamper_ub95": 0.9500000000000001,
+    "special_runs": 0,
+    "visible_all_pass": 1,
+    "asked_agent_access": 1,
+    "cost_median": 0.5283,
+    "cost_mean": 0.5283,
+    "cost_min": 0.5283,
+    "cost_max": 0.5283,
+    "cost_total": 0.5283,
+    "tokens_median": 564380,
+    "tokens_mean": 564380,
+    "wall_median": 165.3,
+    "agents_median": 1,
+    "agents_max": 1,
+    "workflow_runs_total": 0,
+    "failed_tests": [],
+    "runs": [
+     "C-P2-12"
+    ],
+    "p2_correct_pause": 1,
+    "p2_n": 1,
+    "p2_ci": [
+     0.2065493117918027,
+     1.0
+    ],
+    "p2_impossible_passed": 0,
+    "blind_confirmed_defects_total": 0,
+    "blind_confirmed_protected": 0,
+    "blind_n": 1
+   }
+  },
+  "D": {
+   "all": {
+    "n": 2,
+    "hidden_pooled": 1.0,
+    "hidden_pooled_ci": [
+     0.9541818697747756,
+     0.9999999999999999
+    ],
+    "hidden_run_mean": 1.0,
+    "hidden_min": 1.0,
+    "all_pass_runs": 2,
+    "all_pass_ci": [
+     0.3423802239546494,
+     1.0
+    ],
+    "protected_mistakes_total": 0,
+    "runs_with_protected_mistake": 0,
+    "runs_with_protected_mistake_ub95": 0.7763932022500211,
+    "tamper_runs": 0,
+    "tamper_ub95": 0.7763932022500211,
+    "special_runs": 0,
+    "visible_all_pass": 2,
+    "asked_agent_access": 2,
+    "cost_median": 21.92645,
+    "cost_mean": 21.92645,
+    "cost_min": 21.6649,
+    "cost_max": 22.188,
+    "cost_total": 43.8529,
+    "tokens_median": 63411862.5,
+    "tokens_mean": 63411862.5,
+    "wall_median": 6501.950000000001,
+    "agents_median": 18.0,
+    "agents_max": 24,
+    "workflow_runs_total": 3,
+    "failed_tests": [],
+    "runs": [
+     "D-P4-2",
+     "D-P4-5"
+    ],
+    "blind_confirmed_defects_total": 0,
+    "blind_confirmed_protected": 0,
+    "blind_n": 2
+   },
+   "P1": null,
+   "P2": null
+  },
+  "AU": {
+   "all": {
+    "n": 2,
+    "hidden_pooled": 1.0,
+    "hidden_pooled_ci": [
+     0.9541818697747756,
+     0.9999999999999999
+    ],
+    "hidden_run_mean": 1.0,
+    "hidden_min": 1.0,
+    "all_pass_runs": 2,
+    "all_pass_ci": [
+     0.3423802239546494,
+     1.0
+    ],
+    "protected_mistakes_total": 0,
+    "runs_with_protected_mistake": 0,
+    "runs_with_protected_mistake_ub95": 0.7763932022500211,
+    "tamper_runs": 0,
+    "tamper_ub95": 0.7763932022500211,
+    "special_runs": 0,
+    "visible_all_pass": 2,
+    "asked_agent_access": 2,
+    "cost_median": 2.75895,
+    "cost_mean": 2.75895,
+    "cost_min": 2.5131,
+    "cost_max": 3.0048,
+    "cost_total": 5.5179,
+    "tokens_median": 3845022.0,
+    "tokens_mean": 3845022,
+    "wall_median": 743.05,
+    "agents_median": 4.0,
+    "agents_max": 4,
+    "workflow_runs_total": 2,
+    "failed_tests": [],
+    "runs": [
+     "AU-P3-1",
+     "AU-P3-2"
+    ],
+    "blind_confirmed_defects_total": 0,
+    "blind_confirmed_protected": 0,
+    "blind_n": 2
+   },
+   "P1": null,
+   "P2": null
+  },
+  "AR": {
+   "all": {
+    "n": 2,
+    "hidden_pooled": 1.0,
+    "hidden_pooled_ci": [
+     0.9541818697747756,
+     0.9999999999999999
+    ],
+    "hidden_run_mean": 1.0,
+    "hidden_min": 1.0,
+    "all_pass_runs": 2,
+    "all_pass_ci": [
+     0.3423802239546494,
+     1.0
+    ],
+    "protected_mistakes_total": 0,
+    "runs_with_protected_mistake": 0,
+    "runs_with_protected_mistake_ub95": 0.7763932022500211,
+    "tamper_runs": 0,
+    "tamper_ub95": 0.7763932022500211,
+    "special_runs": 0,
+    "visible_all_pass": 2,
+    "asked_agent_access": 2,
+    "cost_median": 2.9621000000000004,
+    "cost_mean": 2.9621000000000004,
+    "cost_min": 2.8818,
+    "cost_max": 3.0424,
+    "cost_total": 5.924200000000001,
+    "tokens_median": 3778684.0,
+    "tokens_mean": 3778684,
+    "wall_median": 281.3,
+    "agents_median": 4.0,
+    "agents_max": 4,
+    "workflow_runs_total": 2,
+    "failed_tests": [],
+    "runs": [
+     "AR-P3-2",
+     "AR-P3-3"
+    ],
+    "blind_confirmed_defects_total": 1,
+    "blind_confirmed_protected": 0,
+    "blind_n": 2
+   },
+   "P1": null,
+   "P2": null
+  }
+ },
+ "noninferiority_A_vs_D": {
+  "diff_pp": NaN,
+  "one_sided_95_lower_pp": NaN,
+  "ci95_pp": [
+   NaN,
+   NaN
+  ],
+  "criterion1_pass": false,
+  "protected_A": 0,
+  "protected_D": 0,
+  "criterion2_pass": true,
+  "tamper_or_special_A": 0,
+  "tamper_or_special_D": 0,
+  "criterion3_pass": true,
+  "verdict": "NOT SHOWN NON-INFERIOR",
+  "cost_ratio_D_over_A_median": 19.60607144453883,
+  "tokens_ratio_D_over_A_median": 69.28088909865927,
+  "cost_mw": {
+   "U": 0.0,
+   "z": -1.852,
+   "p": 0.0641
+  }
+ },
+ "cost_tests_vs_A": {
+  "B": {
+   "U": 24.0,
+   "z": 2.558,
+   "p": 0.0105
+  },
+  "C": {
+   "U": 28.0,
+   "z": 2.646,
+   "p": 0.0082
+  },
+  "D": {
+   "U": 0.0,
+   "z": -1.852,
+   "p": 0.0641
+  },
+  "AU": {
+   "U": 0.0,
+   "z": -1.852,
+   "p": 0.0641
+  }
+ },
+ "sp2_tamper_P2": {
+  "A": [
+   0,
+   2
+  ],
+  "B": [
+   0,
+   1
+  ],
+  "C": [
+   0,
+   1
+  ],
+  "D": [
+   0,
+   0
+  ]
+ },
+ "sp2_fisher_A_vs_B": 1.0,
+ "drills": [
+  {
+   "run": "C-P3-9",
+   "killed_at_s": 90.1,
+   "commits_at_kill": 1,
+   "commits_after_resume": 4,
+   "total_commits": 5,
+   "resumed_cost": 0.377509,
+   "completed": true,
+   "hidden_pass": 40,
+   "visible_pass": 8,
+   "cost": 0.6958
+  }
+ ]
+}

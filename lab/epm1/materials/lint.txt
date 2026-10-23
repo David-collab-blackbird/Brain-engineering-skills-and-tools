@@ -1,0 +1,65 @@
+T01a  bill-approval-check                masked_issues=- title_overlap=- verbatim_has_trigger=True
+T01b  bill-approval-check                masked_issues=- title_overlap=- verbatim_has_trigger=True
+T02a  supplier-statement-reconciliation  masked_issues=- title_overlap=- verbatim_has_trigger=True
+T02b  supplier-statement-reconciliation  masked_issues=- title_overlap=- verbatim_has_trigger=True
+T03a  supplier-bank-change               masked_issues=- title_overlap=- verbatim_has_trigger=True
+T03b  supplier-bank-change               masked_issues=- title_overlap=- verbatim_has_trigger=True
+T06a  overdue-invoice-followup           masked_issues=- title_overlap=- verbatim_has_trigger=True
+T06b  overdue-invoice-followup           masked_issues=- title_overlap=['follow'] verbatim_has_trigger=True
+T07a  quote-follow-up                    masked_issues=- title_overlap=- verbatim_has_trigger=True
+T07b  quote-follow-up                    masked_issues=- title_overlap=- verbatim_has_trigger=True
+T08a  payment-plan-request               masked_issues=- title_overlap=- verbatim_has_trigger=True
+T08b  payment-plan-request               masked_issues=- title_overlap=- verbatim_has_trigger=True
+T09a  deposit-refund                     masked_issues=- title_overlap=- verbatim_has_trigger=True
+T09b  deposit-refund                     masked_issues=- title_overlap=['deposit'] verbatim_has_trigger=True
+T11a  weekly-obligations-check           masked_issues=- title_overlap=- verbatim_has_trigger=True
+T11b  weekly-obligations-check           masked_issues=- title_overlap=- verbatim_has_trigger=True
+T12a  insurance-renewal                  masked_issues=- title_overlap=- verbatim_has_trigger=True
+T12b  insurance-renewal                  masked_issues=- title_overlap=- verbatim_has_trigger=True
+T13a  licence-permit-renewal             masked_issues=- title_overlap=- verbatim_has_trigger=True
+T13b  licence-permit-renewal             masked_issues=- title_overlap=- verbatim_has_trigger=True
+T16a  new-student-enrolment              masked_issues=- title_overlap=- verbatim_has_trigger=True
+T16b  new-student-enrolment              masked_issues=- title_overlap=- verbatim_has_trigger=True
+T17a  lesson-cancellation-credit         masked_issues=- title_overlap=- verbatim_has_trigger=True
+T17b  lesson-cancellation-credit         masked_issues=- title_overlap=['lesson'] verbatim_has_trigger=True
+T18a  member-complaint                   masked_issues=- title_overlap=- verbatim_has_trigger=True
+T18b  member-complaint                   masked_issues=- title_overlap=['customer'] verbatim_has_trigger=True
+T21a  staff-leave-request                masked_issues=- title_overlap=- verbatim_has_trigger=True
+T21b  staff-leave-request                masked_issues=- title_overlap=- verbatim_has_trigger=True
+T22a  new-staff-onboarding               masked_issues=- title_overlap=- verbatim_has_trigger=True
+T22b  new-staff-onboarding               masked_issues=- title_overlap=- verbatim_has_trigger=True
+T23a  timesheet-discrepancy              masked_issues=- title_overlap=['pay'] verbatim_has_trigger=True
+T23b  timesheet-discrepancy              masked_issues=- title_overlap=- verbatim_has_trigger=True
+T26a  equipment-fault                    masked_issues=- title_overlap=- verbatim_has_trigger=True
+T26b  equipment-fault                    masked_issues=- title_overlap=- verbatim_has_trigger=True
+T27a  safety-incident-report             masked_issues=- title_overlap=- verbatim_has_trigger=True
+T27b  safety-incident-report             masked_issues=- title_overlap=- verbatim_has_trigger=True
+T28a  privacy-incident-triage            masked_issues=- title_overlap=- verbatim_has_trigger=True
+T28b  privacy-incident-triage            masked_issues=- title_overlap=- verbatim_has_trigger=True
+T31a  quote-preparation                  masked_issues=- title_overlap=- verbatim_has_trigger=True
+T31b  quote-preparation                  masked_issues=- title_overlap=- verbatim_has_trigger=True
+T32a  job-variation                      masked_issues=- title_overlap=- verbatim_has_trigger=True
+T32b  job-variation                      masked_issues=- title_overlap=- verbatim_has_trigger=True
+T33a  job-completion-handover            masked_issues=- title_overlap=- verbatim_has_trigger=True
+T33b  job-completion-handover            masked_issues=- title_overlap=- verbatim_has_trigger=True
+T36a  decision-brief                     masked_issues=- title_overlap=['owner'] verbatim_has_trigger=True
+T36b  decision-brief                     masked_issues=- title_overlap=['owner'] verbatim_has_trigger=True
+T37a  task-handoff                       masked_issues=- title_overlap=- verbatim_has_trigger=True
+T37b  task-handoff                       masked_issues=- title_overlap=- verbatim_has_trigger=True
+T38a  weekly-owner-brief                 masked_issues=- title_overlap=- verbatim_has_trigger=True
+T38b  weekly-owner-brief                 masked_issues=- title_overlap=- verbatim_has_trigger=True
+
+masked lint failures: 0
+example-request 4-gram leaks into task requests: 0 []
+library size 10: 10 procedures, ~4482 body tokens (chars/4)
+library size 40: 40 procedures, ~14713 body tokens (chars/4)
+library size 120: 120 procedures, ~35763 body tokens (chars/4)
+declared[40][admin/owner] = ['decision-brief', 'task-handoff', 'weekly-owner-brief', 'meeting-minutes', 'rule-change-request']
+declared[40][finance/compliance] = ['weekly-obligations-check', 'insurance-renewal', 'licence-permit-renewal', 'bas-preparation', 'super-payment-check']
+declared[40][finance/payables] = ['bill-approval-check', 'supplier-statement-reconciliation', 'supplier-bank-change', 'payment-run-prep', 'credit-note-handling']
+declared[40][finance/receivables] = ['overdue-invoice-followup', 'quote-follow-up', 'payment-plan-request', 'deposit-refund', 'invoice-dispute']
+declared[40][general] = []
+declared[40][ops/incidents] = ['equipment-fault', 'safety-incident-report', 'privacy-incident-triage', 'food-safety-temp-breach', 'customer-feedback-review']
+declared[40][people/members] = ['new-student-enrolment', 'lesson-cancellation-credit', 'member-complaint', 'term-fee-reminder', 'withdrawal-exit']
+declared[40][people/staff] = ['staff-leave-request', 'new-staff-onboarding', 'timesheet-discrepancy', 'staff-offboarding', 'roster-swap']
+declared[40][sales/landscaping] = ['quote-preparation', 'job-variation', 'job-completion-handover', 'site-visit-booking', 'subcontractor-engagement']

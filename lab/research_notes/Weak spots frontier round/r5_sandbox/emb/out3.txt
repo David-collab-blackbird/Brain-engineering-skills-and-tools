@@ -1,0 +1,12 @@
+docs 800
+RESULT BM25 ID R@1=1.000 R@10=1.000
+RESULT BM25 PARA R@1=0.067 R@10=0.420
+bge-small (+query prefix) loaded 1s
+RESULT bge-small (+query prefix) ID R@1=0.133 R@10=0.293
+RESULT bge-small (+query prefix) PARA R@1=0.887 R@10=1.000
+bge-small (+query prefix) done in 81s
+bge-small (no prefix) loaded 1s
+RESULT bge-small (no prefix) ID R@1=0.087 R@10=0.240
+RESULT bge-small (no prefix) PARA R@1=0.853 R@10=1.000
+bge-small (no prefix) done in 84s
+Qwen3-0.6B (+instruction) loaded 9s
