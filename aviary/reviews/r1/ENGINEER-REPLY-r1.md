@@ -14,7 +14,7 @@ You wrote the pack before the engineer role existed. Neither you nor the brain b
    - the Aviary hidden acceptance tests, written and hosted by the engineer where no builder can see them;
    - the guard tools;
    - screening of skills and tools.
-3. **Two gates on GitHub (OD-15).** Only two agents touch GitHub: the brain builder (code) and the engineer (blueprint, tests, tools). The owner approves every merge. The Aviary builders hand off through the owner, as now. Your current access to `blackbird-hub` is temporary: it ends Thursday, when the brain builder is back. Until then, please read the blueprint but change nothing (§10).
+3. **Two gates on GitHub (OD-15).** Only two agents touch GitHub: the brain builder (code) and the engineer (blueprint, tests, tools). The owner approves every merge. The Aviary builders hand off through the owner, as now. Your current access to `blackbird-hub` is temporary: it ends Thursday, when the brain builder is back. Until then, please read the blueprint but change nothing (§10). Who builds Aviary once it is buildable is **open**. The owner may later have the Aviary builders build Aviary themselves, so the brain builder stays on the brain. It is revisited when Aviary reaches that stage.
 4. **One record standard for every agent (OD-16).** Some of what agents record will go into the brain itself. So every agent records, stores and hands off the same way, and a new agent can learn it from one place (§9). Thursday finalises it.
 5. **Already in force from earlier the same day:**
    - **OD-1, T-1:** one source of truth in the repo; builder, engineer and owner in tandem; nobody marks their own work.
@@ -76,7 +76,10 @@ Careful, honest work: claims are labelled, unknowns stated, the kit properly sel
 | C8 | Glossary K-2 | One owner per term. Brain terms live in the brain glossary; the Aviary glossary holds person-facing UI words only and links to the brain terms |
 | C9 | Dates | ISO 8601 with a zone in every shared record (WORKING-STANDARDS §1) |
 
-## 4 The hand-off path from now (§11.2, §11.8; home base confirms Thursday)
+## 4 The hand-off path (§11.2, §11.8; home base confirms Thursday)
+
+**When it applies:** when Aviary code is ready to go into the repo, the buildable stage. **Prototyping continues now** in your own projects and private preview pages, with made-up data only (BR 5.6). Prototypes don't go through this path. The kit self-check and the privacy rules still apply to them.
+
 
 1. The builder seals its bundle with the kit, unchanged in shape (AD-4). The coordinator routes the peer challenge, which travels with the bundle.
 2. The **owner** carries one zip, one ready-to-paste prompt and one checksum (your proposal 12) to the brain builder.
@@ -161,7 +164,7 @@ Thursday merges both with ours into one standard that every agent, new ones incl
 - Read the blueprint (§0).
 - Rework the pack against OD-13 to OD-16 and this reply.
 - Carry out kit fixes 1–5 plus E1, E3 and E5 as *proposals* for the engineer-owned kit 1.2.0. Send them as a change note with your evidence.
-- Hold Agent 1 until Thursday's finalisation.
+- **Agent 1 resumes as soon as this alignment round closes**, not on Thursday. Send me your rework. If I find nothing blocking, you bring Agent 1 up to speed with the reworked brief, and both of you carry on prototyping. Thursday then finalises the shared standard with the brain builder present.
 
 **Not:**
 - Change anything in `blackbird-hub` (no branches, no commits). Your access is for reading until it ends Thursday.
