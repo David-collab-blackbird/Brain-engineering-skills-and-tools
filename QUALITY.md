@@ -32,3 +32,12 @@ Whoever can change a skill or a guard changes how agents behave.
 - Only the engineer's account writes here by default.
 - A tripwire flags any commit on `main` that did not arrive through a pull request approved by the owner.
 - Product repos use **pinned, checksummed releases**, so an unreviewed change here cannot reach them.
+
+## 6. Every addition earns its place (owner, 2026-10-24)
+
+Skills and tools grow from use. Nobody designs them right in one go, so growth itself is disciplined: "the ceiling becomes the floor".
+1. **Observed failure first.** A proposed addition cites the real case where its absence hurt. A hypothetical improvement is not enough.
+2. **A failing test comes with it,** and someone other than the proposer writes or checks it and runs it.
+3. **Admission:** the new test passes, nothing existing regresses, and the addition shows a measurable benefit worth its cost to every agent who must follow it.
+4. **Retention:** each release reviews what every check, heading and rule caught or improved. One that has earned nothing over a sustained period is proposed for removal through the same steps. Nothing is removed without an owner ruling (§2).
+5. **Each release is versioned,** with a changelog line stating the evidence, and approved by the owner.
