@@ -1,18 +1,18 @@
-# courier v0.1: transmittals, read-backs and brain cards
+# courier v0.1.1: transmittals, read-backs and brain cards
 
-Status: SPEC v0.1 (2026-10-24) · Owner: engineer (OD-14) · Implements: owner request 2026-10-24 (document handling for every agent; plan for brain ingestion), OD-16 (one record standard)
+Status: SPEC v0.1.1 (2026-10-24; v0.1.1 adds the plain role names, OD-17) · Owner: engineer (OD-14) · Implements: owner request 2026-10-24 (document handling for every agent; plan for brain ingestion), OD-16 (one record standard)
 
 A single-file Python 3.11+ tool, `courier.py`, standard library only, Windows- and Linux-safe. Every package that one agent sends another, through the owner, is a folder with `TRANSMITTAL.md` first, zipped with checksums. The tool refuses to pack an incomplete transmittal, verifies packages on arrival, prints the owner a one-screen summary, makes a read-back template, and turns the "For the brain" section into capture-ready records.
 
 ## 1 TRANSMITTAL.md format
 
-YAML-style frontmatter (simple `key: value` lines between `---` lines; no nesting), then these level-2 headings in this order:
+YAML-style frontmatter (simple `key: value` lines between `---` lines; no nesting; each value is trimmed of leading and trailing whitespace before any check, as YAML plain values are), then these level-2 headings in this order:
 
 ```
 ---
 transmittal: 1
 id: TX-<SENDER>-<YYYYMMDD>-<NN>
-from: <Engineer | Coordinator | Agent 1 | Agent 2 | Brain builder | Owner>
+from: <Engineer | Brain builder | Owner | Aviary Orchestrator | Aviary Builder | Personal Builder>
 to: <same set>
 date: <ISO 8601 with zone, e.g. 2026-10-24T18:59+10:30>
 reply_to: <a TX id, or none>
@@ -29,7 +29,7 @@ reply_to: <a TX id, or none>
 ```
 
 Rules (each is checked by `pack` and `check`):
-- R1. All six frontmatter keys present and non-empty. `transmittal` is `1`. `id` matches `^TX-[A-Z0-9]+-\d{8}-\d{2}$`. `from` and `to` are in the set above and differ. `date` matches `^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?([+-]\d{2}:\d{2}|Z)$`. `reply_to` is `none` or a TX id.
+- R1. All six frontmatter keys present and non-empty. `transmittal` is `1`. `id` matches `^TX-[A-Z0-9]+-\d{8}-\d{2}$`. `from` and `to` are each a party name and differ. The party names are the six plain role names in the template (`Engineer`, `Brain builder`, `Owner`, `Aviary Orchestrator`, `Aviary Builder`, `Personal Builder`) and three legacy names (`Coordinator`, `Agent 1`, `Agent 2`) kept so packages written before the plain names still check. Matching is exact and case-sensitive. The legacy names are removed only through QUALITY.md §6 retention with an owner ruling. The R1 failure line for a bad party lists every accepted name. `date` matches `^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?([+-]\d{2}:\d{2}|Z)$`. `reply_to` is `none` or a TX id.
 - R2. All eight headings present, exactly once each, in the order shown.
 - R3. Every section has real content: at least one line that is not blank, not an HTML comment, and not a template placeholder (a line containing `<` … `>` placeholder text such as `<what>`). The words `none` (case-insensitive) are real content for Supersedes, Don't and Needs the owner. `nothing settled` is real content for For the brain.
 - R4. **Asks** is a numbered list (`1.`, `2.` …) with at least one item, numbered consecutively from 1.
@@ -41,7 +41,7 @@ Rules (each is checked by `pack` and `check`):
 
 All commands print plain English. Exit code 0 = OK, 1 = the package or transmittal fails a rule, 2 = usage error (bad arguments, missing path).
 
-- `courier.py template` prints a TRANSMITTAL.md skeleton with placeholders. A skeleton must FAIL `pack` (R3).
+- `courier.py template` prints a TRANSMITTAL.md skeleton with placeholders. A skeleton must FAIL `pack` (R3). Its `from` line lists the six plain role names and none of the legacy names.
 - `courier.py pack <folder> --out <zip> [--alias-file <file>]`:
   1. Validates `<folder>/TRANSMITTAL.md` against R1–R7. Each failure prints one line `FAIL <rule> <detail>`.
   2. Runs the privacy scan (§3) over every text file in the folder.

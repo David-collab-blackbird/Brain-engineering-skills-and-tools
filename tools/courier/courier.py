@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""courier v0.1: transmittals, read-backs and brain cards for every agent hand-off (SPEC.md).
+"""courier v0.1.1: transmittals, read-backs and brain cards for every agent hand-off (SPEC.md).
 
   courier.py template
   courier.py pack <folder> --out <zip> [--alias-file <file>]
@@ -11,8 +11,10 @@ Exit codes: 0 OK, 1 a rule fails, 2 usage error. Python 3.11+ standard library o
 """
 import hashlib, json, os, re, shutil, sys, tempfile, zipfile
 
-VERSION = "0.1.0"
-PARTIES = {"Engineer", "Coordinator", "Agent 1", "Agent 2", "Brain builder", "Owner"}
+VERSION = "0.1.1"
+ROLE_NAMES = ["Engineer", "Brain builder", "Owner", "Aviary Orchestrator", "Aviary Builder", "Personal Builder"]  # OD-17
+LEGACY_NAMES = ["Coordinator", "Agent 1", "Agent 2"]  # earlier packages only; removed only by owner ruling (QUALITY.md §2, §6)
+PARTIES = set(ROLE_NAMES) | set(LEGACY_NAMES)
 KEYS = ["transmittal", "id", "from", "to", "date", "reply_to"]
 HEADINGS = ["Purpose", "Asks", "Decisions relied on", "Supersedes", "Don't", "Reply format", "Needs the owner", "For the brain"]
 TX_ID = re.compile(r"^TX-[A-Z0-9]+-\d{8}-\d{2}$")
@@ -27,7 +29,7 @@ PLACEHOLDER = re.compile(r"<[^<>\n]+>")
 TEMPLATE = """---
 transmittal: 1
 id: TX-<SENDER>-<YYYYMMDD>-<NN>
-from: <Engineer | Coordinator | Agent 1 | Agent 2 | Brain builder | Owner>
+from: <Engineer | Brain builder | Owner | Aviary Orchestrator | Aviary Builder | Personal Builder>
 to: <recipient>
 date: <YYYY-MM-DDTHH:MM+10:30>
 reply_to: <TX id or none>
