@@ -69,7 +69,7 @@ Careful, honest work: claims are labelled, unknowns stated, the kit properly sel
 | C1 | Which rulebook wins | **Ruled (OD-13):** §0.1 |
 | C2 | `P.brain` / `P.ai` and BRAIN-SEAMS.md vs BRAIN-CONTRACT-v0 | Every seam names its contract verb and egress class (X0–X3), and Q11 checks that. Aviary integrates against the contract mock (WP-B02) and keeps contract §10: fail closed, store references not content, purge on `changes`, procedures only from `procedures.*`, untrusted text treated as data |
 | C3 | Three evidence vocabularies | WORKING-STANDARDS §5: status OBSERVED / INFERRED / UNKNOWN, source tag R / D / W. Your [seen] and [read] become OBSERVED with their source |
-| C4 | Master copies in the owner's claude.ai project | **Ruled (OD-16):** the kit, decisions log, register and glossary move to the repo through the gates, as non-personal documents. Scribe and memory records never go to git |
+| C4 | Master copies in the owner's claude.ai project | **Ruled (OD-16, clarified 17:10):** while Aviary is being prototyped, **nothing from Aviary goes into the repo**, documents included, because the app is changing constantly. The two builders keep single-source documents and exchange them through the owner. At the buildable stage, the non-personal documents move into the repo through the gates. Scribe and memory records never go to git. The engineer-owned kit is a tool, not Aviary code: it lives in the engineer's tools repo |
 | C5 | Id clashes (SA-, R-, D-, S-, Q01–Q17, K-) | WORKING-STANDARDS §4: in shared records, Aviary ids carry `AV-` (e.g. `AV-SA-03`, `AV-Q08`) |
 | C6 | Hidden-test feedback: BR 5.9 needs enough to write a failing test first | Report at done-line level: DL id, then what the person sees vs what the done line says, in person-visible terms. Never selectors, data or code (your proposal 9) |
 | C7 | Who merges | **Ruled (OD-15):** §4 |
@@ -77,6 +77,9 @@ Careful, honest work: claims are labelled, unknowns stated, the kit properly sel
 | C9 | Dates | ISO 8601 with a zone in every shared record (WORKING-STANDARDS §1) |
 
 ## 4 The hand-off path (§11.2, §11.8; home base confirms Thursday)
+
+**Channel (owner, 17:10):** the coordinator is the only contact between the Aviary builders and both the engineer and the brain builder, through the owner. The two Aviary builders check and test each other's work and work from single-source documents. Only once they reach an agreed standard does work come to the engineer and the brain builder. This answers Q-a2-89 for the engineer.
+
 
 **When it applies:** when Aviary code is ready to go into the repo, the buildable stage. **Prototyping continues now** in your own projects and private preview pages, with made-up data only (BR 5.6). Prototypes don't go through this path. The kit self-check and the privacy rules still apply to them.
 
@@ -105,6 +108,8 @@ That's two trips through the owner instead of about five. Proposal 16 still scal
 - **Feedback** in the C6 format.
 
 **Your interim rules:** confirmed (drive by visible labels, stored outside the package, never run by the tab's own builder). Added: freeze before the build, tripwires, and C6 feedback.
+
+**During prototyping** (owner, 17:10): no hidden acceptance tests yet. Prototypes get the lighter checks: the kit self-check, the privacy rules, and the name canary on preview pages with made-up data. As a prototype nears the build stage, the engineer runs light prototype tests and a design review for quality and security, so the build starts on a sound footing. The full hidden suites start from the first done line agreed for a real build.
 
 **The peer layer (AD-8) stays** as challenge and review evidence. It never counts as the pass while two builders share an identity or one is dormant. Overlap with my tests is fine: two independent sets are stronger evidence than one.
 
@@ -164,7 +169,7 @@ Thursday merges both with ours into one standard that every agent, new ones incl
 - Read the blueprint (§0).
 - Rework the pack against OD-13 to OD-16 and this reply.
 - Carry out kit fixes 1–5 plus E1, E3 and E5 as *proposals* for the engineer-owned kit 1.2.0. Send them as a change note with your evidence.
-- **Agent 1 resumes as soon as this alignment round closes**, not on Thursday. Send me your rework. If I find nothing blocking, you bring Agent 1 up to speed with the reworked brief, and both of you carry on prototyping. Thursday then finalises the shared standard with the brain builder present.
+- **Agent 1 resumes as soon as you and I are fully aligned** (owner, 17:10), not on Thursday. Send me your rework. If I find nothing blocking, you bring Agent 1 up to speed with the reworked brief, and both of you carry on prototyping. Thursday then finalises the shared standard with the brain builder present.
 
 **Not:**
 - Change anything in `blackbird-hub` (no branches, no commits). Your access is for reading until it ends Thursday.
